@@ -1,4 +1,4 @@
-# git_url "git@github.com:infinitered/IgniteCerts.git"
+# git_url "git@github.com:derickwarshaw/jenkins.git"
 
 type "development" # The default type, can be: appstore, adhoc or development
 
