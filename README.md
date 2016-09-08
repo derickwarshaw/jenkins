@@ -24,8 +24,6 @@
 
 ## Standard Compliant
 
-This project adheres to Standard.  Our CI enforces this, so we suggest you enable linting to keep your project compliant during development.
-
 **To Lint on Commit**
 
 1. Install git-hooks => On a Mac `brew install git-hooks` - [Other](https://github.com/icefox/git-hooks/)
