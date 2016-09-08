@@ -1,0 +1,69 @@
+{
+  "_class": "hudson.model.Hudson",
+  "assignedLabels": [{
+
+  }],
+  "mode": "NORMAL",
+  "nodeDescription": "the master Jenkins node",
+  "nodeName": "",
+  "numExecutors": 2,
+  "description": null,
+  "jobs": [{
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "Archon PR",
+    "url": "http://104.131.2.132:8080/job/Archon%20PR/",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "archon-api",
+    "url": "http://104.131.2.132:8080/job/archon-api/",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "archon-mobile",
+    "url": "http://104.131.2.132:8080/job/archon-mobile/",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "payless-findstore",
+    "url": "http://104.131.2.132:8080/job/payless-findstore/",
+    "color": "aborted"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "test run",
+    "url": "http://104.131.2.132:8080/job/test%20run/",
+    "color": "blue"
+  }],
+  "overallLoad": {
+
+  },
+  "primaryView": {
+    "_class": "hudson.model.AllView",
+    "name": "All",
+    "url": "http://104.131.2.132:8080/"
+  },
+  "quietingDown": false,
+  "slaveAgentPort": 0,
+  "unlabeledLoad": {
+    "_class": "jenkins.model.UnlabeledLoadStatistics"
+  },
+  "useCrumbs": false,
+  "useSecurity": true,
+  "views": [{
+    "_class": "hudson.model.AllView",
+    "name": "All",
+    "url": "http://104.131.2.132:8080/"
+  }, {
+    "_class": "hudson.model.ListView",
+    "name": "Archon-Api",
+    "url": "http://104.131.2.132:8080/view/Archon-Api/"
+  }, {
+    "_class": "hudson.model.ListView",
+    "name": "Archon-Mobile",
+    "url": "http://104.131.2.132:8080/view/Archon-Mobile/"
+  }, {
+    "_class": "hudson.model.ListView",
+    "name": "Payless",
+    "url": "http://104.131.2.132:8080/view/Payless/"
+  }]
+}

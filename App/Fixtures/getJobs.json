@@ -1,0 +1,24 @@
+{
+  "_class": "hudson.model.Hudson",
+  "jobs": [{
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "Archon PR",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "archon-api",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "archon-mobile",
+    "color": "blue"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "payless-findstore",
+    "color": "aborted"
+  }, {
+    "_class": "hudson.model.FreeStyleProject",
+    "name": "test run",
+    "color": "blue"
+  }]
+}
