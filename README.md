@@ -1,7 +1,7 @@
 #  Jenkins Mobile Client
 
 
-* Standard compliant React Native App Utilizing
+* Standard compliant React Native App
 
 ## How to Setup
 
