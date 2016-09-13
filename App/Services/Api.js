@@ -57,16 +57,16 @@ const create = (baseURL = 'http://') => {
       return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
     }).join('&');
   };
-  
-  const updateDefaultBaseUrl = (data) => {
-    return api.defaults.baseURL(request => {
+
+  const transformRequestUrl = (data) => {
+    return api.addRequestTransform(request => {
       request.url = `http://${data.host}:${data.port}/${data.path}`;
     });
   };
 
-  const login = (username, password, instanceName, host, path, port) => {
-    transformRequestUrl({host, path, port});
-    return api.post('/j_acegi_security_check', serializeJSON({
+  const login = (username, password, instanceName, host, port) => {
+    transformRequestUrl({host, port, path: 'j_acegi_security_check'});
+    return api.post('/', serializeJSON({
       j_username: username,
       j_password: password,
       from: '/'
