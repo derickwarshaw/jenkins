@@ -10,13 +10,12 @@ export const INITIAL_STATE = Immutable({
   attempting: false,
   instanceName: null,
   host: null,
-  path: null,
   port: null
 });
 
 // login attempts
 const attempt = (state, action) =>
-  state.merge({ attempting: true, username: action.username, password: action.password, instanceName: action.instanceName, host: action.host, path: action.path, port: action.port });
+  state.merge({ attempting: true, username: action.username, password: action.password, instanceName: action.instanceName, host: action.host, port: action.port });
 
 // successful logins
 const success = (state, action) =>

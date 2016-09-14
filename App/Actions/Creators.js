@@ -1,7 +1,7 @@
 import Types from './Types'
 
-const attemptLogin = (username, password, instanceName, host, path, port) => ({ type: Types.LOGIN_ATTEMPT, username, password, instanceName, host, path, port });
-const loginSuccess = (username, instanceName, host, port) => ({ type: Types.LOGIN_SUCCESS, username, instanceName, host, path, port });
+const attemptLogin = (username, password, instanceName, host, port) => ({ type: Types.LOGIN_ATTEMPT, username, password, instanceName, host, port });
+const loginSuccess = (username, instanceName, host, port) => ({ type: Types.LOGIN_SUCCESS, username, instanceName, host, port });
 const loginFailure = (errorCode) => ({ type: Types.LOGIN_FAILURE, errorCode });
 
 const getJobs = () => ({ type: Types.GETJOBS_ATTEMPT });
