@@ -31,6 +31,10 @@ const create = (baseURL = 'http://') => {
     Reactotron.apiLog(response)
   });
 
+  const updateDefaultBaseURL = (data) => {
+    api.axiosInstance.defaults.baseURL = `http://${data.host}:${data.port}`;
+  };
+
   // ------
   // STEP 2
   // ------
@@ -58,11 +62,8 @@ const create = (baseURL = 'http://') => {
     }).join('&');
   };
 
-  const login = (username, password, instanceName, host, path, port) => {
-
-    api.addRequestTransform(request => {
-      request.url = `http://${host}:${port}/${path}`;
-    });
+  const login = (username, password, instanceName, host, port) => {
+    updateDefaultBaseURL({host, port});
     return api.post('/j_acegi_security_check', serializeJSON({
       j_username: username,
       j_password: password,

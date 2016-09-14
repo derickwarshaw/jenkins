@@ -28,7 +28,6 @@ class LoginScreen extends React.Component {
       password: '',
       instanceName: '',
       host: '',
-      path: '',
       port: '',
       visibleHeight: Metrics.screenHeight,
       topLogo: { width: Metrics.screenWidth }
@@ -77,10 +76,10 @@ class LoginScreen extends React.Component {
   };
 
   handlePressLogin = () => {
-    const { username, password, instanceName, host, path, port } = this.state;
+    const { username, password, instanceName, host, port } = this.state;
     this.isAttempting = true;
     // attempt a login - a saga is listening to pick it up from here.
-    this.props.attemptLogin(username, password, instanceName, host, path, port );
+    this.props.attemptLogin(username, password, instanceName, host, port );
   };
 
   handleChangeUsername = (text) => {
@@ -97,10 +96,6 @@ class LoginScreen extends React.Component {
 
   handleChangeHost = (text) => {
     this.setState({ host: text })
-  };
-
-  handleChangePath = (text) => {
-    this.setState({ path: text })
   };
 
   handleChangePort = (text) => {
@@ -146,22 +141,6 @@ class LoginScreen extends React.Component {
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.host.focus()}
               placeholder={I18n.t('host')} />
-          </View>
-
-          <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('path')}</Text>
-            <TextInput
-              ref='path'
-              autoCapitalize="none"
-              style={textInputStyle}
-              value={path}
-              editable={editable}
-              keyboardType='default'
-              returnKeyType='next'
-              onChangeText={this.handleChangePath}
-              underlineColorAndroid='transparent'
-              onSubmitEditing={() => this.refs.path.focus()}
-              placeholder={I18n.t('path')} />
           </View>
 
           <View style={Styles.row}>
@@ -255,7 +234,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     close: NavigationActions.pop,
-    attemptLogin: (username, password, instanceName, host, path, port) => dispatch(Actions.attemptLogin(username, password, instanceName, host, path, port))
+    attemptLogin: (username, password, instanceName, host, port) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port))
   }
 };
 
