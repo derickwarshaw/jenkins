@@ -1,14 +1,14 @@
 // An All Components Screen is a great way to dev and quick-test components
-import React, { PropTypes } from 'react'
-import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native'
-import { Metrics, Images } from '../Themes'
-import FullButton from '../Components/FullButton'
+import React, { PropTypes } from 'react';
+import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { Metrics, Images } from '../Themes';
+import FullButton from '../Components/FullButton';
 // For API
-import API from '../Services/Api'
-import FJSON from 'format-json'
+import API from '../Services/Api';
+import FJSON from 'format-json';
 
 // Styles
-import styles from './Styles/APITestingScreenStyle'
+import styles from './Styles/APITestingScreenStyle';
 
 // API buttons here:
 const endpoints = [
@@ -30,7 +30,7 @@ export default class APITestingScreen extends React.Component {
       visibleHeight: Metrics.screenHeight
     };
 
-    this.api = API.create()
+    this.api = API.create();
   }
 
   static propTypes = {
@@ -42,7 +42,7 @@ export default class APITestingScreen extends React.Component {
       this.refs.result.setState({message: FJSON.plain(response.data), title: title});
       this.refs.result.setState({cookie: response , title: 'cookie'});
     } else {
-      this.refs.result.setState({message: `${response.problem} - ${response.status}`, title: title})
+      this.refs.result.setState({message: `${response.problem} - ${response.status}`, title: title});
     }
   }
 
@@ -50,18 +50,18 @@ export default class APITestingScreen extends React.Component {
     const { label, endpoint, args = [''] } = apiEndpoint;
     this.api[endpoint].apply(this, args).then((result) => {
       this.showResult(result, label || `${endpoint}(${args.join(', ')})`)
-    })
+    });
   }
 
   renderButton (apiEndpoint) {
     const { label, endpoint, args = [''] } = apiEndpoint;
     return (
       <FullButton text={label || `${endpoint}(${args.join(', ')})`} onPress={this.tryEndpoint.bind(this, apiEndpoint)} styles={{marginTop: 10}} key={`${endpoint}-${args.join('-')}`} />
-    )
+    );
   }
 
   renderButtons () {
-    return endpoints.map((endpoint) => this.renderButton(endpoint))
+    return endpoints.map((endpoint) => this.renderButton(endpoint));
   }
 
   render () {

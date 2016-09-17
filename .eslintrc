@@ -270,7 +270,7 @@
     "keyword-spacing": 1,
     // enforce spacing before and after keywords
     "jsx-quotes": [
-      1,
+      0,
       "prefer-double"
     ],
     "comma-spacing": 0,

@@ -17,4 +17,4 @@ DrawerButton.propTypes = {
   onPress: PropTypes.func.isRequired
 };
 
-export default DrawerButton
+export default DrawerButton;

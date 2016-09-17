@@ -1,6 +1,6 @@
-import immutablePersistenceTransform from '../Store/ImmutablePersistenceTransform'
-import { persistentStoreBlacklist } from '../Reducers/'
-import { AsyncStorage } from 'react-native'
+import immutablePersistenceTransform from '../Store/ImmutablePersistenceTransform';
+import { persistentStoreBlacklist } from '../Reducers/';
+import { AsyncStorage } from 'react-native';
 
 const REDUX_PERSIST = {
   active: true,
@@ -12,4 +12,4 @@ const REDUX_PERSIST = {
   }
 };
 
-export default REDUX_PERSIST
+export default REDUX_PERSIST;
