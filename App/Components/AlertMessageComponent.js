@@ -1,9 +1,9 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-import styles from './Styles/AlertMessageComponentStyle'
-import * as Animatable from 'react-native-animatable'
-import { Metrics } from '../Themes/'
-import Icon from 'react-native-vector-icons/Ionicons'
+import React from 'react';
+import { View, Text } from 'react-native';
+import styles from './Styles/AlertMessageComponentStyle';
+import * as Animatable from 'react-native-animatable';
+import { Metrics } from '../Themes/';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 export default class AlertMessage extends React.Component {
 
@@ -37,9 +37,9 @@ export default class AlertMessage extends React.Component {
             <Text allowFontScaling={false} style={styles.message}>{title && title.toUpperCase()}</Text>
           </View>
         </Animatable.View>
-      )
+      );
     }
 
-    return messageComponent
+    return messageComponent;
   }
 }
