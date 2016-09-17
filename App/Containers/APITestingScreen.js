@@ -1,5 +1,5 @@
 // An All Components Screen is a great way to dev and quick-test components
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
 import { Metrics, Images } from '../Themes';
 import FullButton from '../Components/FullButton';
@@ -33,9 +33,6 @@ export default class APITestingScreen extends React.Component {
     this.api = API.create();
   }
 
-  static propTypes = {
-  };
-
   showResult (response, title = 'Response') {
     this.refs.container.scrollTo({x: 0, y: 0, animated: true});
     if (response.ok) {
@@ -49,7 +46,7 @@ export default class APITestingScreen extends React.Component {
   tryEndpoint (apiEndpoint) {
     const { label, endpoint, args = [''] } = apiEndpoint;
     this.api[endpoint].apply(this, args).then((result) => {
-      this.showResult(result, label || `${endpoint}(${args.join(', ')})`)
+      this.showResult(result, label || `${endpoint}(${args.join(', ')})`);
     });
   }
 
@@ -83,7 +80,7 @@ export default class APITestingScreen extends React.Component {
           <APIResult ref='result' />
         </ScrollView>
       </View>
-    )
+    );
   }
 }
 
@@ -94,11 +91,11 @@ class APIResult extends React.Component {
     this.state = {
       message: false,
       title: false
-    }
+    };
   }
 
   onApiPress = () => {
-    this.setState({message: false})
+    this.setState({message: false});
   };
 
   renderView () {
@@ -114,15 +111,15 @@ class APIResult extends React.Component {
           </Text>
         </TouchableOpacity>
       </ScrollView>
-    )
+    );
   }
 
   render () {
     let messageView = null;
     if (this.state.message) {
-      return this.renderView()
+      return this.renderView();
     }
 
-    return messageView
+    return messageView;
   }
 }
