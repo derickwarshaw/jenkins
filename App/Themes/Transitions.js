@@ -1,4 +1,4 @@
-import {Navigator} from 'react-native'
+import {Navigator} from 'react-native';
 
 // Transitions could be any of those provided by SceneConfigs
 // https://github.com/facebook/react-native/blob/master/Libraries/CustomComponents/Navigator/NavigatorSceneConfigs.js
@@ -15,4 +15,4 @@ const transitions = {
   }
 };
 
-export default transitions
+export default transitions;

@@ -57,5 +57,5 @@ export default {
   type,
   size,
   style
-}
+};
 
