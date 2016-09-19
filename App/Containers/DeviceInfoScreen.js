@@ -1,10 +1,10 @@
 // An All Components Screen is a great way to dev and quick-test components
-import React, {PropTypes} from 'react'
-import { View, ScrollView, Text, Image } from 'react-native'
-import DeviceInfo from 'react-native-device-info'
-import { Metrics, Images } from '../Themes'
+import React, {PropTypes} from 'react';
+import { View, ScrollView, Text, Image } from 'react-native';
+import DeviceInfo from 'react-native-device-info';
+import { Metrics, Images } from '../Themes';
 
-import styles from './Styles/DeviceInfoScreenStyle'
+import styles from './Styles/DeviceInfoScreenStyle';
 
 const HARDWARE_DATA = [
   {title: 'Device Manufacturer', info: DeviceInfo.getManufacturer()},
@@ -16,24 +16,24 @@ const HARDWARE_DATA = [
   {title: 'User Agent', info: DeviceInfo.getUserAgent()},
   {title: 'Screen Width', info: Metrics.screenWidth},
   {title: 'Screen Height', info: Metrics.screenHeight}
-]
+];
 
 const OS_DATA = [
   {title: 'Device System Name', info: DeviceInfo.getSystemName()},
   {title: 'Device ID', info: DeviceInfo.getDeviceId()},
   {title: 'Device Version', info: DeviceInfo.getSystemVersion()}
-]
+];
 
 const APP_DATA = [
   {title: 'Bundle Id', info: DeviceInfo.getBundleId()},
   {title: 'Build Number', info: DeviceInfo.getBuildNumber()},
   {title: 'App Version', info: DeviceInfo.getVersion()},
   {title: 'App Version (Readable)', info: DeviceInfo.getReadableVersion()}
-]
+];
 
 export default class DeviceInfoScreen extends React.Component {
   static propTypes = {
-  }
+  };
 
   renderCard (cardTitle, rowData) {
     return (
@@ -46,7 +46,7 @@ export default class DeviceInfoScreen extends React.Component {
 
   renderRows (rowData) {
     return rowData.map((cell) => {
-      const {title, info} = cell
+      const {title, info} = cell;
       return (
         <View key={title} style={styles.rowContainer}>
           <View style={styles.rowLabelContainer}>
@@ -56,8 +56,8 @@ export default class DeviceInfoScreen extends React.Component {
             <Text style={styles.rowInfo}>{info}</Text>
           </View>
         </View>
-      )
-    })
+      );
+    });
   }
 
   render () {
@@ -75,6 +75,6 @@ export default class DeviceInfoScreen extends React.Component {
           {this.renderCard('App Info', APP_DATA)}
         </ScrollView>
       </View>
-    )
+    );
   }
 }
