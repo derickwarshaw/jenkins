@@ -1,5 +1,5 @@
-import R from 'ramda'
-import Immutable from 'seamless-immutable'
+import R from 'ramda';
+import Immutable from 'seamless-immutable';
 
 // is this object already Immutable?
 const isImmutable = R.has('asMutable');
@@ -27,10 +27,10 @@ export default {
     // which is lodash isPlainObject.
     // --- END HACKZORZ ---
     state.mergeDeep = R.identity;
-    return toImmutable(state)
+    return toImmutable(state);
   },
   in: (raw) => {
     // console.log({ storing: raw })
-    return fromImmutable(raw)
+    return fromImmutable(raw);
   }
-}
+};

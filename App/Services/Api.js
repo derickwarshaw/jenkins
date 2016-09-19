@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
-import apisauce from 'apisauce'
-import Reactotron from 'reactotron'
+import apisauce from 'apisauce';
+import Reactotron from 'reactotron';
 
 // our "constructor"
 const create = (baseURL = 'http://') => {
@@ -28,7 +28,7 @@ const create = (baseURL = 'http://') => {
   // additional monitors in the future.
   const addMonitor = api.addMonitor((response) => {
     // Monitors are called passively after every request.
-    Reactotron.apiLog(response)
+    Reactotron.apiLog(response);
   });
 
   const updateDefaultBaseURL = (data) => {
@@ -58,7 +58,7 @@ const create = (baseURL = 'http://') => {
 
   const serializeJSON = (data) => {
     return Object.keys(data).map((keyName) => {
-      return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
+      return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName]);
     }).join('&');
   };
 
@@ -70,7 +70,7 @@ const create = (baseURL = 'http://') => {
       from: '/'
     }), {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-    })};
+    });};
 
   const startJob = (job) =>  api.post(`/job/${job}/build`);
 
@@ -98,10 +98,10 @@ const create = (baseURL = 'http://') => {
     startJob,
     // additional utilities
     addMonitor
-  }
+  };
 };
 
 // let's return back our create method as the default.
 export default {
   create
-}
+};

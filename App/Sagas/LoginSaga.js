@@ -1,6 +1,6 @@
-import { take, put, call } from 'redux-saga/effects'
-import Types from '../Actions/Types'
-import Actions from '../Actions/Creators'
+import { take, put, call } from 'redux-saga/effects';
+import Types from '../Actions/Types';
+import Actions from '../Actions/Creators';
 
 // attempts to login
 export default (api) => {
@@ -21,12 +21,12 @@ export default (api) => {
   function * watcher () {
     while (true) {
       const { username, password, instanceName, host, port } = yield take(Types.LOGIN_ATTEMPT);
-      yield call(worker,username, password, instanceName, host, port)
+      yield call(worker,username, password, instanceName, host, port);
     }
   }
 
   return {
     watcher,
     worker
-  }
-}
+  };
+};
