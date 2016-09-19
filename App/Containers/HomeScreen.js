@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react'
-import { ScrollView, Text, Image, View } from 'react-native'
-import { Images } from '../Themes'
-import { connect } from 'react-redux'
-import RoundedButton from '../Components/RoundedButton'
-import { Actions as NavigationActions } from 'react-native-router-flux'
+import React, {PropTypes} from 'react';
+import { ScrollView, Text, Image, View } from 'react-native';
+import { Images } from '../Themes';
+import { connect } from 'react-redux';
+import RoundedButton from '../Components/RoundedButton';
+import { Actions as NavigationActions } from 'react-native-router-flux';
 
 // Styles
-import styles from './Styles/PresentationScreenStyle'
+import styles from './Styles/PresentationScreenStyle';
 
 class HomeScreen extends React.Component {
 
@@ -49,7 +49,7 @@ class HomeScreen extends React.Component {
 
         </ScrollView>
       </View>
-    )
+    );
   }
 }
 
@@ -60,7 +60,7 @@ const mapStateToProps = (state) => {
     host: state.login.host,
     port: state.login.port,
     path: state.login.path
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -68,7 +68,7 @@ const mapDispatchToProps = (dispatch) => {
     login: NavigationActions.login,
     jobList: NavigationActions.jobList
 
-  }
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);

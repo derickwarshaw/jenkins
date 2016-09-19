@@ -20,4 +20,4 @@ const colors = {
   drawer: 'rgba(30, 30, 29, 0.95)'
 };
 
-export default colors
+export default colors;

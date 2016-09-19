@@ -1,13 +1,13 @@
-import React, { PropTypes } from 'react'
-import { View, StatusBar } from 'react-native'
-import { Provider } from 'react-redux'
-import Actions from './Actions/Creators'
-import DebugSettings from './Config/DebugSettings'
-import NavigationRouter from './Navigation/NavigationRouter'
+import React, { PropTypes } from 'react';
+import { View, StatusBar } from 'react-native';
+import { Provider } from 'react-redux';
+import Actions from './Actions/Creators';
+import DebugSettings from './Config/DebugSettings';
+import NavigationRouter from './Navigation/NavigationRouter';
 // import './Config/PushConfig'
 
 // Styles
-import styles from './Containers/Styles/RootStyle'
+import styles from './Containers/Styles/RootStyle';
 
 export default class Root extends React.Component {
   static propTypes = {
@@ -16,7 +16,7 @@ export default class Root extends React.Component {
 
   componentWillMount () {
     const { dispatch } = this.props.store;
-    dispatch(Actions.startup())
+    dispatch(Actions.startup());
   }
 
   renderApp () {
@@ -30,10 +30,10 @@ export default class Root extends React.Component {
           <NavigationRouter />
         </View>
       </Provider>
-    )
+    );
   }
 
   render () {
-    return this.renderApp()
+    return this.renderApp();
   }
 }

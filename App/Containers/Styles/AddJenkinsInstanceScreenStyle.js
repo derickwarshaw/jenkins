@@ -1,5 +1,5 @@
-import { StyleSheet } from 'react-native'
-import { Colors, Metrics } from '../../Themes'
+import { StyleSheet } from 'react-native';
+import { Colors, Metrics } from '../../Themes';
 
 export default StyleSheet.create({
   container: {
@@ -49,4 +49,4 @@ export default StyleSheet.create({
     alignSelf: 'center',
     resizeMode: 'contain'
   }
-})
+});

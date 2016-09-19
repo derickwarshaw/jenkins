@@ -1,4 +1,4 @@
-import {Colors} from '../../Themes/'
+import {Colors} from '../../Themes/';
 
 export default {
   drawer: {
@@ -7,4 +7,4 @@ export default {
   main: {
     backgroundColor: Colors.ember
   }
-}
+};

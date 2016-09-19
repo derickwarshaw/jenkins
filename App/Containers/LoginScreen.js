@@ -1,4 +1,4 @@
-import React, {PropTypes} from 'react'
+import React, {PropTypes} from 'react';
 import {
   View,
   ScrollView,
@@ -7,17 +7,16 @@ import {
   TouchableOpacity,
   Image,
   Keyboard,
-  LayoutAnimation,
-  Alert
-} from 'react-native'
-import { connect } from 'react-redux'
-import Styles from './Styles/LoginScreenStyle'
-import Actions from '../Actions/Creators'
-import {Images, Metrics} from '../Themes'
-import { Actions as NavigationActions } from 'react-native-router-flux'
+  LayoutAnimation
+} from 'react-native';
+import { connect } from 'react-redux';
+import Styles from './Styles/LoginScreenStyle';
+import Actions from '../Actions/Creators';
+import {Images, Metrics} from '../Themes';
+import { Actions as NavigationActions } from 'react-native-router-flux';
 
 // I18n
-import I18n from '../I18n/I18n.js'
+import I18n from '../I18n/I18n.js';
 
 class LoginScreen extends React.Component {
 
@@ -32,7 +31,7 @@ class LoginScreen extends React.Component {
       visibleHeight: Metrics.screenHeight,
       topLogo: { width: Metrics.screenWidth }
     };
-    this.isAttempting = false
+    this.isAttempting = false;
   }
 
   componentWillReceiveProps (newProps) {
@@ -40,7 +39,7 @@ class LoginScreen extends React.Component {
     // Did the login attempt complete?
     if (this.isAttempting && !newProps.attempting && newProps.loginSuccess) {
       console.log(newProps);
-      this.props.close()
+      this.props.close();
     }
   }
 
@@ -63,7 +62,7 @@ class LoginScreen extends React.Component {
     this.setState({
       visibleHeight: newSize,
       topLogo: {width: 100, height: 70}
-    })
+    });
   };
 
   keyboardDidHide = (e) => {
@@ -72,7 +71,7 @@ class LoginScreen extends React.Component {
     this.setState({
       visibleHeight: Metrics.screenHeight,
       topLogo: {width: Metrics.screenWidth}
-    })
+    });
   };
 
   handlePressLogin = () => {
@@ -83,27 +82,27 @@ class LoginScreen extends React.Component {
   };
 
   handleChangeUsername = (text) => {
-    this.setState({ username: text })
+    this.setState({ username: text });
   };
 
   handleChangePassword = (text) => {
-    this.setState({ password: text })
+    this.setState({ password: text });
   };
 
   handleChangeInstanceName = (text) => {
-    this.setState({ instanceName: text })
+    this.setState({ instanceName: text });
   };
 
   handleChangeHost = (text) => {
-    this.setState({ host: text })
+    this.setState({ host: text });
   };
 
   handleChangePort = (text) => {
-    this.setState({ port: text })
+    this.setState({ port: text });
   };
 
   render () {
-    const { username, password, instanceName, host, path, port } = this.state;
+    const { username, password, instanceName, host, port } = this.state;
     const { attempting } = this.props;
     const editable = !attempting;
     const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly;
@@ -207,7 +206,7 @@ class LoginScreen extends React.Component {
         </View>
 
       </ScrollView>
-    )
+    );
   }
 
 }
@@ -228,14 +227,14 @@ const mapStateToProps = (state) => {
     jobs: state.jobs.data,
     loginSuccess: state.login.loginSuccess,
     loginFail: state.login.fail
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     close: NavigationActions.pop,
     attemptLogin: (username, password, instanceName, host, port) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port))
-  }
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);

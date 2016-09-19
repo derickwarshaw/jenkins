@@ -1,4 +1,4 @@
-import {Colors} from '../../Themes/'
+import {Colors} from '../../Themes/';
 
 export default {
   container: {
@@ -16,4 +16,4 @@ export default {
   rightButton: {
     color: Colors.snow
   }
-}
+};

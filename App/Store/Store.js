@@ -1,14 +1,14 @@
-import { createStore, applyMiddleware, compose } from 'redux'
-import { autoRehydrate } from 'redux-persist'
-import createLogger from 'redux-logger'
-import rootReducer from '../Reducers/'
-import Config from '../Config/DebugSettings'
-import createSagaMiddleware from 'redux-saga'
-import sagas from '../Sagas/'
-import R from 'ramda'
-import Reactotron from 'reactotron'
-import RehydrationServices from '../Services/RehydrationServices'
-import ReduxPersist from '../Config/ReduxPersist'
+import { createStore, applyMiddleware, compose } from 'redux';
+import { autoRehydrate } from 'redux-persist';
+import createLogger from 'redux-logger';
+import rootReducer from '../Reducers/';
+import Config from '../Config/DebugSettings';
+import createSagaMiddleware from 'redux-saga';
+import sagas from '../Sagas/';
+import R from 'ramda';
+import Reactotron from 'reactotron';
+import RehydrationServices from '../Services/RehydrationServices';
+import ReduxPersist from '../Config/ReduxPersist';
 
 // the logger master switch
 const USE_LOGGING = Config.reduxLogging;
@@ -25,7 +25,7 @@ middleware.push(sagaMiddleware);
 
 // Don't ship these
 if (__DEV__) {
-  middleware.push(logger)
+  middleware.push(logger);
 }
 
 // a function which can create our store and auto-persist the data
@@ -46,7 +46,7 @@ export default () => {
     );
 
     // configure persistStore and check reducer version number
-    RehydrationServices.updateReducers(store)
+    RehydrationServices.updateReducers(store);
   } else {
     const enhancers = compose(
       applyMiddleware(...middleware),
@@ -56,11 +56,11 @@ export default () => {
     store = createStore(
       rootReducer,
       enhancers
-    )
+    );
   }
 
   // run sagas
   sagaMiddleware.run(sagas);
 
-  return store
-}
+  return store;
+};
