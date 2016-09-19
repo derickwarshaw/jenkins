@@ -1,5 +1,5 @@
 // An All Components Screen is a great way to dev and quick-test components
-import React, {PropTypes} from 'react';
+import React from 'react';
 import { View, ScrollView, Text, Image } from 'react-native';
 import DeviceInfo from 'react-native-device-info';
 import { Metrics, Images } from '../Themes';
@@ -41,7 +41,7 @@ export default class DeviceInfoScreen extends React.Component {
         <Text style={styles.cardTitle}>{cardTitle.toUpperCase()}</Text>
         {this.renderRows(rowData)}
       </View>
-    )
+    );
   }
 
   renderRows (rowData) {

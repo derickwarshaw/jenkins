@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react'
-import { ScrollView, Image } from 'react-native'
-import styles from './Styles/DrawerContentStyle'
-import { Images } from '../Themes'
-import DrawerButton from '../Components/DrawerButton'
-import { Actions as NavigationActions } from 'react-native-router-flux'
+import React, { Component } from 'react';
+import { ScrollView, Image } from 'react-native';
+import styles from './Styles/DrawerContentStyle';
+import { Images } from '../Themes';
+import DrawerButton from '../Components/DrawerButton';
+import { Actions as NavigationActions } from 'react-native-router-flux';
 
 class DrawerContent extends Component {
 
   toggleDrawer () {
-    this.context.drawer.toggle()
+    this.context.drawer.toggle();
   }
 
   handlePressHome = () => {
@@ -23,22 +23,22 @@ class DrawerContent extends Component {
 
   handlePressAPI = () => {
     this.toggleDrawer();
-    NavigationActions.apiTesting()
+    NavigationActions.apiTesting();
   };
 
   handlePressDevice = () => {
     this.toggleDrawer();
-    NavigationActions.deviceInfo()
+    NavigationActions.deviceInfo();
   };
 
   handlePressLogin = () => {
     this.toggleDrawer();
-    NavigationActions.login()
+    NavigationActions.login();
   };
 
   handlePressBuildList = () => {
     this.toggleDrawer();
-    NavigationActions.buildList()
+    NavigationActions.buildList();
   };
 
   render () {
@@ -52,7 +52,7 @@ class DrawerContent extends Component {
         <DrawerButton text='Login' onPress={this.handlePressLogin} />
         <DrawerButton text='Build List' onPress={this.handlePressBuildList} />
       </ScrollView>
-    )
+    );
   }
 
 }
@@ -64,4 +64,4 @@ DrawerContent.contextTypes = {
   drawer: React.PropTypes.object
 };
 
-export default DrawerContent
+export default DrawerContent;

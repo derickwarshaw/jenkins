@@ -6,4 +6,4 @@ export default {
   logo: {
     alignSelf: 'center'
   }
-}
+};

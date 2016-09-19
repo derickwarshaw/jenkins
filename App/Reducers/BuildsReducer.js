@@ -1,6 +1,6 @@
-import Types from '../Actions/Types'
-import Immutable from 'seamless-immutable'
-import { createReducer } from 'reduxsauce'
+import Types from '../Actions/Types';
+import Immutable from 'seamless-immutable';
+import { createReducer } from 'reduxsauce';
 
 export const INITIAL_STATE = Immutable({
   data: [],
@@ -28,4 +28,4 @@ const ACTION_HANDLERS = {
   [Types.GETBUILDS_FAILURE]: failure
 };
 
-export default createReducer(INITIAL_STATE, ACTION_HANDLERS)
+export default createReducer(INITIAL_STATE, ACTION_HANDLERS);
