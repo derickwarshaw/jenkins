@@ -1,6 +1,6 @@
 import PushNotification from 'react-native-push-notification';
 
-// https://github.com/zo0r/react-native-push-notification zomgbingbong
+// https://github.com/zo0r/react-native-push-notification zomgbingbongoh my!
 PushNotification.configure({
 
   // (optional) Called when Token is generated (iOS and Android)
