@@ -1,9 +1,10 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce';
 import Reactotron from 'reactotron';
+import { info, builds, jobs, views, que, load } from '../Services/';
 
 // our "constructor"
-const create = (baseURL = 'http://') => {
+const create = (baseURL = 'http://jenkins.derickwarshaw.com:8080') => {
   // ------
   // STEP 1
   // ------
@@ -49,12 +50,14 @@ const create = (baseURL = 'http://') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getJenkinsInfo = () => api.get('/api/json?pretty=true');
-  const getJenkinsJobs = () => api.get('/api/json?tree=jobs[name,color]');
-  const getJenkinsViews = () => api.get('/api/json?tree=views[name,url]');
-  const getQueAPI = () => api.get('/queue/api/json?pretty=true');
-  const getLoadAPI = () => api.get('/overallLoad/api/json?pretty=true');
-  const getBuilds = (job) => api.get(`/job/${job}/api/json?tree=builds[number,status,timestamp,id,result]`);
+
+  const getJenkinsJobs = () => jobs.getJobs(api);
+  const getJenkinsViews = () => views.getViews(api);
+  const getQueAPI = () => que.getQueApi(api);
+  const getLoadAPI = () => load.getLoadApi(api);
+  const getBuilds = (job) => builds.getBuilds(api, job);
+  const getJenkinsInfo = () => info.getInfo(api);
+  const startJob = (job) =>  jobs.getJob(api, job);
 
   const serializeJSON = (data) => {
     return Object.keys(data).map((keyName) => {
@@ -72,7 +75,7 @@ const create = (baseURL = 'http://') => {
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
     });};
 
-  const startJob = (job) =>  api.post(`/job/${job}/build`);
+
 
   // ------
   // STEP 3
