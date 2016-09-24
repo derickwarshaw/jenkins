@@ -1,7 +1,7 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce';
 import Reactotron from 'reactotron';
-import { info, builds, jobs, views, que, load } from '../Services/';
+import { info, builds, jobs, views, que, load, login } from '../Services/';
 
 // our "constructor"
 const create = (baseURL = 'http://') => {
@@ -58,9 +58,9 @@ const create = (baseURL = 'http://') => {
   const getBuilds = (job) => builds.getBuilds(api, job);
   const getJenkinsInfo = () => info.getInfo(api);
   const startJob = (job) =>  jobs.getJob(api, job);
-  const login = (username, password, instanceName, host, port) => {
+  const startLogin = (username, password, instanceName, host, port) => {
     updateDefaultBaseURL({host, port});
-    return login.attemptLogin(api, username, password, instanceName, host, port);
+    return login.attemptLogin(api, username, password, instanceName);
   };
 
 
@@ -85,7 +85,7 @@ const create = (baseURL = 'http://') => {
     getQueAPI,
     getLoadAPI,
     getBuilds,
-    login,
+    startLogin,
     startJob,
     // additional utilities
     addMonitor

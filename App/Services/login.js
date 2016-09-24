@@ -1,8 +1,8 @@
-import { serializeJSON } from '../Util';
+import { util } from '../Util';
 
 export default {
-  attemptLogin: (api) => {
-    return api.post('/j_acegi_security_check', serializeJSON({
+  attemptLogin: (api, username, password) => {
+    return api.post('/j_acegi_security_check', util.serializeJSON({
       j_username: username,
       j_password: password,
       from: '/'
