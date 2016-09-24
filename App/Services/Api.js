@@ -4,7 +4,7 @@ import Reactotron from 'reactotron';
 import { info, builds, jobs, views, que, load } from '../Services/';
 
 // our "constructor"
-const create = (baseURL = 'http://jenkins.derickwarshaw.com:8080') => {
+const create = (baseURL = 'http://') => {
   // ------
   // STEP 1
   // ------
@@ -58,22 +58,10 @@ const create = (baseURL = 'http://jenkins.derickwarshaw.com:8080') => {
   const getBuilds = (job) => builds.getBuilds(api, job);
   const getJenkinsInfo = () => info.getInfo(api);
   const startJob = (job) =>  jobs.getJob(api, job);
-
-  const serializeJSON = (data) => {
-    return Object.keys(data).map((keyName) => {
-      return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName]);
-    }).join('&');
-  };
-
   const login = (username, password, instanceName, host, port) => {
     updateDefaultBaseURL({host, port});
-    return api.post('/j_acegi_security_check', serializeJSON({
-      j_username: username,
-      j_password: password,
-      from: '/'
-    }), {
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-    });};
+    return login.attemptLogin(api, username, password, instanceName, host, port);
+  };
 
 
 
