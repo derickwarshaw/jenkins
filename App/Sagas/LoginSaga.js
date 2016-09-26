@@ -7,7 +7,7 @@ export default (api) => {
 
   function * worker (username, password, instanceName, host, port) {
 
-    const response = yield call(api.login, username, password, instanceName, host, port);
+    const response = yield call(api.startLogin, username, password, instanceName, host, port);
 
     if (response.ok) {
       yield put(Actions.loginSuccess(username, instanceName, host, port ));

@@ -21,11 +21,6 @@ class DrawerContent extends Component {
     NavigationActions.jobList();
   };
 
-  handlePressAPI = () => {
-    this.toggleDrawer();
-    NavigationActions.apiTesting();
-  };
-
   handlePressDevice = () => {
     this.toggleDrawer();
     NavigationActions.deviceInfo();
@@ -47,7 +42,6 @@ class DrawerContent extends Component {
         <Image source={Images.logo} style={styles.logo} />
         <DrawerButton text='Home Screen' onPress={this.handlePressHome} />
         <DrawerButton text='Jobs' onPress={this.handlePressJobs} />
-        <DrawerButton text='API Testing' onPress={this.handlePressAPI} />
         <DrawerButton text='Device Info' onPress={this.handlePressDevice} />
         <DrawerButton text='Login' onPress={this.handlePressLogin} />
         <DrawerButton text='Build List' onPress={this.handlePressBuildList} />
