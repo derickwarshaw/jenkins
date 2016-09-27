@@ -10,7 +10,6 @@
     "test": "ava",
     "test:watch": "ava --watch",
     "coverage": "nyc ava",
-    "tron": "node_modules/.bin/reactotron",
     "android:build": "cd android && ./gradlew assembleRelease",
     "android:install": "cd android && ./gradlew assembleRelease && ./gradlew installRelease",
     "android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
@@ -53,8 +52,7 @@
     "nyc": "^7.0.0",
     "react-addons-test-utils": "^15.1.0",
     "react-dom": "^15.1.0",
-    "react-native-mock": "^0.2.3",
-    "reactotron": "^0.7.0"
+    "react-native-mock": "^0.2.3"
   },
   "ava": {
     "files": [
