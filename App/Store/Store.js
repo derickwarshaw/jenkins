@@ -6,7 +6,6 @@ import Config from '../Config/DebugSettings';
 import createSagaMiddleware from 'redux-saga';
 import sagas from '../Sagas/';
 import R from 'ramda';
-import Reactotron from 'reactotron';
 import RehydrationServices from '../Services/RehydrationServices';
 import ReduxPersist from '../Config/ReduxPersist';
 
@@ -36,7 +35,6 @@ export default () => {
   if (ReduxPersist.active) {
     const enhancers = compose(
       applyMiddleware(...middleware),
-      Reactotron.storeEnhancer(),
       autoRehydrate()
     );
 
@@ -49,8 +47,7 @@ export default () => {
     RehydrationServices.updateReducers(store);
   } else {
     const enhancers = compose(
-      applyMiddleware(...middleware),
-      Reactotron.storeEnhancer()
+      applyMiddleware(...middleware)
     );
 
     store = createStore(
