@@ -1,6 +1,5 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce';
-import Reactotron from 'reactotron';
 import { info, builds, jobs, views, que, load, login } from '../Services/';
 
 // our "constructor"
@@ -29,7 +28,6 @@ const create = (baseURL = 'http://') => {
   // additional monitors in the future.
   const addMonitor = api.addMonitor((response) => {
     // Monitors are called passively after every request.
-    Reactotron.apiLog(response);
   });
 
   const updateDefaultBaseURL = (data) => {
