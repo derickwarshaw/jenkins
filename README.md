@@ -23,3 +23,7 @@
   * for Android
     * Run Genymotion
     * run `react-native run-android`
+
+## Want to make a contribution?
+
+Check out **https://github.com/derickwarshaw/jenkins/blob/master/CONTRIBUTING.md**
