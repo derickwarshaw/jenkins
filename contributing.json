@@ -1,4 +1,5 @@
 // https://gitmagic.io/rules
+// This really needs to be refined..
 {
   "commit": {
   },
@@ -9,7 +10,6 @@
     "subject_must_be_in_tense": "imperative",
     "subject_must_start_with_case": "upper",
     "subject_must_not_end_with_dot": true,
-
     "body_cannot_be_empty": true,
     "body_must_include_verification_steps": true,
     "body_must_include_screenshot": ["html", "css"]
@@ -21,10 +21,8 @@
     "subject_must_be_in_tense": "imperative",
     "subject_must_start_with_case": "upper",
     "subject_must_not_end_with_dot": true,
-
     "body_cannot_be_empty": true,
     "body_must_include_reproduction_steps": ["bug"],
-
     "label_must_be_set": true
   }
 }
