@@ -9,15 +9,15 @@
 Clone the repo: 
 `git clone https://github.com/derickwarshaw/jenkins.git`
 
-### Step 2
+### Step 2:
 Change directories into the repo:
 `cd jenkins`
 
-### Step 3
+### Step 3:
 Install the npm application: 
 `npm install`
 
-### Step 4
+### Step 4:
 If you run into an issue building the project, [check out React's issues page.](https://github.com/facebook/react-native/issues/8584)  
 You may need to go into XCode and doubleclick on the RCTWebSocket project in your navigator and remove the flags under build settings > custom compiler flags.
 
