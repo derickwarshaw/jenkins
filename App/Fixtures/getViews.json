@@ -10,28 +10,28 @@
   "description": null,
   "jobs": [{
     "_class": "hudson.model.FreeStyleProject",
-    "name": "Archon PR",
-    "url": "http://104.131.2.132:8080/job/Archon%20PR/",
+    "name": "Test1",
+    "url": "http://",
     "color": "blue"
   }, {
     "_class": "hudson.model.FreeStyleProject",
-    "name": "archon-api",
-    "url": "http://104.131.2.132:8080/job/archon-api/",
+    "name": "Test2",
+    "url": "http://",
     "color": "blue"
   }, {
     "_class": "hudson.model.FreeStyleProject",
-    "name": "archon-mobile",
-    "url": "http://104.131.2.132:8080/job/archon-mobile/",
+    "name": "Test3",
+    "url": "http://",
     "color": "blue"
   }, {
     "_class": "hudson.model.FreeStyleProject",
-    "name": "payless-findstore",
-    "url": "http://104.131.2.132:8080/job/payless-findstore/",
+    "name": "Test4",
+    "url": "http://",
     "color": "aborted"
   }, {
     "_class": "hudson.model.FreeStyleProject",
-    "name": "test run",
-    "url": "http://104.131.2.132:8080/job/test%20run/",
+    "name": "Test5",
+    "url": "http://",
     "color": "blue"
   }],
   "overallLoad": {
@@ -40,7 +40,7 @@
   "primaryView": {
     "_class": "hudson.model.AllView",
     "name": "All",
-    "url": "http://104.131.2.132:8080/"
+    "url": "http://"
   },
   "quietingDown": false,
   "slaveAgentPort": 0,
@@ -52,18 +52,18 @@
   "views": [{
     "_class": "hudson.model.AllView",
     "name": "All",
-    "url": "http://104.131.2.132:8080/"
+    "url": "http://"
   }, {
     "_class": "hudson.model.ListView",
-    "name": "Archon-Api",
-    "url": "http://104.131.2.132:8080/view/Archon-Api/"
+    "name": "Test6",
+    "url": "http://"
   }, {
     "_class": "hudson.model.ListView",
-    "name": "Archon-Mobile",
-    "url": "http://104.131.2.132:8080/view/Archon-Mobile/"
+    "name": "Test7",
+    "url": "http://"
   }, {
     "_class": "hudson.model.ListView",
-    "name": "Payless",
-    "url": "http://104.131.2.132:8080/view/Payless/"
+    "name": "Test8",
+    "url": "http://"
   }]
 }
