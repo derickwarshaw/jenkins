@@ -1,4 +1,3 @@
-
 ### Fixtures folder
 All key API responses are housed here.
 
