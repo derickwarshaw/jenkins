@@ -38,3 +38,10 @@ Run Build:
 
 ## Want to make a contribution?
 [Check this out](https://github.com/derickwarshaw/jenkins/blob/master/CONTRIBUTING.md)
+
+## Troubleshooting
+1. ** BUILD FAILED ** 
+    * CFBundleIdentifier
+        * Typically the result of another process running on the same port. To resolve this find the PID for the process on port 8081
+        * run lsof -n -i4TCP:8081 which should return any process running on 8081.
+        * run kill -p PID - where PID is the PID of the process identified by the command above.
