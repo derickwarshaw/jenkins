@@ -30,7 +30,7 @@ Make sure you're in the project folder. If not, change directories into the fold
 
 ### Step 2:
 Run Build:
-  See https://facebook.github.io/react-native/docs/getting-started.html for your mobile and development OS instructions
+  See [Facebook's official instructions on getting started](https://facebook.github.io/react-native/docs/getting-started.html) for your mobile and development OS instructions
 
 ## Want to make a contribution?
 [Check this out](https://github.com/derickwarshaw/jenkins/blob/master/CONTRIBUTING.md)
