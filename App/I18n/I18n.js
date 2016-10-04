@@ -31,7 +31,8 @@ I18n.translations = {
     instanceName: 'Instance Name',
     host: 'Host',
     path: 'Path',
-    port: 'Port'
+    port: 'Port',
+    https: 'HTTPS'
   },
   fr: {
     signIn: 'Se connecter',
