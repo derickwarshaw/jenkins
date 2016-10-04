@@ -5,9 +5,9 @@
 
 ## How to Setup
 
-**Step 1:** git clone this repo:
+**Step 1:** git clone this repo: `git clone https://github.com/derickwarshaw/jenkins.git`
 
-**Step 2:** cd to the cloned repo:
+**Step 2:** cd to the cloned repo: `cd jenkins`
 
 **Step 3:** Install the Application with `npm install`
 
