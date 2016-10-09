@@ -23,7 +23,7 @@ const success = (state, action) =>
 
 // login failure
 const failure = (state, action) =>
-  state.merge({ attempting: false, errorCode: action.errorCode });
+  state.merge({ attempting: false, errorCode: action.errorCode, instanceName: null });
 
 // logout
 const logout = (state, action) =>
