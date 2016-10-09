@@ -13,5 +13,9 @@
   "plugins": [
     {"name": "esdoc-es7-plugin"}
   ],
+  "autoPrivate": true,
+  "index": "./README.md",
+  "package": "none",
+  "coverage": true,
   "lint": true
 }
