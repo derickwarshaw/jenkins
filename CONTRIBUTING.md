@@ -44,6 +44,11 @@ If you are proposing a feature:
 -   Remember that this is a volunteer-driven project, and that
     contributions are welcome
 
+## Testing
+
+Test the project with:
+
+    npm run test
 
 ## Linting
 
