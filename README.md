@@ -2,6 +2,9 @@
 
 React-Native Jenkins Client for iOS and Android
 
+## Documentation
+Check out the [documentation](https://derickwarshaw.github.io/jenkins/) for the project.
+
 ## Setup
 
 ### Step 1:
