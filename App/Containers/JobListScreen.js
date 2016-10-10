@@ -1,14 +1,14 @@
-import React, {PropTypes} from 'react'
-import { View, Text, ListView, TouchableHighlight } from 'react-native'
-import { connect } from 'react-redux'
-import Actions from '../Actions/Creators'
-import { Actions as NavigationActions } from 'react-native-router-flux'
+import React, {PropTypes} from 'react';
+import { View, Text, ListView, TouchableHighlight } from 'react-native';
+import { connect } from 'react-redux';
+import Actions from '../Actions/Creators';
+import { Actions as NavigationActions } from 'react-native-router-flux';
 
 // For empty lists
-import AlertMessage from '../Components/AlertMessageComponent'
+import AlertMessage from '../Components/AlertMessageComponent';
 
 // Styles
-import styles from './Styles/JobListStyle'
+import styles from './Styles/JobListStyle';
 
 class JobListScreen extends React.Component {
 
@@ -44,7 +44,7 @@ class JobListScreen extends React.Component {
     // Datasource is always in state
     this.state = {
       dataSource: ds.cloneWithRows(props.dataObjects)
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -79,7 +79,7 @@ class JobListScreen extends React.Component {
         <Text style={styles.label}>{rowData.color}</Text>
       </View>
       </TouchableHighlight>
-    )
+    );
   }
 
   /* ***********************************************************
@@ -103,7 +103,7 @@ class JobListScreen extends React.Component {
   // Used for friendly AlertMessage
   // returns true if the dataSource is empty
   _noRowData () {
-    return this.state.dataSource.getRowCount() === 0
+    return this.state.dataSource.getRowCount() === 0;
   }
 
   render () {
@@ -116,7 +116,7 @@ class JobListScreen extends React.Component {
           renderRow={this._renderRow.bind(this)}
         />
       </View>
-    )
+    );
   }
 }
 
@@ -126,13 +126,13 @@ const mapStateToProps = (state) => {
     dataObjects: state.jobs.data,
     builds: state.builds,
     buildList: NavigationActions.buildList
-  }
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
     getBuilds: (jobName) => dispatch(Actions.getBuilds(jobName))
-  }
+  };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(JobListScreen)
+export default connect(mapStateToProps, mapDispatchToProps)(JobListScreen);

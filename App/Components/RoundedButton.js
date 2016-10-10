@@ -1,6 +1,6 @@
-import React from 'react'
-import { TouchableOpacity, Text } from 'react-native'
-import styles from './Styles/RoundedButtonStyle'
+import React from 'react';
+import { TouchableOpacity, Text } from 'react-native';
+import styles from './Styles/RoundedButtonStyle';
 
 export default class RoundedButton extends React.Component {
 
@@ -13,7 +13,7 @@ export default class RoundedButton extends React.Component {
 
   getText () {
     const buttonText = this.props.text || this.props.children.toString();
-    return buttonText.toUpperCase()
+    return buttonText.toUpperCase();
   }
 
   render () {
@@ -21,6 +21,6 @@ export default class RoundedButton extends React.Component {
       <TouchableOpacity style={styles.button} onPress={this.props.onPress}>
         <Text style={styles.buttonText}>{this.getText()}</Text>
       </TouchableOpacity>
-    )
+    );
   }
 }

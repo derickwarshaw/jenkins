@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
-import apisauce from 'apisauce'
-import Reactotron from 'reactotron'
+import apisauce from 'apisauce';
+import { info, builds, jobs, views, que, load, login } from '../Services/';
 
 // our "constructor"
 const create = (baseURL = 'http://') => {
@@ -28,7 +28,6 @@ const create = (baseURL = 'http://') => {
   // additional monitors in the future.
   const addMonitor = api.addMonitor((response) => {
     // Monitors are called passively after every request.
-    Reactotron.apiLog(response)
   });
 
   const updateDefaultBaseURL = (data) => {
@@ -49,30 +48,20 @@ const create = (baseURL = 'http://') => {
   // Since we can't hide from that, we embrace it by getting out of the
   // way at this level.
   //
-  const getJenkinsInfo = () => api.get('/api/json?pretty=true');
-  const getJenkinsJobs = () => api.get('/api/json?tree=jobs[name,color]');
-  const getJenkinsViews = () => api.get('/api/json?tree=views[name,url]');
-  const getQueAPI = () => api.get('/queue/api/json?pretty=true');
-  const getLoadAPI = () => api.get('/overallLoad/api/json?pretty=true');
-  const getBuilds = (job) => api.get(`/job/${job}/api/json?tree=builds[number,status,timestamp,id,result]`);
 
-  const serializeJSON = (data) => {
-    return Object.keys(data).map((keyName) => {
-      return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName])
-    }).join('&');
+  const getJenkinsJobs = () => jobs.getJobs(api);
+  const getJenkinsViews = () => views.getViews(api);
+  const getQueAPI = () => que.getQueApi(api);
+  const getLoadAPI = () => load.getLoadApi(api);
+  const getBuilds = (job) => builds.getBuilds(api, job);
+  const getJenkinsInfo = () => info.getInfo(api);
+  const startJob = (job) =>  jobs.getJob(api, job);
+  const startLogin = (username, password, instanceName, host, port) => {
+    updateDefaultBaseURL({host, port});
+    return login.attemptLogin(api, username, password, instanceName);
   };
 
-  const login = (username, password, instanceName, host, port) => {
-    updateDefaultBaseURL({host, port});
-    return api.post('/j_acegi_security_check', serializeJSON({
-      j_username: username,
-      j_password: password,
-      from: '/'
-    }), {
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'}
-    })};
 
-  const startJob = (job) =>  api.post(`/job/${job}/build`);
 
   // ------
   // STEP 3
@@ -94,14 +83,14 @@ const create = (baseURL = 'http://') => {
     getQueAPI,
     getLoadAPI,
     getBuilds,
-    login,
+    startLogin,
     startJob,
     // additional utilities
     addMonitor
-  }
+  };
 };
 
 // let's return back our create method as the default.
 export default {
   create
-}
+};

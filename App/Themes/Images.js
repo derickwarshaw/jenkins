@@ -5,4 +5,4 @@ const images = {
   background: require('../Images/BG.png')
 };
 
-export default images
+export default images;

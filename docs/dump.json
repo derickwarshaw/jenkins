@@ -1,0 +1,4002 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Actions/Creators.js",
+    "memberof": null,
+    "longname": "App/Actions/Creators.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Types from './Types';\n\nconst attemptLogin = (username, password, instanceName, host, port) => ({ type: Types.LOGIN_ATTEMPT, username, password, instanceName, host, port });\nconst loginSuccess = (username, instanceName, host, port) => ({ type: Types.LOGIN_SUCCESS, username, instanceName, host, port });\nconst loginFailure = (errorCode) => ({ type: Types.LOGIN_FAILURE, errorCode });\n\nconst getJobs = () => ({ type: Types.GETJOBS_ATTEMPT });\nconst getJobsSuccess = (result) => ({ type: Types.GETJOBS_SUCCESS, result });\nconst getJobsFailure = (errorCode) => ({ type: Types.GETJOBS_FAILURE, errorCode });\n\nconst getBuilds = (job) => ({ type: Types.GETBUILDS_ATTEMPT, job });\nconst getBuildsSuccess = (result) => ({ type: Types.GETBUILDS_SUCCESS, result });\nconst getBuildsFailure = (errorCode) => ({ type: Types.GETBUILDS_FAILURE, errorCode });\n\nconst logout = () => ({ type: Types.LOGOUT });\n\nconst startup = () => ({ type: Types.STARTUP });\n\n/**\n Makes available all the action creators we've created.\n */\nexport default {\n  attemptLogin,\n  getBuilds,\n  getBuildsSuccess,\n  getBuildsFailure,\n  getJobs,\n  getJobsSuccess,\n  getJobsFailure,\n  loginSuccess,\n  loginFailure,\n  logout,\n  startup\n};\n"
+  },
+  {
+    "__docId__": 1,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "attemptLogin",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~attemptLogin",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 2,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loginSuccess",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~loginSuccess",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 3,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "loginFailure",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~loginFailure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getJobs",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getJobs",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getJobsSuccess",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getJobsSuccess",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getJobsFailure",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getJobsFailure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getBuilds",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getBuilds",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getBuildsSuccess",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getBuildsSuccess",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "getBuildsFailure",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~getBuildsFailure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "logout",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~logout",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "startup",
+    "memberof": "App/Actions/Creators.js",
+    "longname": "App/Actions/Creators.js~startup",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Actions/Creators.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Actions/Types.js",
+    "memberof": null,
+    "longname": "App/Actions/Types.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// A list of all actions in the system.\nimport { createTypes } from 'reduxsauce';\n\nexport default createTypes(`\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT\n\n  STARTUP\n`);\n"
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/AlertMessageComponent.js",
+    "memberof": null,
+    "longname": "App/Components/AlertMessageComponent.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport { View, Text } from 'react-native';\nimport styles from './Styles/AlertMessageComponentStyle';\nimport * as Animatable from 'react-native-animatable';\nimport { Metrics } from '../Themes/';\nimport Icon from 'react-native-vector-icons/Ionicons';\n\nexport default class AlertMessage extends React.Component {\n\n  static propTypes = {\n    style: React.PropTypes.object,\n    title: React.PropTypes.string.isRequired,\n    icon: React.PropTypes.string,\n    show: React.PropTypes.bool\n  };\n\n  static defaultProps = {\n    show: true\n  };\n\n  render () {\n    let messageComponent = null;\n    if (this.props.show) {\n      const { title } = this.props;\n      return (\n        <Animatable.View\n          style={[styles.container, this.props.style]}\n          delay={800}\n          animation='bounceIn'\n        >\n          <View style={styles.contentContainer}>\n            <Icon\n              name={this.props.icon || 'ios-alert'}\n              size={Metrics.icons.large}\n              style={styles.icon}\n            />\n            <Text allowFontScaling={false} style={styles.message}>{title && title.toUpperCase()}</Text>\n          </View>\n        </Animatable.View>\n      );\n    }\n\n    return messageComponent;\n  }\n}\n"
+  },
+  {
+    "__docId__": 14,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "AlertMessage",
+    "memberof": "App/Components/AlertMessageComponent.js",
+    "longname": "App/Components/AlertMessageComponent.js~AlertMessage",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Components/AlertMessageComponent.js",
+    "importStyle": "AlertMessage",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 15,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Components/AlertMessageComponent.js~AlertMessage",
+    "longname": "App/Components/AlertMessageComponent.js~AlertMessage#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 16,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/DrawerButton.js",
+    "memberof": null,
+    "longname": "App/Components/DrawerButton.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, { Component, PropTypes } from 'react';\nimport { Text, TouchableOpacity } from 'react-native';\nimport styles from './Styles/DrawerButtonStyles';\n\nclass DrawerButton extends Component {\n  render () {\n    return (\n      <TouchableOpacity onPress={this.props.onPress}>\n        <Text style={styles.text}>{this.props.text}</Text>\n      </TouchableOpacity>\n    );\n  }\n}\n\nDrawerButton.propTypes = {\n  text: PropTypes.string.isRequired,\n  onPress: PropTypes.func.isRequired\n};\n\nexport default DrawerButton;\n"
+  },
+  {
+    "__docId__": 17,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "DrawerButton",
+    "memberof": "App/Components/DrawerButton.js",
+    "longname": "App/Components/DrawerButton.js~DrawerButton",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Components/DrawerButton.js",
+    "importStyle": "DrawerButton",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 18,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Components/DrawerButton.js~DrawerButton",
+    "longname": "App/Components/DrawerButton.js~DrawerButton#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 19,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/FullButton.js",
+    "memberof": null,
+    "longname": "App/Components/FullButton.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport { TouchableOpacity, Text } from 'react-native';\nimport styles from './Styles/FullButtonStyle';\n\nexport default class FullButton extends React.Component {\n\n  static propTypes = {\n    text: React.PropTypes.string.isRequired,\n    onPress: React.PropTypes.func.isRequired,\n    styles: React.PropTypes.object\n  };\n\n  render () {\n    return (\n      <TouchableOpacity style={[styles.button, this.props.styles]} onPress={this.props.onPress}>\n        <Text style={styles.buttonText}>{this.props.text && this.props.text.toUpperCase()}</Text>\n      </TouchableOpacity>\n    );\n  }\n}\n"
+  },
+  {
+    "__docId__": 20,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "FullButton",
+    "memberof": "App/Components/FullButton.js",
+    "longname": "App/Components/FullButton.js~FullButton",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Components/FullButton.js",
+    "importStyle": "FullButton",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 21,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Components/FullButton.js~FullButton",
+    "longname": "App/Components/FullButton.js~FullButton#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 22,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/RoundedButton.js",
+    "memberof": null,
+    "longname": "App/Components/RoundedButton.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport { TouchableOpacity, Text } from 'react-native';\nimport styles from './Styles/RoundedButtonStyle';\n\nexport default class RoundedButton extends React.Component {\n\n  static propTypes = {\n    navigator: React.PropTypes.object,\n    text: React.PropTypes.string,\n    onPress: React.PropTypes.func.isRequired,\n    children: React.PropTypes.string\n  };\n\n  getText () {\n    const buttonText = this.props.text || this.props.children.toString();\n    return buttonText.toUpperCase();\n  }\n\n  render () {\n    return (\n      <TouchableOpacity style={styles.button} onPress={this.props.onPress}>\n        <Text style={styles.buttonText}>{this.getText()}</Text>\n      </TouchableOpacity>\n    );\n  }\n}\n"
+  },
+  {
+    "__docId__": 23,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "RoundedButton",
+    "memberof": "App/Components/RoundedButton.js",
+    "longname": "App/Components/RoundedButton.js~RoundedButton",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Components/RoundedButton.js",
+    "importStyle": "RoundedButton",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 24,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getText",
+    "memberof": "App/Components/RoundedButton.js~RoundedButton",
+    "longname": "App/Components/RoundedButton.js~RoundedButton#getText",
+    "access": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 25,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Components/RoundedButton.js~RoundedButton",
+    "longname": "App/Components/RoundedButton.js~RoundedButton#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 26,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/Styles/AlertMessageComponentStyle.js",
+    "memberof": null,
+    "longname": "App/Components/Styles/AlertMessageComponentStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Colors, Metrics, Fonts } from '../../Themes/';\n\nexport default StyleSheet.create({\n  container: {\n    justifyContent: 'center',\n    marginVertical: Metrics.section\n  },\n  contentContainer: {\n    alignSelf: 'center',\n    alignItems: 'center'\n  },\n  message: {\n    marginTop: Metrics.baseMargin,\n    marginHorizontal: Metrics.baseMargin,\n    textAlign: 'center',\n    fontFamily: Fonts.base,\n    fontSize: Fonts.size.regular,\n    fontWeight: 'bold',\n    color: Colors.steel\n  },\n  icon: {\n    color: Colors.steel\n  }\n});\n"
+  },
+  {
+    "__docId__": 27,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/Styles/DrawerButtonStyles.js",
+    "memberof": null,
+    "longname": "App/Components/Styles/DrawerButtonStyles.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { Metrics, Colors, Fonts } from '../../Themes';\n\nexport default {\n  text: {\n    ...Fonts.style.h5,\n    color: Colors.snow,\n    marginVertical: Metrics.baseMargin\n  }\n};\n"
+  },
+  {
+    "__docId__": 28,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/Styles/FullButtonStyle.js",
+    "memberof": null,
+    "longname": "App/Components/Styles/FullButtonStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Fonts, Colors } from '../../Themes/';\n\nexport default StyleSheet.create({\n  button: {\n    marginVertical: 5,\n    borderTopColor: Colors.fire,\n    borderBottomColor: Colors.bloodOrange,\n    borderTopWidth: 1,\n    borderBottomWidth: 1,\n    backgroundColor: Colors.ember\n  },\n  buttonText: {\n    margin: 18,\n    textAlign: 'center',\n    color: Colors.snow,\n    fontSize: Fonts.size.medium,\n    fontFamily: Fonts.bold\n  }\n});\n"
+  },
+  {
+    "__docId__": 29,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Components/Styles/RoundedButtonStyle.js",
+    "memberof": null,
+    "longname": "App/Components/Styles/RoundedButtonStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "'use strict';\n\nimport { StyleSheet } from 'react-native';\nimport { Fonts, Colors, Metrics } from '../../Themes/';\n\nexport default StyleSheet.create({\n  button: {\n    height: 45,\n    borderRadius: 5,\n    marginHorizontal: Metrics.section,\n    marginVertical: Metrics.baseMargin,\n    backgroundColor: Colors.fire,\n    justifyContent: 'center'\n  },\n  buttonText: {\n    color: Colors.snow,\n    textAlign: 'center',\n    fontWeight: 'bold',\n    fontSize: Fonts.size.medium,\n    marginVertical: Metrics.baseMargin\n  }\n});\n"
+  },
+  {
+    "__docId__": 30,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Config/DebugSettings.js",
+    "memberof": null,
+    "longname": "App/Config/DebugSettings.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const SETTINGS = {\n  useFixtures: false,\n  ezLogin: false,\n  yellowBox: __DEV__,\n  reduxLogging: true,\n  includeExamples: __DEV__\n};\n\nexport default SETTINGS;\n"
+  },
+  {
+    "__docId__": 31,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SETTINGS",
+    "memberof": "App/Config/DebugSettings.js",
+    "longname": "App/Config/DebugSettings.js~SETTINGS",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Config/DebugSettings.js",
+    "importStyle": "SETTINGS",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Config/PushConfig.js",
+    "memberof": null,
+    "longname": "App/Config/PushConfig.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import PushNotification from 'react-native-push-notification';\n\n// https://github.com/zo0r/react-native-push-notification\nPushNotification.configure({\n\n  // (optional) Called when Token is generated (iOS and Android)\n  onRegister: (token) => {\n    if (__DEV__) {\n      console.log('TOKEN:', token);\n    }\n  },\n\n  // (required) Called when a remote or local notification is opened or received\n  onNotification: (notification) => {\n    if (__DEV__) {\n      console.log('NOTIFICATION:', notification);\n    }\n  },\n\n  // ANDROID ONLY: (optional) GCM Sender ID.\n  senderID: 'YOUR GCM SENDER ID',\n\n  // IOS ONLY (optional): default: all - Permissions to register.\n  permissions: {\n    alert: true,\n    badge: true,\n    sound: true\n  },\n\n  // Should the initial notification be popped automatically\n  // default: true\n  // Leave this off unless you have good reason.\n  popInitialNotification: false,\n\n  /**\n    * IOS ONLY: (optional) default: true\n    * - Specified if permissions will requested or not,\n    * - if not, you must call PushNotificationsHandler.requestPermissions() later\n    * This example app shows how to best call requestPermissions() later.\n    */\n  requestPermissions: false\n});\n"
+  },
+  {
+    "__docId__": 33,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Config/ReduxPersist.js",
+    "memberof": null,
+    "longname": "App/Config/ReduxPersist.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import immutablePersistenceTransform from '../Store/ImmutablePersistenceTransform';\nimport { persistentStoreBlacklist } from '../Reducers/';\nimport { AsyncStorage } from 'react-native';\n\nconst REDUX_PERSIST = {\n  active: true,\n  reducerVersion: '1',\n  storeConfig: {\n    storage: AsyncStorage,\n    blacklist: persistentStoreBlacklist,\n    transforms: [immutablePersistenceTransform]\n  }\n};\n\nexport default REDUX_PERSIST;\n"
+  },
+  {
+    "__docId__": 34,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "REDUX_PERSIST",
+    "memberof": "App/Config/ReduxPersist.js",
+    "longname": "App/Config/ReduxPersist.js~REDUX_PERSIST",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Config/ReduxPersist.js",
+    "importStyle": "REDUX_PERSIST",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/BuildListScreen.js",
+    "memberof": null,
+    "longname": "App/Containers/BuildListScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React from 'react';\nimport { View, Text, ListView, TouchableHighlight } from 'react-native';\nimport { connect } from 'react-redux';\n\n// For empty lists\nimport AlertMessage from '../Components/AlertMessageComponent';\n\n// Styles\nimport styles from './Styles/BuildListStyle';\n\nclass BuildListScreen extends React.Component {\n\n  constructor (props) {\n    super(props);\n    /* ***********************************************************\n     * STEP 1\n     * This is an array of objects with the properties you desire\n     * Usually this should come from Redux mapStateToProps\n     *************************************************************/\n\n\n    /* ***********************************************************\n     * STEP 2\n     * Teach datasource how to detect if rows are different\n     * Make this function fast!  Perhaps something like:\n     *   (r1, r2) => r1.id !== r2.id}\n     *************************************************************/\n    const rowHasChanged = (r1, r2) => r1 !== r2;\n\n    // DataSource configured\n    const ds = new ListView.DataSource({rowHasChanged});\n\n    // Datasource is always in state\n    this.state = {\n      dataSource: ds.cloneWithRows(props.dataObjects)\n    };\n  }\n\n  componentWillReceiveProps(nextProps) {\n    if (nextProps.builds.data) {\n      this.setState({\n        dataSource: this.state.dataSource.cloneWithRows(nextProps.builds.data)\n      });\n    }\n  }\n\n  /* ***********************************************************\n   * STEP 3\n   * `_renderRow` function -How each cell/row should be rendered\n   * It's our best practice to place a single component here:\n   *\n   * e.g.\n   return <MyCustomCell title={rowData.title} description={rowData.description} />\n   *************************************************************/\n  _renderRow (rowData) {\n    return (\n      <TouchableHighlight>\n      <View style={styles.row}>\n        <Text style={styles.boldLabel}>{rowData.number}</Text>\n        <Text style={styles.label}>{rowData.result}</Text>\n      </View>\n        </TouchableHighlight>\n    );\n  }\n\n  /* ***********************************************************\n   * STEP 4\n   * If your datasource is driven by Redux, you'll need to\n   * reset it when new data arrives.\n   * DO NOT! place `cloneWithRows` inside of render, since render\n   * is called very often, and should remain fast!  Just replace\n   * state's datasource on newProps.\n   *\n   * e.g.\n   componentWillReceiveProps (newProps) {\n   if (newProps.someData) {\n   this.setState({\n   dataSource: this.state.dataSource.cloneWithRows(newProps.someData)\n   })\n   }\n   }\n   *************************************************************/\n\n  // Used for friendly AlertMessage\n  // returns true if the dataSource is empty\n  _noRowData () {\n    return this.state.dataSource.getRowCount() === 0;\n  }\n\n  render () {\n    return (\n      <View style={styles.container}>\n        <AlertMessage title='Nothing to See Here, Move Along' show={this._noRowData()} />\n        <ListView\n          contentContainerStyle={styles.listContent}\n          dataSource={this.state.dataSource}\n          renderRow={this._renderRow}\n        />\n      </View>\n    );\n  }\n}\n\nconst mapStateToProps = (state) => {\n  return {\n    dataObjects: state.builds.data\n  };\n};\n\nexport default connect(mapStateToProps)(BuildListScreen);\n"
+  },
+  {
+    "__docId__": 36,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "BuildListScreen",
+    "memberof": "App/Containers/BuildListScreen.js",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/BuildListScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 37,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 38,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "state",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillReceiveProps",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#componentWillReceiveProps",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "params": [
+      {
+        "name": "nextProps",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 40,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "_renderRow",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#_renderRow",
+    "access": null,
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "params": [
+      {
+        "name": "rowData",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 41,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "_noRowData",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#_noRowData",
+    "access": null,
+    "description": null,
+    "lineNumber": 86,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 42,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/BuildListScreen.js~BuildListScreen",
+    "longname": "App/Containers/BuildListScreen.js~BuildListScreen#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 43,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapStateToProps",
+    "memberof": "App/Containers/BuildListScreen.js",
+    "longname": "App/Containers/BuildListScreen.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/BuildListScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 104,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 44,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/DeviceInfoScreen.js",
+    "memberof": null,
+    "longname": "App/Containers/DeviceInfoScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// An All Components Screen is a great way to dev and quick-test components\nimport React from 'react';\nimport { View, ScrollView, Text, Image } from 'react-native';\nimport DeviceInfo from 'react-native-device-info';\nimport { Metrics, Images } from '../Themes';\n\nimport styles from './Styles/DeviceInfoScreenStyle';\n\nconst HARDWARE_DATA = [\n  {title: 'Device Manufacturer', info: DeviceInfo.getManufacturer()},\n  {title: 'Device Name', info: DeviceInfo.getDeviceName()},\n  {title: 'Device Model', info: DeviceInfo.getModel()},\n  {title: 'Device Unique ID', info: DeviceInfo.getUniqueID()},\n  {title: 'Device Locale', info: DeviceInfo.getDeviceLocale()},\n  {title: 'Device Country', info: DeviceInfo.getDeviceCountry()},\n  {title: 'User Agent', info: DeviceInfo.getUserAgent()},\n  {title: 'Screen Width', info: Metrics.screenWidth},\n  {title: 'Screen Height', info: Metrics.screenHeight}\n];\n\nconst OS_DATA = [\n  {title: 'Device System Name', info: DeviceInfo.getSystemName()},\n  {title: 'Device ID', info: DeviceInfo.getDeviceId()},\n  {title: 'Device Version', info: DeviceInfo.getSystemVersion()}\n];\n\nconst APP_DATA = [\n  {title: 'Bundle Id', info: DeviceInfo.getBundleId()},\n  {title: 'Build Number', info: DeviceInfo.getBuildNumber()},\n  {title: 'App Version', info: DeviceInfo.getVersion()},\n  {title: 'App Version (Readable)', info: DeviceInfo.getReadableVersion()}\n];\n\nexport default class DeviceInfoScreen extends React.Component {\n  static propTypes = {\n  };\n\n  renderCard (cardTitle, rowData) {\n    return (\n      <View style={styles.cardContainer}>\n        <Text style={styles.cardTitle}>{cardTitle.toUpperCase()}</Text>\n        {this.renderRows(rowData)}\n      </View>\n    );\n  }\n\n  renderRows (rowData) {\n    return rowData.map((cell) => {\n      const {title, info} = cell;\n      return (\n        <View key={title} style={styles.rowContainer}>\n          <View style={styles.rowLabelContainer}>\n            <Text style={styles.rowLabel}>{title}</Text>\n          </View>\n          <View style={styles.rowInfoContainer}>\n            <Text style={styles.rowInfo}>{info}</Text>\n          </View>\n        </View>\n      );\n    });\n  }\n\n  render () {\n    return (\n      <View style={styles.mainContainer}>\n        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />\n        <ScrollView style={styles.container}>\n          <View style={styles.section}>\n            <Text style={styles.sectionText} >\n              Dedicated to identifying specifics of the device.  All info useful for identifying outlying behaviour specific to a device.\n            </Text>\n          </View>\n          {this.renderCard('Device Hardware', HARDWARE_DATA)}\n          {this.renderCard('Device OS', OS_DATA)}\n          {this.renderCard('App Info', APP_DATA)}\n        </ScrollView>\n      </View>\n    );\n  }\n}\n"
+  },
+  {
+    "__docId__": 45,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "HARDWARE_DATA",
+    "memberof": "App/Containers/DeviceInfoScreen.js",
+    "longname": "App/Containers/DeviceInfoScreen.js~HARDWARE_DATA",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/DeviceInfoScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "OS_DATA",
+    "memberof": "App/Containers/DeviceInfoScreen.js",
+    "longname": "App/Containers/DeviceInfoScreen.js~OS_DATA",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/DeviceInfoScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 47,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "APP_DATA",
+    "memberof": "App/Containers/DeviceInfoScreen.js",
+    "longname": "App/Containers/DeviceInfoScreen.js~APP_DATA",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/DeviceInfoScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 48,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "DeviceInfoScreen",
+    "memberof": "App/Containers/DeviceInfoScreen.js",
+    "longname": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Containers/DeviceInfoScreen.js",
+    "importStyle": "DeviceInfoScreen",
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "renderCard",
+    "memberof": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen",
+    "longname": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen#renderCard",
+    "access": null,
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "params": [
+      {
+        "name": "cardTitle",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "rowData",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "renderRows",
+    "memberof": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen",
+    "longname": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen#renderRows",
+    "access": null,
+    "description": null,
+    "lineNumber": 47,
+    "undocument": true,
+    "params": [
+      {
+        "name": "rowData",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 51,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen",
+    "longname": "App/Containers/DeviceInfoScreen.js~DeviceInfoScreen#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 52,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/DrawerContent.js",
+    "memberof": null,
+    "longname": "App/Containers/DrawerContent.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, { Component } from 'react';\nimport { ScrollView, Image } from 'react-native';\nimport styles from './Styles/DrawerContentStyle';\nimport { Images } from '../Themes';\nimport DrawerButton from '../Components/DrawerButton';\nimport { Actions as NavigationActions } from 'react-native-router-flux';\n\nclass DrawerContent extends Component {\n\n  toggleDrawer () {\n    this.context.drawer.toggle();\n  }\n\n  handlePressHome = () => {\n    this.toggleDrawer();\n    NavigationActions.homeScreen();\n  };\n\n  handlePressJobs = () => {\n    this.toggleDrawer();\n    NavigationActions.jobList();\n  };\n\n  handlePressDevice = () => {\n    this.toggleDrawer();\n    NavigationActions.deviceInfo();\n  };\n\n  handlePressLogin = () => {\n    this.toggleDrawer();\n    NavigationActions.login();\n  };\n\n  handlePressBuildList = () => {\n    this.toggleDrawer();\n    NavigationActions.buildList();\n  };\n\n  render () {\n    return (\n      <ScrollView style={styles.container}>\n        <Image source={Images.logo} style={styles.logo} />\n        <DrawerButton text='Home Screen' onPress={this.handlePressHome} />\n        <DrawerButton text='Jobs' onPress={this.handlePressJobs} />\n        <DrawerButton text='Device Info' onPress={this.handlePressDevice} />\n        <DrawerButton text='Login' onPress={this.handlePressLogin} />\n        <DrawerButton text='Build List' onPress={this.handlePressBuildList} />\n      </ScrollView>\n    );\n  }\n\n}\n\nDrawerContent.propTypes = {\n};\n\nDrawerContent.contextTypes = {\n  drawer: React.PropTypes.object\n};\n\nexport default DrawerContent;\n"
+  },
+  {
+    "__docId__": 53,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "DrawerContent",
+    "memberof": "App/Containers/DrawerContent.js",
+    "longname": "App/Containers/DrawerContent.js~DrawerContent",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Containers/DrawerContent.js",
+    "importStyle": "DrawerContent",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 54,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "toggleDrawer",
+    "memberof": "App/Containers/DrawerContent.js~DrawerContent",
+    "longname": "App/Containers/DrawerContent.js~DrawerContent#toggleDrawer",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/DrawerContent.js~DrawerContent",
+    "longname": "App/Containers/DrawerContent.js~DrawerContent#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 56,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/HomeScreen.js",
+    "memberof": null,
+    "longname": "App/Containers/HomeScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, {PropTypes} from 'react';\nimport { ScrollView, Text, Image, View } from 'react-native';\nimport { Images } from '../Themes';\nimport { connect } from 'react-redux';\nimport RoundedButton from '../Components/RoundedButton';\nimport { Actions as NavigationActions } from 'react-native-router-flux';\n\n// Styles\nimport styles from './Styles/PresentationScreenStyle';\n\nclass HomeScreen extends React.Component {\n\n  static propTypes = {\n    login: PropTypes.func,\n    username: PropTypes.string,\n    instanceName: PropTypes.string,\n    host: PropTypes.string,\n    jobList: PropTypes.func,\n    port: PropTypes.string,\n    path: PropTypes.string\n\n  };\n\n  render () {\n    const instanceName = this.props.instanceName;\n\n    return (\n      <View style={styles.mainContainer}>\n        <Image source={Images.background} style={styles.backgroundImage} resizeMode='stretch' />\n        <ScrollView style={styles.container}>\n          <View style={styles.centered}>\n            <Image source={Images.clearLogo} style={styles.logo} />\n          </View>\n\n          <View style={styles.section} >\n            <Text style={styles.sectionText} >\n              Your Jenkins Instances\n            </Text>\n            <View>\n              <Text style={styles.sectionText} onPress={this.props.jobList} >\n                {instanceName}\n              </Text>\n            </View>\n          </View>\n\n          <RoundedButton onPress={this.props.login}>\n            Add Jenkins Instance\n          </RoundedButton>\n\n        </ScrollView>\n      </View>\n    );\n  }\n}\n\nconst mapStateToProps = (state) => {\n  return {\n    username: state.login.username,\n    instanceName: state.login.instanceName,\n    host: state.login.host,\n    port: state.login.port,\n    path: state.login.path\n  };\n};\n\nconst mapDispatchToProps = (dispatch) => {\n  return {\n    login: NavigationActions.login,\n    jobList: NavigationActions.jobList\n\n  };\n};\n\nexport default connect(mapStateToProps, mapDispatchToProps)(HomeScreen);\n"
+  },
+  {
+    "__docId__": 57,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "HomeScreen",
+    "memberof": "App/Containers/HomeScreen.js",
+    "longname": "App/Containers/HomeScreen.js~HomeScreen",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/HomeScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/HomeScreen.js~HomeScreen",
+    "longname": "App/Containers/HomeScreen.js~HomeScreen#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 59,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapStateToProps",
+    "memberof": "App/Containers/HomeScreen.js",
+    "longname": "App/Containers/HomeScreen.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/HomeScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapDispatchToProps",
+    "memberof": "App/Containers/HomeScreen.js",
+    "longname": "App/Containers/HomeScreen.js~mapDispatchToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/HomeScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/JobListScreen.js",
+    "memberof": null,
+    "longname": "App/Containers/JobListScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, {PropTypes} from 'react';\nimport { View, Text, ListView, TouchableHighlight } from 'react-native';\nimport { connect } from 'react-redux';\nimport Actions from '../Actions/Creators';\nimport { Actions as NavigationActions } from 'react-native-router-flux';\n\n// For empty lists\nimport AlertMessage from '../Components/AlertMessageComponent';\n\n// Styles\nimport styles from './Styles/JobListStyle';\n\nclass JobListScreen extends React.Component {\n\n  static propTypes = {\n    jobs: PropTypes.object,\n    builds: PropTypes.object,\n    buildList: PropTypes.func,\n    dispatch: PropTypes.func,\n    getBuilds: PropTypes.func\n  };\n\n  constructor (props) {\n    super(props);\n\n    /* ***********************************************************\n     * STEP 1\n     * This is an array of objects with the properties you desire\n     * Usually this should come from Redux mapStateToProps\n     *************************************************************/\n\n\n    /* ***********************************************************\n     * STEP 2\n     * Teach datasource how to detect if rows are different\n     * Make this function fast!  Perhaps something like:\n     *   (r1, r2) => r1.id !== r2.id}\n     *************************************************************/\n    const rowHasChanged = (r1, r2) => r1 !== r2;\n\n    // DataSource configured\n    const ds = new ListView.DataSource({rowHasChanged});\n\n    // Datasource is always in state\n    this.state = {\n      dataSource: ds.cloneWithRows(props.dataObjects)\n    };\n  }\n\n  componentWillReceiveProps(nextProps) {\n    if (nextProps.jobs.data) {\n      this.setState({\n        dataSource: this.state.dataSource.cloneWithRows(nextProps.jobs.data)\n      });\n    }\n\n    if (nextProps.builds.loaded) {\n      NavigationActions.buildList();\n    }\n  }\n\n  getBuilds(name) {\n    this.props.getBuilds(name);\n  }\n\n  /* ***********************************************************\n   * STEP 3\n   * `_renderRow` function -How each cell/row should be rendered\n   * It's our best practice to place a single component here:\n   *\n   * e.g.\n   return <MyCustomCell title={rowData.title} description={rowData.description} />\n   *************************************************************/\n  _renderRow (rowData) {\n    return (\n      <TouchableHighlight onPress={() => this.getBuilds(rowData.name)}>\n      <View style={styles.row} >\n        <Text style={styles.boldLabel}>{rowData.name}</Text>\n        <Text style={styles.label}>{rowData.color}</Text>\n      </View>\n      </TouchableHighlight>\n    );\n  }\n\n  /* ***********************************************************\n   * STEP 4\n   * If your datasource is driven by Redux, you'll need to\n   * reset it when new data arrives.\n   * DO NOT! place `cloneWithRows` inside of render, since render\n   * is called very often, and should remain fast!  Just replace\n   * state's datasource on newProps.\n   *\n   * e.g.\n   componentWillReceiveProps (newProps) {\n   if (newProps.someData) {\n   this.setState({\n   dataSource: this.state.dataSource.cloneWithRows(newProps.someData)\n   })\n   }\n   }\n   *************************************************************/\n\n  // Used for friendly AlertMessage\n  // returns true if the dataSource is empty\n  _noRowData () {\n    return this.state.dataSource.getRowCount() === 0;\n  }\n\n  render () {\n    return (\n      <View style={styles.container}>\n        <AlertMessage title='Nothing to See Here, Move Along' show={this._noRowData()} />\n        <ListView\n          contentContainerStyle={styles.listContent}\n          dataSource={this.state.dataSource}\n          renderRow={this._renderRow.bind(this)}\n        />\n      </View>\n    );\n  }\n}\n\nconst mapStateToProps = (state) => {\n  return {\n    jobs: state.jobs.data,\n    dataObjects: state.jobs.data,\n    builds: state.builds,\n    buildList: NavigationActions.buildList\n  };\n};\n\nconst mapDispatchToProps = (dispatch) => {\n  return {\n    getBuilds: (jobName) => dispatch(Actions.getBuilds(jobName))\n  };\n};\n\nexport default connect(mapStateToProps, mapDispatchToProps)(JobListScreen);\n"
+  },
+  {
+    "__docId__": 62,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "JobListScreen",
+    "memberof": "App/Containers/JobListScreen.js",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/JobListScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 63,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "state",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillReceiveProps",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#componentWillReceiveProps",
+    "access": null,
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "params": [
+      {
+        "name": "nextProps",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 66,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "getBuilds",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#getBuilds",
+    "access": null,
+    "description": null,
+    "lineNumber": 62,
+    "undocument": true,
+    "params": [
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 67,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "_renderRow",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#_renderRow",
+    "access": null,
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "params": [
+      {
+        "name": "rowData",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "_noRowData",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#_noRowData",
+    "access": null,
+    "description": null,
+    "lineNumber": 105,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/JobListScreen.js~JobListScreen",
+    "longname": "App/Containers/JobListScreen.js~JobListScreen#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 109,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 70,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapStateToProps",
+    "memberof": "App/Containers/JobListScreen.js",
+    "longname": "App/Containers/JobListScreen.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/JobListScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapDispatchToProps",
+    "memberof": "App/Containers/JobListScreen.js",
+    "longname": "App/Containers/JobListScreen.js~mapDispatchToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/JobListScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 132,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 72,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/LoginScreen.js",
+    "memberof": null,
+    "longname": "App/Containers/LoginScreen.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, {PropTypes} from 'react';\nimport {\n  View,\n  ScrollView,\n  Text,\n  TextInput,\n  TouchableOpacity,\n  Image,\n  Keyboard,\n  LayoutAnimation\n} from 'react-native';\nimport { connect } from 'react-redux';\nimport Styles from './Styles/LoginScreenStyle';\nimport Actions from '../Actions/Creators';\nimport {Images, Metrics} from '../Themes';\nimport { Actions as NavigationActions } from 'react-native-router-flux';\n\n// I18n\nimport I18n from '../I18n/I18n.js';\n\nclass LoginScreen extends React.Component {\n\n  constructor (props) {\n    super(props);\n    this.state = {\n      username: '',\n      password: '',\n      instanceName: '',\n      host: '',\n      port: '',\n      visibleHeight: Metrics.screenHeight,\n      topLogo: { width: Metrics.screenWidth }\n    };\n    this.isAttempting = false;\n  }\n\n  componentWillReceiveProps (newProps) {\n    this.forceUpdate();\n    // Did the login attempt complete?\n    if (this.isAttempting && !newProps.attempting && newProps.loginSuccess) {\n      console.log(newProps);\n      this.props.close();\n    }\n  }\n\n  componentWillMount () {\n    // Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android\n    // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468\n    this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);\n    this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);\n  }\n\n  componentWillUnmount () {\n    this.keyboardDidShowListener.remove();\n    this.keyboardDidHideListener.remove();\n  }\n\n  keyboardDidShow = (e) => {\n    // Animation types easeInEaseOut/linear/spring\n    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);\n    let newSize = Metrics.screenHeight - e.endCoordinates.height;\n    this.setState({\n      visibleHeight: newSize,\n      topLogo: {width: 100, height: 70}\n    });\n  };\n\n  keyboardDidHide = (e) => {\n    // Animation types easeInEaseOut/linear/spring\n    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);\n    this.setState({\n      visibleHeight: Metrics.screenHeight,\n      topLogo: {width: Metrics.screenWidth}\n    });\n  };\n\n  handlePressLogin = () => {\n    const { username, password, instanceName, host, port } = this.state;\n    this.isAttempting = true;\n    // attempt a login - a saga is listening to pick it up from here.\n    this.props.attemptLogin(username, password, instanceName, host, port );\n  };\n\n  handleChangeUsername = (text) => {\n    this.setState({ username: text });\n  };\n\n  handleChangePassword = (text) => {\n    this.setState({ password: text });\n  };\n\n  handleChangeInstanceName = (text) => {\n    this.setState({ instanceName: text });\n  };\n\n  handleChangeHost = (text) => {\n    this.setState({ host: text });\n  };\n\n  handleChangePort = (text) => {\n    this.setState({ port: text });\n  };\n\n  render () {\n    const { username, password, instanceName, host, port } = this.state;\n    const { attempting } = this.props;\n    const editable = !attempting;\n    const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly;\n    return (\n      <ScrollView contentContainerStyle={{justifyContent: 'center'}} style={[Styles.container, {height: this.state.visibleHeight}]}>\n        <Image source={Images.logo} style={[Styles.topLogo, this.state.topLogo]} />\n        <View style={Styles.form}>\n          <View style={Styles.row}>\n            <Text style={Styles.rowLabel}>{I18n.t('instanceName')}</Text>\n            <TextInput\n              ref='instanceName'\n              autoCapitalize=\"none\"\n              style={textInputStyle}\n              value={instanceName}\n              editable={editable}\n              keyboardType='default'\n              returnKeyType='next'\n              onChangeText={this.handleChangeInstanceName}\n              underlineColorAndroid='transparent'\n              onSubmitEditing={() => this.refs.instanceName.focus()}\n              placeholder={I18n.t('instanceName')} />\n          </View>\n\n          <View style={Styles.row}>\n            <Text style={Styles.rowLabel}>{I18n.t('host')}</Text>\n            <TextInput\n              ref='host'\n              autoCapitalize=\"none\"\n              style={textInputStyle}\n              value={host}\n              editable={editable}\n              keyboardType='default'\n              returnKeyType='next'\n              onChangeText={this.handleChangeHost}\n              underlineColorAndroid='transparent'\n              onSubmitEditing={() => this.refs.host.focus()}\n              placeholder={I18n.t('host')} />\n          </View>\n\n          <View style={Styles.row}>\n            <Text style={Styles.rowLabel}>{I18n.t('port')}</Text>\n            <TextInput\n              ref='port'\n              autoCapitalize=\"none\"\n              style={textInputStyle}\n              value={port}\n              editable={editable}\n              keyboardType='default'\n              returnKeyType='next'\n              onChangeText={this.handleChangePort}\n              underlineColorAndroid='transparent'\n              onSubmitEditing={() => this.refs.port.focus()}\n              placeholder={I18n.t('port')} />\n          </View>\n\n          <View style={Styles.row}>\n            <Text style={Styles.rowLabel}>{I18n.t('username')}</Text>\n            <TextInput\n              ref='username'\n              autoCapitalize=\"none\"\n              style={textInputStyle}\n              value={username}\n              editable={editable}\n              keyboardType='default'\n              returnKeyType='next'\n              onChangeText={this.handleChangeUsername}\n              underlineColorAndroid='transparent'\n              onSubmitEditing={() => this.refs.password.focus()}\n              placeholder={I18n.t('username')} />\n          </View>\n\n          <View style={Styles.row}>\n            <Text style={Styles.rowLabel}>{I18n.t('password')}</Text>\n            <TextInput\n              ref='password'\n              autoCapitalize=\"none\"\n              style={textInputStyle}\n              value={password}\n              editable={editable}\n              keyboardType='default'\n              returnKeyType='go'\n              secureTextEntry\n              onChangeText={this.handleChangePassword}\n              underlineColorAndroid='transparent'\n              onSubmitEditing={this.handlePressLogin}\n              placeholder={I18n.t('password')} />\n          </View>\n\n          <View style={[Styles.loginRow]}>\n            <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}>\n              <View style={Styles.loginButton}>\n                <Text style={Styles.loginText}>{I18n.t('signIn')}</Text>\n              </View>\n            </TouchableOpacity>\n            <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.props.close}>\n              <View style={Styles.loginButton}>\n                <Text style={Styles.loginText}>{I18n.t('cancel')}</Text>\n              </View>\n            </TouchableOpacity>\n          </View>\n        </View>\n\n      </ScrollView>\n    );\n  }\n\n}\n\nLoginScreen.propTypes = {\n  dispatch: PropTypes.func,\n  attempting: PropTypes.bool,\n  close: PropTypes.func,\n  attemptLogin: PropTypes.func,\n  loginFail: PropTypes.bool,\n  loginSuccess: PropTypes.bool\n};\n\nconst mapStateToProps = (state) => {\n  return {\n    attempting: state.login.attempting,\n    username: state.login.username,\n    jobs: state.jobs.data,\n    loginSuccess: state.login.loginSuccess,\n    loginFail: state.login.fail\n  };\n};\n\nconst mapDispatchToProps = (dispatch) => {\n  return {\n    close: NavigationActions.pop,\n    attemptLogin: (username, password, instanceName, host, port) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port))\n  };\n};\n\nexport default connect(mapStateToProps, mapDispatchToProps)(LoginScreen);\n"
+  },
+  {
+    "__docId__": 73,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "LoginScreen",
+    "memberof": "App/Containers/LoginScreen.js",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/LoginScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 74,
+    "kind": "constructor",
+    "static": false,
+    "variation": null,
+    "name": "constructor",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 75,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "state",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 76,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "isAttempting",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#isAttempting",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillReceiveProps",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#componentWillReceiveProps",
+    "access": null,
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "params": [
+      {
+        "name": "newProps",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "generator": false
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillMount",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 79,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "keyboardDidShowListener",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#keyboardDidShowListener",
+    "access": null,
+    "description": null,
+    "lineNumber": 49,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 80,
+    "kind": "member",
+    "static": false,
+    "variation": null,
+    "name": "keyboardDidHideListener",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#keyboardDidHideListener",
+    "access": null,
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 81,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillUnmount",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 53,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 82,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Containers/LoginScreen.js~LoginScreen",
+    "longname": "App/Containers/LoginScreen.js~LoginScreen#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 104,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 83,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapStateToProps",
+    "memberof": "App/Containers/LoginScreen.js",
+    "longname": "App/Containers/LoginScreen.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/LoginScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 223,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapDispatchToProps",
+    "memberof": "App/Containers/LoginScreen.js",
+    "longname": "App/Containers/LoginScreen.js~mapDispatchToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Containers/LoginScreen.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 233,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/APITestingScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/APITestingScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { ApplicationStyles } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen\n});\n"
+  },
+  {
+    "__docId__": 86,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/AddJenkinsInstanceScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/AddJenkinsInstanceScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Colors, Metrics } from '../../Themes';\n\nexport default StyleSheet.create({\n  container: {\n    paddingTop: 70,\n    backgroundColor: Colors.background\n  },\n  form: {\n    backgroundColor: Colors.snow,\n    margin: Metrics.baseMargin,\n    borderRadius: 4\n  },\n  row: {\n    paddingVertical: Metrics.doubleBaseMargin,\n    paddingHorizontal: Metrics.doubleBaseMargin\n  },\n  rowLabel: {\n    color: Colors.charcoal\n  },\n  textInput: {\n    height: 40,\n    color: Colors.coal\n  },\n  textInputReadonly: {\n    height: 40,\n    color: Colors.steel\n  },\n  loginRow: {\n    paddingBottom: Metrics.doubleBaseMargin,\n    paddingHorizontal: Metrics.doubleBaseMargin,\n    flexDirection: 'row'\n  },\n  loginButtonWrapper: {\n    flex: 1\n  },\n  loginButton: {\n    flex: 1,\n    borderWidth: 1,\n    borderColor: Colors.charcoal,\n    backgroundColor: Colors.panther,\n    padding: 6\n  },\n  loginText: {\n    textAlign: 'center',\n    color: Colors.silver\n  },\n  topLogo: {\n    alignSelf: 'center',\n    resizeMode: 'contain'\n  }\n});\n"
+  },
+  {
+    "__docId__": 87,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/AllComponentsScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/AllComponentsScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { ApplicationStyles } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  groupContainer: {\n    ...ApplicationStyles.groupContainer\n  }\n});\n"
+  },
+  {
+    "__docId__": 88,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/BuildListStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/BuildListStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { ApplicationStyles, Metrics, Colors } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  container: {\n    flex: 1,\n    marginTop: Metrics.navBarHeight,\n    backgroundColor: Colors.background\n  },\n  row: {\n    flex: 1,\n    backgroundColor: Colors.fire,\n    marginVertical: Metrics.smallMargin,\n    justifyContent: 'center'\n  },\n  boldLabel: {\n    fontWeight: 'bold',\n    alignSelf: 'center',\n    color: Colors.snow,\n    textAlign: 'center',\n    marginBottom: Metrics.smallMargin\n  },\n  label: {\n    textAlign: 'center',\n    color: Colors.snow\n  },\n  listContent: {\n    marginTop: Metrics.baseMargin\n  }\n});\n"
+  },
+  {
+    "__docId__": 89,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/DeviceInfoScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/DeviceInfoScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Colors, Metrics, Fonts, ApplicationStyles } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  cardTitle: {\n    alignSelf: 'center',\n    fontSize: Fonts.size.regular,\n    fontWeight: 'bold',\n    marginVertical: Metrics.baseMargin,\n    color: Colors.snow\n  },\n  cardContainer: {\n    backgroundColor: Colors.ember,\n    borderColor: 'black',\n    borderWidth: 1,\n    borderRadius: 2,\n    shadowColor: Colors.panther,\n    shadowOffset: {\n      height: 7,\n      width: 7\n    },\n    shadowRadius: 2,\n    paddingBottom: Metrics.baseMargin,\n    margin: Metrics.baseMargin\n  },\n  rowContainer: {\n    flexDirection: 'row',\n    borderColor: Colors.windowTint,\n    borderWidth: 0.5,\n    borderRadius: 2,\n    marginHorizontal: Metrics.baseMargin\n  },\n  rowLabelContainer: {\n    flex: 1,\n    justifyContent: 'center',\n    backgroundColor: Colors.snow\n  },\n  rowLabel: {\n    fontWeight: 'bold',\n    fontSize: Fonts.size.medium,\n    marginVertical: Metrics.baseMargin,\n    marginLeft: Metrics.baseMargin\n  },\n  rowInfoContainer: {\n    flex: 2,\n    justifyContent: 'center',\n    backgroundColor: Colors.silver\n  },\n  rowInfo: {\n    fontSize: Fonts.size.regular,\n    margin: Metrics.baseMargin\n  }\n});\n"
+  },
+  {
+    "__docId__": 90,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/DrawerContentStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/DrawerContentStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  container: {\n    flex: 1,\n    padding: 20\n  },\n  logo: {\n    alignSelf: 'center'\n  }\n};\n"
+  },
+  {
+    "__docId__": 91,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/HomeScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/HomeScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Metrics, ApplicationStyles } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  logo: {\n    height: Metrics.images.logo,\n    width: Metrics.images.logo,\n    resizeMode: 'contain'\n  },\n  centered: {\n    alignItems: 'center'\n  }\n});\n"
+  },
+  {
+    "__docId__": 92,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/JobListStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/JobListStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { ApplicationStyles, Metrics, Colors } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  container: {\n    flex: 1,\n    marginTop: Metrics.navBarHeight,\n    backgroundColor: Colors.background\n  },\n  row: {\n    flex: 1,\n    backgroundColor: Colors.fire,\n    marginVertical: Metrics.smallMargin,\n    justifyContent: 'center'\n  },\n  boldLabel: {\n    fontWeight: 'bold',\n    alignSelf: 'center',\n    color: Colors.snow,\n    textAlign: 'center',\n    marginBottom: Metrics.smallMargin\n  },\n  label: {\n    textAlign: 'center',\n    color: Colors.snow\n  },\n  listContent: {\n    marginTop: Metrics.baseMargin\n  }\n});\n"
+  },
+  {
+    "__docId__": 93,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/LoginScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/LoginScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Colors, Metrics } from '../../Themes';\n\nexport default StyleSheet.create({\n  container: {\n    paddingTop: 70,\n    backgroundColor: Colors.background\n  },\n  form: {\n    backgroundColor: Colors.snow,\n    margin: Metrics.baseMargin,\n    borderRadius: 4\n  },\n  row: {\n    paddingVertical: Metrics.doubleBaseMargin,\n    paddingHorizontal: Metrics.doubleBaseMargin\n  },\n  rowLabel: {\n    color: Colors.charcoal\n  },\n  textInput: {\n    height: 40,\n    color: Colors.coal\n  },\n  textInputReadonly: {\n    height: 40,\n    color: Colors.steel\n  },\n  loginRow: {\n    paddingBottom: Metrics.doubleBaseMargin,\n    paddingHorizontal: Metrics.doubleBaseMargin,\n    flexDirection: 'row'\n  },\n  loginButtonWrapper: {\n    flex: 1\n  },\n  loginButton: {\n    flex: 1,\n    borderWidth: 1,\n    borderColor: Colors.charcoal,\n    backgroundColor: Colors.panther,\n    padding: 6\n  },\n  loginText: {\n    textAlign: 'center',\n    color: Colors.silver\n  },\n  topLogo: {\n    alignSelf: 'center',\n    resizeMode: 'contain'\n  }\n});\n"
+  },
+  {
+    "__docId__": 94,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/PresentationScreenStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/PresentationScreenStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { StyleSheet } from 'react-native';\nimport { Metrics, ApplicationStyles } from '../../Themes/';\n\nexport default StyleSheet.create({\n  ...ApplicationStyles.screen,\n  logo: {\n    height: Metrics.images.logo,\n    width: Metrics.images.logo,\n    resizeMode: 'contain'\n  },\n  centered: {\n    alignItems: 'center'\n  }\n});\n"
+  },
+  {
+    "__docId__": 95,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Containers/Styles/RootStyle.js",
+    "memberof": null,
+    "longname": "App/Containers/Styles/RootStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {StyleSheet} from 'react-native';\nimport {Fonts, Metrics, Colors} from '../../Themes/';\n\nconst RootStyle = StyleSheet.create({\n  applicationView: {\n    flex: 1\n  },\n  container: {\n    flex: 1,\n    justifyContent: 'center',\n    backgroundColor: Colors.background\n  },\n  welcome: {\n    fontSize: 20,\n    textAlign: 'center',\n    fontFamily: Fonts.base,\n    margin: Metrics.baseMargin\n  },\n  myImage: {\n    width: 200,\n    height: 200,\n    alignSelf: 'center'\n  }\n\n});\n\nexport default RootStyle;\n"
+  },
+  {
+    "__docId__": 96,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "RootStyle",
+    "memberof": "App/Containers/Styles/RootStyle.js",
+    "longname": "App/Containers/Styles/RootStyle.js~RootStyle",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Containers/Styles/RootStyle.js",
+    "importStyle": "RootStyle",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/I18n/I18n.js",
+    "memberof": null,
+    "longname": "App/I18n/I18n.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import I18n from 'react-native-i18n';\n\n// Enable fallbacks if you want `en-US` and `en-GB` to fallback to `en`\nI18n.fallbacks = true;\n\n// All translations for the app go here:\nI18n.translations = {\n  en: {\n    signIn: 'Sign In',\n    logOut: 'Log Out',\n    loginLogoutExampleTitle: 'Login/Logout Redux + Sagas Example',\n    progressiveImageComponent: 'Progressive Image Component',\n    api: 'API',\n    locale: 'I18n Locale',\n    rnVectorIcons: 'RN Vector Icons',\n    loginWithFacebook: 'Login with Facebook',\n    rnAnimatable: 'RN Animatable',\n    forgotPassword: 'Forgot Password',\n    username: 'Username',\n    password: 'Password',\n    cancel: 'Cancel',\n    welcome: 'Welcome',\n    login: 'Login',\n    tempIndicator: 'F',\n    componentExamples: 'Component Examples',\n    usageExamples: 'Usage Examples',\n    apiTesting: 'API Testing',\n    themeSettings: 'Theme Settings',\n    deviceDetails: 'Device Details',\n    noItems: 'No Items',\n    instanceName: 'Instance Name',\n    host: 'Host',\n    path: 'Path',\n    port: 'Port'\n  },\n  fr: {\n    signIn: 'Se connecter',\n    logOut: 'Se déconnecter',\n    loginLogoutExampleTitle: 'Connexion / Déconnexion Redux + Sagas Exemple',\n    progressiveImageComponent: 'Composant Image Progressive',\n    api: 'Mon Dieu!  Une API pour vous!',\n    locale: 'I18n Paramètres régionaux',\n    rnVectorIcons: 'RN icônes vectorielles',\n    loginWithFacebook: 'Se connecter avec Facebook',\n    rnAnimatable: 'RN Animatable',\n    forgotPassword: 'Mot de passe oublié',\n    username: 'Nom d\\'utilisateur',\n    password: 'Mot de passe',\n    cancel: 'Annuler',\n    welcome: 'Bienvenue',\n    login: 'S\\'identifier',\n    tempIndicator: 'C',\n    componentExamples: 'Exemples de Composants',\n    usageExamples: \"Exemples d'utilisation\",\n    apiTesting: 'API Testing',\n    themeSettings: 'Réglage des thèmes',\n    deviceDetails: 'Détails du périphérique',\n    noItems: 'Aucun'\n  }\n};\n\nexport default I18n;\n"
+  },
+  {
+    "__docId__": 98,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Navigation/NavigationDrawer.js",
+    "memberof": null,
+    "longname": "App/Navigation/NavigationDrawer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, { PropTypes, Component } from 'react';\nimport Drawer from 'react-native-drawer';\nimport { DefaultRenderer } from 'react-native-router-flux';\nimport DrawerContent from '../Containers/DrawerContent';\nimport { connect } from 'react-redux';\nimport Styles from './Styles/NavigationDrawerStyle';\n\n/********************\n* Documentation: https://github.com/root-two/react-native-drawer\n********************/\n\nclass NavigationDrawer extends Component {\n  static propTypes = {\n    navigationState: PropTypes.object\n  };\n\n  render () {\n    const children = this.props.navigationState.children;\n    return (\n      <Drawer\n        ref='navigation'\n        type='displace'\n        content={<DrawerContent />}\n        styles={Styles}\n        tapToClose\n        openDrawerOffset={0.2}\n        panCloseMask={0.2}\n        negotiatePan\n        tweenHandler={(ratio) => ({\n          main: { opacity: Math.max(0.54, 1 - ratio) }\n        })}\n      >\n        <DefaultRenderer navigationState={children[0]} onNavigate={this.props.onNavigate} />\n      </Drawer>\n    );\n  }\n}\n\nconst mapStateToProps = (state) => {\n  return {\n  };\n};\n\nconst mapDispatchToProps = (dispatch) => {\n  return {\n  };\n};\n\nexport default connect(mapStateToProps, mapDispatchToProps)(NavigationDrawer);\n"
+  },
+  {
+    "__docId__": 99,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "NavigationDrawer",
+    "memberof": "App/Navigation/NavigationDrawer.js",
+    "longname": "App/Navigation/NavigationDrawer.js~NavigationDrawer",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Navigation/NavigationDrawer.js",
+    "importStyle": null,
+    "description": "*****************\nDocumentation: https://github.com/root-two/react-native-drawer\n******************",
+    "lineNumber": 12,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Navigation/NavigationDrawer.js~NavigationDrawer",
+    "longname": "App/Navigation/NavigationDrawer.js~NavigationDrawer#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 101,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapStateToProps",
+    "memberof": "App/Navigation/NavigationDrawer.js",
+    "longname": "App/Navigation/NavigationDrawer.js~mapStateToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Navigation/NavigationDrawer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "mapDispatchToProps",
+    "memberof": "App/Navigation/NavigationDrawer.js",
+    "longname": "App/Navigation/NavigationDrawer.js~mapDispatchToProps",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Navigation/NavigationDrawer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Navigation/NavigationRouter.js",
+    "memberof": null,
+    "longname": "App/Navigation/NavigationRouter.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, { Component } from 'react';\nimport { Scene, Router } from 'react-native-router-flux';\nimport Styles from './Styles/NavigationContainerStyle';\nimport NavigationDrawer from './NavigationDrawer';\n\n// screens identified by the router\nimport HomeScreen from '../Containers/HomeScreen';\nimport LoginScreen from '../Containers/LoginScreen';\nimport DeviceInfoScreen from '../Containers/DeviceInfoScreen';\nimport JobListScreen from '../Containers/JobListScreen';\nimport BuildListScreen from '../Containers/BuildListScreen';\n\n/***************************\n* Documentation: https://github.com/aksonov/react-native-router-flux\n***************************/\n\nclass NavigationRouter extends Component {\n  render () {\n    return (\n      <Router>\n        <Scene key='drawer' component={NavigationDrawer}>\n          <Scene key='drawerChildrenWrapper' navigationBarStyle={Styles.navBar} titleStyle={Styles.title} leftButtonIconStyle={Styles.leftButton} rightButtonTextStyle={Styles.rightButton}>\n            <Scene key='homeScreen' component={HomeScreen} title='Home' initial />\n            <Scene key='login' component={LoginScreen} title='New Instance' />\n            <Scene key='jobList' component={JobListScreen} title='Jobs' />\n            <Scene key='buildList' component={BuildListScreen} title='Builds' />\n            <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />\n          </Scene>\n        </Scene>\n      </Router>\n    );\n  }\n}\n\nexport default NavigationRouter;\n"
+  },
+  {
+    "__docId__": 104,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "NavigationRouter",
+    "memberof": "App/Navigation/NavigationRouter.js",
+    "longname": "App/Navigation/NavigationRouter.js~NavigationRouter",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Navigation/NavigationRouter.js",
+    "importStyle": "NavigationRouter",
+    "description": "************************\nDocumentation: https://github.com/aksonov/react-native-router-flux\n*************************",
+    "lineNumber": 17,
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 105,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Navigation/NavigationRouter.js~NavigationRouter",
+    "longname": "App/Navigation/NavigationRouter.js~NavigationRouter#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 106,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Navigation/Styles/NavigationContainerStyle.js",
+    "memberof": null,
+    "longname": "App/Navigation/Styles/NavigationContainerStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {Colors} from '../../Themes/';\n\nexport default {\n  container: {\n    flex: 1\n  },\n  navBar: {\n    backgroundColor: Colors.background\n  },\n  title: {\n    color: Colors.snow\n  },\n  leftButton: {\n    tintColor: Colors.snow\n  },\n  rightButton: {\n    color: Colors.snow\n  }\n};\n"
+  },
+  {
+    "__docId__": 107,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Navigation/Styles/NavigationDrawerStyle.js",
+    "memberof": null,
+    "longname": "App/Navigation/Styles/NavigationDrawerStyle.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {Colors} from '../../Themes/';\n\nexport default {\n  drawer: {\n    backgroundColor: Colors.background\n  },\n  main: {\n    backgroundColor: Colors.ember\n  }\n};\n"
+  },
+  {
+    "__docId__": 108,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Reducers/BuildsReducer.js",
+    "memberof": null,
+    "longname": "App/Reducers/BuildsReducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Types from '../Actions/Types';\nimport Immutable from 'seamless-immutable';\nimport { createReducer } from 'reduxsauce';\n\nexport const INITIAL_STATE = Immutable({\n  data: [],\n  errorCode: null,\n  attempting: false,\n  loaded: false\n});\n\n// attempt\nconst attempt = (state, action) =>\n  state.merge({ attempting: true, loaded: false });\n\n// successful\nconst success = (state, action) =>\n  state.merge({ attempting: false, loaded: true, data: action.result });\n\n// failure\nconst failure = (state, action) =>\n  state.merge({ attempting: false, loaded: false, errorCode: action.errorCode });\n\n// map our types to our handlers\nconst ACTION_HANDLERS = {\n  [Types.GETBUILDS_ATTEMPT]: attempt,\n  [Types.GETBUILDS_SUCCESS]: success,\n  [Types.GETBUILDS_FAILURE]: failure\n};\n\nexport default createReducer(INITIAL_STATE, ACTION_HANDLERS);\n"
+  },
+  {
+    "__docId__": 109,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "INITIAL_STATE",
+    "memberof": "App/Reducers/BuildsReducer.js",
+    "longname": "App/Reducers/BuildsReducer.js~INITIAL_STATE",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Reducers/BuildsReducer.js",
+    "importStyle": "{INITIAL_STATE}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "attempt",
+    "memberof": "App/Reducers/BuildsReducer.js",
+    "longname": "App/Reducers/BuildsReducer.js~attempt",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/BuildsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 111,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "success",
+    "memberof": "App/Reducers/BuildsReducer.js",
+    "longname": "App/Reducers/BuildsReducer.js~success",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/BuildsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "failure",
+    "memberof": "App/Reducers/BuildsReducer.js",
+    "longname": "App/Reducers/BuildsReducer.js~failure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/BuildsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 113,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ACTION_HANDLERS",
+    "memberof": "App/Reducers/BuildsReducer.js",
+    "longname": "App/Reducers/BuildsReducer.js~ACTION_HANDLERS",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/BuildsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Reducers/JobsReducer.js",
+    "memberof": null,
+    "longname": "App/Reducers/JobsReducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Types from '../Actions/Types';\nimport Immutable from 'seamless-immutable';\nimport { createReducer } from 'reduxsauce';\n\nexport const INITIAL_STATE = Immutable({\n  data: [],\n  errorCode: null,\n  attempting: false\n});\n\n// login attempts\nconst attempt = (state, action) =>\n  state.merge({ attempting: true });\n\n// successful logins\nconst success = (state, action) =>\n  state.merge({ attempting: false, data: action.result });\n\n// login failure\nconst failure = (state, action) =>\n  state.merge({ attempting: false, errorCode: action.errorCode });\n\n// map our types to our handlers\nconst ACTION_HANDLERS = {\n  [Types.GETJOBS_ATTEMPT]: attempt,\n  [Types.GETJOBS_SUCCESS]: success,\n  [Types.GETJOBS_FAILURE]: failure\n};\n\nexport default createReducer(INITIAL_STATE, ACTION_HANDLERS);\n"
+  },
+  {
+    "__docId__": 115,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "INITIAL_STATE",
+    "memberof": "App/Reducers/JobsReducer.js",
+    "longname": "App/Reducers/JobsReducer.js~INITIAL_STATE",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Reducers/JobsReducer.js",
+    "importStyle": "{INITIAL_STATE}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "attempt",
+    "memberof": "App/Reducers/JobsReducer.js",
+    "longname": "App/Reducers/JobsReducer.js~attempt",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/JobsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "success",
+    "memberof": "App/Reducers/JobsReducer.js",
+    "longname": "App/Reducers/JobsReducer.js~success",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/JobsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "failure",
+    "memberof": "App/Reducers/JobsReducer.js",
+    "longname": "App/Reducers/JobsReducer.js~failure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/JobsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ACTION_HANDLERS",
+    "memberof": "App/Reducers/JobsReducer.js",
+    "longname": "App/Reducers/JobsReducer.js~ACTION_HANDLERS",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/JobsReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 120,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Reducers/LoginReducer.js",
+    "memberof": null,
+    "longname": "App/Reducers/LoginReducer.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Types from '../Actions/Types';\nimport Immutable from 'seamless-immutable';\nimport { createReducer } from 'reduxsauce';\n\nexport const INITIAL_STATE = Immutable({\n  username: null,\n  loginSuccess: false,\n  password: null,\n  errorCode: null,\n  attempting: false,\n  instanceName: null,\n  host: null,\n  port: null\n});\n\n// login attempts\nconst attempt = (state, action) =>\n  state.merge({ attempting: true, username: action.username, password: action.password, instanceName: action.instanceName, host: action.host, port: action.port });\n\n// successful logins\nconst success = (state, action) =>\n  state.merge({ attempting: false, loginSuccess: true, password: null, errorCode: null, username: action.username, instanceName: action.instanceName, host: action.host, port: action.port });\n\n// login failure\nconst failure = (state, action) =>\n  state.merge({ attempting: false, errorCode: action.errorCode, instanceName: null });\n\n// logout\nconst logout = (state, action) =>\n  state.merge({ username: null });\n\n// map our types to our handlers\nconst ACTION_HANDLERS = {\n  [Types.LOGIN_ATTEMPT]: attempt,\n  [Types.LOGIN_SUCCESS]: success,\n  [Types.LOGIN_FAILURE]: failure,\n  [Types.LOGOUT]: logout\n};\n\nexport default createReducer(INITIAL_STATE, ACTION_HANDLERS);\n"
+  },
+  {
+    "__docId__": 121,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "INITIAL_STATE",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~INITIAL_STATE",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": "{INITIAL_STATE}",
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 122,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "attempt",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~attempt",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 123,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "success",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~success",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "failure",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~failure",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "logout",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~logout",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ACTION_HANDLERS",
+    "memberof": "App/Reducers/LoginReducer.js",
+    "longname": "App/Reducers/LoginReducer.js~ACTION_HANDLERS",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Reducers/LoginReducer.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Reducers/index.js",
+    "memberof": null,
+    "longname": "App/Reducers/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { combineReducers } from 'redux';\nimport LoginReducer from './LoginReducer';\nimport JobsReducer from './JobsReducer';\nimport BuildsReducer from './BuildsReducer';\n\n// glue all the reducers together into 1 root reducer\nexport default combineReducers({\n  login: LoginReducer,\n  jobs: JobsReducer,\n  builds: BuildsReducer\n});\n\n// Put reducer keys that you do NOT want stored to persistence here\nexport const persistentStoreBlacklist = ['login', 'jobs', 'builds'];\n"
+  },
+  {
+    "__docId__": 128,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "persistentStoreBlacklist",
+    "memberof": "App/Reducers/index.js",
+    "longname": "App/Reducers/index.js~persistentStoreBlacklist",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Reducers/index.js",
+    "importStyle": "{persistentStoreBlacklist}",
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 129,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Root.js",
+    "memberof": null,
+    "longname": "App/Root.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import React, { PropTypes } from 'react';\nimport { View, StatusBar } from 'react-native';\nimport { Provider } from 'react-redux';\nimport Actions from './Actions/Creators';\nimport DebugSettings from './Config/DebugSettings';\nimport NavigationRouter from './Navigation/NavigationRouter';\n// import './Config/PushConfig'\n\n// Styles\nimport styles from './Containers/Styles/RootStyle';\n\nexport default class Root extends React.Component {\n  static propTypes = {\n    store: PropTypes.object.isRequired\n  };\n\n  componentWillMount () {\n    const { dispatch } = this.props.store;\n    dispatch(Actions.startup());\n  }\n\n  renderApp () {\n    console.disableYellowBox = DebugSettings.yellowBox;\n    return (\n      <Provider store={this.props.store}>\n        <View style={styles.applicationView}>\n          <StatusBar\n            barStyle='light-content'\n          />\n          <NavigationRouter />\n        </View>\n      </Provider>\n    );\n  }\n\n  render () {\n    return this.renderApp();\n  }\n}\n"
+  },
+  {
+    "__docId__": 130,
+    "kind": "class",
+    "static": true,
+    "variation": null,
+    "name": "Root",
+    "memberof": "App/Root.js",
+    "longname": "App/Root.js~Root",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Root.js",
+    "importStyle": "Root",
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 131,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "componentWillMount",
+    "memberof": "App/Root.js~Root",
+    "longname": "App/Root.js~Root#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [],
+    "generator": false
+  },
+  {
+    "__docId__": 132,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "renderApp",
+    "memberof": "App/Root.js~Root",
+    "longname": "App/Root.js~Root#renderApp",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 133,
+    "kind": "method",
+    "static": false,
+    "variation": null,
+    "name": "render",
+    "memberof": "App/Root.js~Root",
+    "longname": "App/Root.js~Root#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "generator": false
+  },
+  {
+    "__docId__": 134,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Sagas/GetBuildsSaga.js",
+    "memberof": null,
+    "longname": "App/Sagas/GetBuildsSaga.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {take, put, call} from 'redux-saga/effects';\nimport Types from '../Actions/Types';\nimport Actions from '../Actions/Creators';\n\nexport default (api) => {\n  function * worker(job) {\n    // make the call to the api\n    const response = yield call(api.getBuilds, job);\n\n    if (response.ok) {\n      yield put(Actions.getBuildsSuccess(response.data.builds));\n    } else {\n      yield put(Actions.getBuildsFailure(response.statusCode));\n    }\n  }\n\n  function * watcher() {\n    while (true) {\n      const { job } = yield take(Types.GETBUILDS_ATTEMPT);\n      yield call(worker, job);\n    }\n  }\n\n  return {\n    watcher,\n    worker\n  };\n};\n"
+  },
+  {
+    "__docId__": 135,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Sagas/GetJobsSaga.js",
+    "memberof": null,
+    "longname": "App/Sagas/GetJobsSaga.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {take, put, call} from 'redux-saga/effects';\nimport Types from '../Actions/Types';\nimport Actions from '../Actions/Creators';\n\nexport default (api) => {\n  function * worker() {\n    const response = yield call(api.getJenkinsJobs);\n\n    if (response.ok) {\n      yield put(Actions.getJobsSuccess(response.data.jobs));\n    } else {\n      yield put(Actions.getJobsFailure(response.statusCode));\n    }\n  }\n\n  function * watcher() {\n    while (true) {\n      yield take(Types.GETJOBS_ATTEMPT);\n      yield call(worker);\n    }\n  }\n\n  return {\n    watcher,\n    worker\n  };\n};\n"
+  },
+  {
+    "__docId__": 136,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Sagas/LoginSaga.js",
+    "memberof": null,
+    "longname": "App/Sagas/LoginSaga.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { take, put, call } from 'redux-saga/effects';\nimport Types from '../Actions/Types';\nimport Actions from '../Actions/Creators';\n\n// attempts to login\nexport default (api) => {\n\n  function * worker (username, password, instanceName, host, port) {\n\n    const response = yield call(api.startLogin, username, password, instanceName, host, port);\n\n    if (response.ok) {\n      yield put(Actions.loginSuccess(username, instanceName, host, port ));\n\n      yield put(Actions.getJobs());\n    } else {\n      yield put(Actions.loginFailure(response.statusCode));\n    }\n  }\n\n  function * watcher () {\n    while (true) {\n      const { username, password, instanceName, host, port } = yield take(Types.LOGIN_ATTEMPT);\n      yield call(worker,username, password, instanceName, host, port);\n    }\n  }\n\n  return {\n    watcher,\n    worker\n  };\n};\n"
+  },
+  {
+    "__docId__": 137,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Sagas/StartupSaga.js",
+    "memberof": null,
+    "longname": "App/Sagas/StartupSaga.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { take } from 'redux-saga/effects';\nimport Types from '../Actions/Types';\n\n\n// process STARTUP actions\nexport function * watchStartup () {\n  yield take(Types.STARTUP);\n}\n"
+  },
+  {
+    "__docId__": 138,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "watchStartup",
+    "memberof": "App/Sagas/StartupSaga.js",
+    "longname": "App/Sagas/StartupSaga.js~watchStartup",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Sagas/StartupSaga.js",
+    "importStyle": "{watchStartup}",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "params": [],
+    "generator": true
+  },
+  {
+    "__docId__": 139,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Sagas/index.js",
+    "memberof": null,
+    "longname": "App/Sagas/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { fork } from 'redux-saga/effects';\nimport API from '../Services/Api';\nimport FixtureAPI from '../Services/FixtureApi';\nimport { watchStartup } from './StartupSaga';\nimport login from './LoginSaga';\nimport getJobs from './GetJobsSaga';\nimport getBuilds from './GetBuildsSaga';\nimport DebugSettings from '../Config/DebugSettings';\n\n// Create our API at this level and feed it into\n// the sagas that are expected to make API calls\n// so there's only 1 copy app-wide!\n// const api = API.create()\nconst api = DebugSettings.useFixtures ? FixtureAPI : API.create();\n\n// start the daemons\nexport default function * root () {\n  yield fork(watchStartup);\n  yield fork(login(api).watcher);\n  yield fork(getJobs(api).watcher);\n  yield fork(getBuilds(api).watcher);\n}\n"
+  },
+  {
+    "__docId__": 140,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "api",
+    "memberof": "App/Sagas/index.js",
+    "longname": "App/Sagas/index.js~api",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Sagas/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 141,
+    "kind": "function",
+    "static": true,
+    "variation": null,
+    "name": "root",
+    "memberof": "App/Sagas/index.js",
+    "longname": "App/Sagas/index.js~root",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Sagas/index.js",
+    "importStyle": "root",
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "params": [],
+    "generator": true
+  },
+  {
+    "__docId__": 142,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/Api.js",
+    "memberof": null,
+    "longname": "App/Services/Api.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// a library to wrap and simplify api calls\nimport apisauce from 'apisauce';\nimport { info, builds, jobs, views, que, load, login } from '../Services/';\n\n// our \"constructor\"\nconst create = (baseURL = 'http://') => {\n  // ------\n  // STEP 1\n  // ------\n  //\n  // Create and configure an apisauce-based api object.\n  //\n  const api = apisauce.create({\n    // base URL is read from the \"constructor\"\n    baseURL,\n    // here are some default headers\n    headers: {\n      'Cache-Control': 'no-cache',\n      'Connection': 'keep-alive',\n      'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31',\n      'Accept-Language': 'en-US,en;q=0.8'\n    },\n    // 10 second timeout...\n    timeout: 10000\n  });\n\n  // Wrap api's addMonitor to allow the calling code to attach\n  // additional monitors in the future.\n  const addMonitor = api.addMonitor((response) => {\n    // Monitors are called passively after every request.\n  });\n\n  const updateDefaultBaseURL = (data) => {\n    api.axiosInstance.defaults.baseURL = `http://${data.host}:${data.port}`;\n  };\n\n  // ------\n  // STEP 2\n  // ------\n  //\n  // Define some functions that call the api.  The goal is to provide\n  // a thin wrapper of the api layer providing nicer feeling functions\n  // rather than \"get\", \"post\" and friends.\n  //\n  // I generally don't like wrapping the output at this level because\n  // sometimes specific actions need to be take on `403` or `401`, etc.\n  //\n  // Since we can't hide from that, we embrace it by getting out of the\n  // way at this level.\n  //\n\n  const getJenkinsJobs = () => jobs.getJobs(api);\n  const getJenkinsViews = () => views.getViews(api);\n  const getQueAPI = () => que.getQueApi(api);\n  const getLoadAPI = () => load.getLoadApi(api);\n  const getBuilds = (job) => builds.getBuilds(api, job);\n  const getJenkinsInfo = () => info.getInfo(api);\n  const startJob = (job) =>  jobs.getJob(api, job);\n  const startLogin = (username, password, instanceName, host, port) => {\n    updateDefaultBaseURL({host, port});\n    return login.attemptLogin(api, username, password, instanceName);\n  };\n\n\n\n  // ------\n  // STEP 3\n  // ------\n  //\n  // Return back a collection of functions that we would consider our\n  // interface.  Most of the time it'll be just the list of all the\n  // methods in step 2.\n  //\n  // Notice we're not returning back the `api` created in step 1?  That's\n  // because it is scoped privately.  This is one way to create truly\n  // private scoped goodies in JavaScript.\n  //\n  return {\n    // a list of the API functions from step 2\n    getJenkinsInfo,\n    getJenkinsJobs,\n    getJenkinsViews,\n    getQueAPI,\n    getLoadAPI,\n    getBuilds,\n    startLogin,\n    startJob,\n    // additional utilities\n    addMonitor\n  };\n};\n\n// let's return back our create method as the default.\nexport default {\n  create\n};\n"
+  },
+  {
+    "__docId__": 143,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "create",
+    "memberof": "App/Services/Api.js",
+    "longname": "App/Services/Api.js~create",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Services/Api.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 144,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/FixtureApi.js",
+    "memberof": null,
+    "longname": "App/Services/FixtureApi.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n};\n"
+  },
+  {
+    "__docId__": 145,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/RehydrationServices.js",
+    "memberof": null,
+    "longname": "App/Services/RehydrationServices.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import ReduxPersist from '../Config/ReduxPersist';\nimport { AsyncStorage } from 'react-native';\nimport { persistStore } from 'redux-persist';\n\nconst updateReducers = (store) => {\n  const reducerVersion = ReduxPersist.reducerVersion;\n  const config = ReduxPersist.storeConfig;\n\n  // Begin a fresh store\n  persistStore(store, config);\n\n  // Check to ensure latest reducer version\n  AsyncStorage.getItem('reducerVersion').then((localVersion) => {\n    if (localVersion !== reducerVersion) {\n      // console.log('PURGING STORE', localVersion, 'vs.', reducerVersion)\n      // Purge store and refresh\n      persistStore(store, config, () => {\n        // Start a fresh store\n        persistStore(store, config);\n      }).purgeAll();\n      // Update reducer to current version number\n      AsyncStorage.setItem('reducerVersion', reducerVersion);\n    }\n  }).catch(() => AsyncStorage.setItem('reducerVersion', reducerVersion));\n};\n\nexport default {updateReducers};\n"
+  },
+  {
+    "__docId__": 146,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "updateReducers",
+    "memberof": "App/Services/RehydrationServices.js",
+    "longname": "App/Services/RehydrationServices.js~updateReducers",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Services/RehydrationServices.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 147,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/builds.js",
+    "memberof": null,
+    "longname": "App/Services/builds.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "/**\n * Add more function comments!\n */\nexport default {\n  getBuilds: (api, job) => {\n    return api.get(`/job/${job}/api/json?tree=builds[number,status,timestamp,id,result]`);\n  }\n};\n"
+  },
+  {
+    "__docId__": 148,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/index.js",
+    "memberof": null,
+    "longname": "App/Services/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import info from './info';\nimport builds from './builds';\nimport jobs from './jobs';\nimport views from './views';\nimport que from './que';\nimport load from './load';\nimport login from './login';\n\nexport { info, builds, jobs, views, que, load, login };\n"
+  },
+  {
+    "__docId__": 149,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/info.js",
+    "memberof": null,
+    "longname": "App/Services/info.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  getInfo: (api) => {\n    return api.get('/api/json?pretty=true');\n  }\n};\n"
+  },
+  {
+    "__docId__": 150,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/jobs.js",
+    "memberof": null,
+    "longname": "App/Services/jobs.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  getJobs: (api) => {\n    return api.get('/api/json?tree=jobs[name,color]');\n  },\n  startJob: (api, job) => {\n    return api.post(`/job/${job}/build`);\n  }\n};\n"
+  },
+  {
+    "__docId__": 151,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/load.js",
+    "memberof": null,
+    "longname": "App/Services/load.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  getLoadApi: (api) => {\n    return api.get('/overallLoad/api/json?pretty=true');\n  }\n};\n"
+  },
+  {
+    "__docId__": 152,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/login.js",
+    "memberof": null,
+    "longname": "App/Services/login.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { util } from '../Util';\n\nexport default {\n  attemptLogin: (api, username, password) => {\n    return api.post('/j_acegi_security_check', util.serializeJSON({\n      j_username: username,\n      j_password: password,\n      from: '/'\n    }), {\n      headers: {'Content-Type': 'application/x-www-form-urlencoded'}\n    });\n  }\n};\n"
+  },
+  {
+    "__docId__": 153,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/que.js",
+    "memberof": null,
+    "longname": "App/Services/que.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  getQueApi: (api) => {\n    return api.get('/queue/api/json?pretty=true');\n  }\n};\n"
+  },
+  {
+    "__docId__": 154,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Services/views.js",
+    "memberof": null,
+    "longname": "App/Services/views.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  getViews: (api) => {\n    return api.get('/api/json?tree=views[name,url]');\n  }\n};\n"
+  },
+  {
+    "__docId__": 155,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Store/ImmutablePersistenceTransform.js",
+    "memberof": null,
+    "longname": "App/Store/ImmutablePersistenceTransform.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import R from 'ramda';\nimport Immutable from 'seamless-immutable';\n\n// is this object already Immutable?\nconst isImmutable = R.has('asMutable');\n\n// change this Immutable object into a JS object\nconst convertToJs = (state) => state.asMutable({deep: true});\n\n// optionally convert this object into a JS object if it is Immutable\nconst fromImmutable = R.when(isImmutable, convertToJs);\n\n// convert this JS object into an Immutable object\nconst toImmutable = (raw) => Immutable(raw);\n\n// the transform interface that redux-persist is expecting\nexport default {\n  out: (state) => {\n    // console.log({ retrieving: state })\n    // --- HACKZORZ ---\n    // Attach a empty-ass function to the object called `mergeDeep`.\n    // This tricks redux-persist into just placing our Immutable object into the state tree\n    // instead of trying to convert it to a POJO\n    // https://github.com/rt2zz/redux-persist/blob/master/src/autoRehydrate.js#L55\n    //\n    // Another equal terrifying option would be to try to pass their other check\n    // which is lodash isPlainObject.\n    // --- END HACKZORZ ---\n    state.mergeDeep = R.identity;\n    return toImmutable(state);\n  },\n  in: (raw) => {\n    // console.log({ storing: raw })\n    return fromImmutable(raw);\n  }\n};\n"
+  },
+  {
+    "__docId__": 156,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "isImmutable",
+    "memberof": "App/Store/ImmutablePersistenceTransform.js",
+    "longname": "App/Store/ImmutablePersistenceTransform.js~isImmutable",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/ImmutablePersistenceTransform.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "convertToJs",
+    "memberof": "App/Store/ImmutablePersistenceTransform.js",
+    "longname": "App/Store/ImmutablePersistenceTransform.js~convertToJs",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/ImmutablePersistenceTransform.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "fromImmutable",
+    "memberof": "App/Store/ImmutablePersistenceTransform.js",
+    "longname": "App/Store/ImmutablePersistenceTransform.js~fromImmutable",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/ImmutablePersistenceTransform.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "toImmutable",
+    "memberof": "App/Store/ImmutablePersistenceTransform.js",
+    "longname": "App/Store/ImmutablePersistenceTransform.js~toImmutable",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/ImmutablePersistenceTransform.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Store/Store.js",
+    "memberof": null,
+    "longname": "App/Store/Store.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import { createStore, applyMiddleware, compose } from 'redux';\nimport { autoRehydrate } from 'redux-persist';\nimport createLogger from 'redux-logger';\nimport rootReducer from '../Reducers/';\nimport Config from '../Config/DebugSettings';\nimport createSagaMiddleware from 'redux-saga';\nimport sagas from '../Sagas/';\nimport R from 'ramda';\nimport RehydrationServices from '../Services/RehydrationServices';\nimport ReduxPersist from '../Config/ReduxPersist';\n\n// the logger master switch\nconst USE_LOGGING = Config.reduxLogging;\n// silence these saga-based messages\nconst SAGA_LOGGING_BLACKLIST = ['EFFECT_TRIGGERED', 'EFFECT_RESOLVED', 'EFFECT_REJECTED', 'persist/REHYDRATE'];\n// create the logger\nconst logger = createLogger({\n  predicate: (getState, { type }) => USE_LOGGING && R.not(R.contains(type, SAGA_LOGGING_BLACKLIST))\n});\n\nlet middleware = [];\nconst sagaMiddleware = createSagaMiddleware();\nmiddleware.push(sagaMiddleware);\n\n// Don't ship these\nif (__DEV__) {\n  middleware.push(logger);\n}\n\n// a function which can create our store and auto-persist the data\nexport default () => {\n  let store = {};\n\n  // Add rehydrate enhancer if ReduxPersist is active\n  if (ReduxPersist.active) {\n    const enhancers = compose(\n      applyMiddleware(...middleware),\n      autoRehydrate()\n    );\n\n    store = createStore(\n      rootReducer,\n      enhancers\n    );\n\n    // configure persistStore and check reducer version number\n    RehydrationServices.updateReducers(store);\n  } else {\n    const enhancers = compose(\n      applyMiddleware(...middleware)\n    );\n\n    store = createStore(\n      rootReducer,\n      enhancers\n    );\n  }\n\n  // run sagas\n  sagaMiddleware.run(sagas);\n\n  return store;\n};\n"
+  },
+  {
+    "__docId__": 161,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "USE_LOGGING",
+    "memberof": "App/Store/Store.js",
+    "longname": "App/Store/Store.js~USE_LOGGING",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/Store.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "SAGA_LOGGING_BLACKLIST",
+    "memberof": "App/Store/Store.js",
+    "longname": "App/Store/Store.js~SAGA_LOGGING_BLACKLIST",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/Store.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "logger",
+    "memberof": "App/Store/Store.js",
+    "longname": "App/Store/Store.js~logger",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/Store.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 164,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "middleware",
+    "memberof": "App/Store/Store.js",
+    "longname": "App/Store/Store.js~middleware",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/Store.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "sagaMiddleware",
+    "memberof": "App/Store/Store.js",
+    "longname": "App/Store/Store.js~sagaMiddleware",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Store/Store.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/ApplicationStyles.js",
+    "memberof": null,
+    "longname": "App/Themes/ApplicationStyles.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Fonts from './Fonts';\nimport Metrics from './Metrics';\nimport Colors from './Colors';\n\n// This file is for a reusable grouping of Theme items.\n// Similar to an XML fragment layout in Android\n\nconst ApplicationStyles = {\n  screen: {\n    mainContainer: {\n      flex: 1,\n      marginTop: Metrics.navBarHeight,\n      backgroundColor: Colors.transparent\n    },\n    backgroundImage: {\n      position: 'absolute',\n      top: 0,\n      left: 0,\n      bottom: 0,\n      right: 0\n    },\n    container: {\n      flex: 1,\n      paddingTop: Metrics.baseMargin\n    },\n    section: {\n      margin: Metrics.section,\n      padding: Metrics.baseMargin,\n      borderTopColor: Colors.frost,\n      borderTopWidth: 0.5,\n      borderBottomColor: Colors.frost,\n      borderBottomWidth: 1\n    },\n    sectionText: {\n      color: Colors.snow,\n      marginVertical: Metrics.smallMargin,\n      textAlign: 'center',\n      fontWeight: 'bold'\n    },\n    subtitle: {\n      color: Colors.snow,\n      padding: Metrics.smallMargin,\n      marginBottom: Metrics.smallMargin,\n      marginHorizontal: Metrics.smallMargin\n    }\n  },\n  darkLabelContainer: {\n    backgroundColor: Colors.cloud,\n    padding: Metrics.smallMargin\n  },\n  darkLabel: {\n    fontFamily: Fonts.bold,\n    color: Colors.snow\n  },\n  groupContainer: {\n    margin: Metrics.smallMargin,\n    flexDirection: 'row',\n    justifyContent: 'space-around',\n    alignItems: 'center'\n  },\n  sectionTitle: {\n    ...Fonts.style.h4,\n    color: Colors.coal,\n    backgroundColor: Colors.ricePaper,\n    padding: Metrics.smallMargin,\n    marginTop: Metrics.smallMargin,\n    marginHorizontal: Metrics.baseMargin,\n    borderWidth: 1,\n    borderColor: Colors.ember,\n    alignItems: 'center',\n    textAlign: 'center'\n  }\n};\n\nexport default ApplicationStyles;\n"
+  },
+  {
+    "__docId__": 167,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "ApplicationStyles",
+    "memberof": "App/Themes/ApplicationStyles.js",
+    "longname": "App/Themes/ApplicationStyles.js~ApplicationStyles",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Themes/ApplicationStyles.js",
+    "importStyle": "ApplicationStyles",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/Colors.js",
+    "memberof": null,
+    "longname": "App/Themes/Colors.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const colors = {\n  background: '#1F0808',\n  clear: 'rgba(0,0,0,0)',\n  facebook: '#3b5998',\n  transparent: 'rgba(0,0,0,0)',\n  silver: '#F7F7F7',\n  steel: '#CCCCCC',\n  error: 'rgba(200, 0, 0, 0.8)',\n  ricePaper: 'rgba(255,255,255, 0.75)',\n  frost: '#D8D8D8',\n  cloud: 'rgba(200,200,200, 0.35)',\n  windowTint: 'rgba(0, 0, 0, 0.4)',\n  panther: '#161616',\n  charcoal: '#595959',\n  coal: '#2d2d2d',\n  bloodOrange: '#fb5f26',\n  snow: 'white',\n  ember: 'rgba(164, 0, 48, 0.5)',\n  fire: '#e73536',\n  drawer: 'rgba(30, 30, 29, 0.95)'\n};\n\nexport default colors;\n"
+  },
+  {
+    "__docId__": 169,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "colors",
+    "memberof": "App/Themes/Colors.js",
+    "longname": "App/Themes/Colors.js~colors",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Themes/Colors.js",
+    "importStyle": "colors",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/Fonts.js",
+    "memberof": null,
+    "longname": "App/Themes/Fonts.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "const type = {\n  base: 'HelveticaNeue',\n  bold: 'HelveticaNeue-Bold',\n  emphasis: 'HelveticaNeue-Italic'\n};\n\nconst size = {\n  h1: 38,\n  h2: 34,\n  h3: 30,\n  h4: 26,\n  h5: 20,\n  h6: 19,\n  input: 18,\n  regular: 17,\n  medium: 14,\n  small: 12,\n  tiny: 8.5\n};\n\nconst style = {\n  h1: {\n    fontFamily: type.base,\n    fontSize: size.h1\n  },\n  h2: {\n    fontWeight: 'bold',\n    fontSize: size.h2\n  },\n  h3: {\n    fontFamily: type.emphasis,\n    fontSize: size.h3\n  },\n  h4: {\n    fontFamily: type.base,\n    fontSize: size.h4\n  },\n  h5: {\n    fontFamily: type.base,\n    fontSize: size.h5\n  },\n  h6: {\n    fontFamily: type.emphasis,\n    fontSize: size.h6\n  },\n  normal: {\n    fontFamily: type.base,\n    fontSize: size.regular\n  },\n  description: {\n    fontFamily: type.base,\n    fontSize: size.medium\n  }\n};\n\nexport default {\n  type,\n  size,\n  style\n};\n\n"
+  },
+  {
+    "__docId__": 171,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "type",
+    "memberof": "App/Themes/Fonts.js",
+    "longname": "App/Themes/Fonts.js~type",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Themes/Fonts.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 172,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "size",
+    "memberof": "App/Themes/Fonts.js",
+    "longname": "App/Themes/Fonts.js~size",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Themes/Fonts.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 173,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "style",
+    "memberof": "App/Themes/Fonts.js",
+    "longname": "App/Themes/Fonts.js~style",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Themes/Fonts.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/Images.js",
+    "memberof": null,
+    "longname": "App/Themes/Images.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "// leave off @2x/@3x\nconst images = {\n  logo: require('../Images/ir.png'),\n  clearLogo: require('../Images/jenkinsLogo1.png'),\n  background: require('../Images/BG.png')\n};\n\nexport default images;\n"
+  },
+  {
+    "__docId__": 175,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "images",
+    "memberof": "App/Themes/Images.js",
+    "longname": "App/Themes/Images.js~images",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Themes/Images.js",
+    "importStyle": "images",
+    "description": null,
+    "lineNumber": 2,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 176,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/Metrics.js",
+    "memberof": null,
+    "longname": "App/Themes/Metrics.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {Dimensions, Platform} from 'react-native';\n\nconst { width, height } = Dimensions.get('window');\n\n// Used via Metrics.baseMargin\nconst metrics = {\n  marginHorizontal: 10,\n  marginVertical: 10,\n  section: 25,\n  baseMargin: 10,\n  doubleBaseMargin: 20,\n  smallMargin: 5,\n  horizontalLineHeight: 1,\n  screenWidth: width < height ? width : height,\n  screenHeight: width < height ? height : width,\n  navBarHeight: (Platform.OS === 'ios') ? 64 : 54,\n  buttonRadius: 4,\n  icons: {\n    tiny: 15,\n    small: 20,\n    medium: 30,\n    large: 45,\n    xl: 60\n  },\n  images: {\n    small: 20,\n    medium: 40,\n    large: 60,\n    logo: 300\n  }\n};\n\nexport default metrics;\n"
+  },
+  {
+    "__docId__": 177,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "width",
+    "memberof": "App/Themes/Metrics.js",
+    "longname": "App/Themes/Metrics.js~width",
+    "access": null,
+    "export": false,
+    "importPath": "./App/Themes/Metrics.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 178,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "metrics",
+    "memberof": "App/Themes/Metrics.js",
+    "longname": "App/Themes/Metrics.js~metrics",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Themes/Metrics.js",
+    "importStyle": "metrics",
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 179,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/Transitions.js",
+    "memberof": null,
+    "longname": "App/Themes/Transitions.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import {Navigator} from 'react-native';\n\n// Transitions could be any of those provided by SceneConfigs\n// https://github.com/facebook/react-native/blob/master/Libraries/CustomComponents/Navigator/NavigatorSceneConfigs.js\n// OR\n// Something custom that you've created.\n\nconst transitions = {\n  default: {\n    ...Navigator.SceneConfigs.HorizontalSwipeJump,\n    gestures: null\n  },\n  modal: {\n    ...Navigator.SceneConfigs.FloatFromBottom\n  }\n};\n\nexport default transitions;\n"
+  },
+  {
+    "__docId__": 180,
+    "kind": "variable",
+    "static": true,
+    "variation": null,
+    "name": "transitions",
+    "memberof": "App/Themes/Transitions.js",
+    "longname": "App/Themes/Transitions.js~transitions",
+    "access": null,
+    "export": true,
+    "importPath": "./App/Themes/Transitions.js",
+    "importStyle": "transitions",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 181,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Themes/index.js",
+    "memberof": null,
+    "longname": "App/Themes/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import Colors from './Colors';\nimport Fonts from './Fonts';\nimport Metrics from './Metrics';\nimport Images from './Images';\nimport Transitions from './Transitions';\nimport ApplicationStyles from './ApplicationStyles';\n\nexport { Colors, Fonts, Images, Metrics, ApplicationStyles, Transitions };\n"
+  },
+  {
+    "__docId__": 182,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Util/index.js",
+    "memberof": null,
+    "longname": "App/Util/index.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "import util from './util';\n\nexport { util };\n"
+  },
+  {
+    "__docId__": 183,
+    "kind": "file",
+    "static": true,
+    "variation": null,
+    "name": "App/Util/util.js",
+    "memberof": null,
+    "longname": "App/Util/util.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1,
+    "content": "export default {\n  serializeJSON: (data) => {\n    return Object.keys(data).map((keyName) => {\n      return encodeURIComponent(keyName) + '=' + encodeURIComponent(data[keyName]);\n    }).join('&');\n  }\n};\n"
+  },
+  {
+    "__docId__": 185,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Infinity",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 186,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~NaN",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 187,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~undefined",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 188,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~null",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 189,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 190,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~object",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 191,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 192,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~function",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 193,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 194,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~boolean",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 195,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Symbol",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 196,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Error",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 197,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~EvalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 198,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~InternalError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 199,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RangeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 200,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ReferenceError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 201,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~SyntaxError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 202,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~TypeError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 203,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~URIError",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 204,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 205,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~number",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 206,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Date",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 207,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~String",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 208,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~string",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 209,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~RegExp",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 210,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 211,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 212,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 213,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint8ClampedArray",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 214,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 215,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint16Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 216,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Int32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 217,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Uint32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 218,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float32Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 219,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Float64Array",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 220,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Map",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 221,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Set",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 222,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakMap",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 223,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~WeakSet",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 224,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~ArrayBuffer",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 225,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~DataView",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 226,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~JSON",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 227,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Promise",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 228,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Generator",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 229,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~GeneratorFunction",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 230,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Reflect",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 231,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "BuiltinExternal/ECMAScriptExternal.js",
+    "longname": "BuiltinExternal/ECMAScriptExternal.js~Proxy",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 233,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "CanvasRenderingContext2D",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~CanvasRenderingContext2D",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 234,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "DocumentFragment",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~DocumentFragment",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 235,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Element",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Element",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Element",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 236,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Event",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Event",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Event",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 237,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "Node",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/Node",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~Node",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 238,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "NodeList",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/API/NodeList",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~NodeList",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 239,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "XMLHttpRequest",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 240,
+    "kind": "external",
+    "static": true,
+    "variation": null,
+    "name": "AudioContext",
+    "externalLink": "https://developer.mozilla.org/en/docs/Web/API/AudioContext",
+    "memberof": "BuiltinExternal/WebAPIExternal.js",
+    "longname": "BuiltinExternal/WebAPIExternal.js~AudioContext",
+    "access": null,
+    "description": "",
+    "builtinExternal": true
+  }
+]

@@ -6,4 +6,4 @@ const SETTINGS = {
   includeExamples: __DEV__
 };
 
-export default SETTINGS
+export default SETTINGS;

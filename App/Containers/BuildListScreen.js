@@ -1,12 +1,12 @@
-import React, {PropTypes} from 'react'
-import { View, Text, ListView, TouchableHighlight } from 'react-native'
-import { connect } from 'react-redux'
+import React from 'react';
+import { View, Text, ListView, TouchableHighlight } from 'react-native';
+import { connect } from 'react-redux';
 
 // For empty lists
-import AlertMessage from '../Components/AlertMessageComponent'
+import AlertMessage from '../Components/AlertMessageComponent';
 
 // Styles
-import styles from './Styles/BuildListStyle'
+import styles from './Styles/BuildListStyle';
 
 class BuildListScreen extends React.Component {
 
@@ -33,7 +33,7 @@ class BuildListScreen extends React.Component {
     // Datasource is always in state
     this.state = {
       dataSource: ds.cloneWithRows(props.dataObjects)
-    }
+    };
   }
 
   componentWillReceiveProps(nextProps) {
@@ -60,7 +60,7 @@ class BuildListScreen extends React.Component {
         <Text style={styles.label}>{rowData.result}</Text>
       </View>
         </TouchableHighlight>
-    )
+    );
   }
 
   /* ***********************************************************
@@ -84,7 +84,7 @@ class BuildListScreen extends React.Component {
   // Used for friendly AlertMessage
   // returns true if the dataSource is empty
   _noRowData () {
-    return this.state.dataSource.getRowCount() === 0
+    return this.state.dataSource.getRowCount() === 0;
   }
 
   render () {
@@ -97,14 +97,14 @@ class BuildListScreen extends React.Component {
           renderRow={this._renderRow}
         />
       </View>
-    )
+    );
   }
 }
 
 const mapStateToProps = (state) => {
   return {
     dataObjects: state.builds.data
-  }
+  };
 };
 
-export default connect(mapStateToProps)(BuildListScreen)
+export default connect(mapStateToProps)(BuildListScreen);

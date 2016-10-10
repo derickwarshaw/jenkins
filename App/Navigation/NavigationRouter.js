@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
-import { Scene, Router } from 'react-native-router-flux'
-import Styles from './Styles/NavigationContainerStyle'
-import NavigationDrawer from './NavigationDrawer'
+import React, { Component } from 'react';
+import { Scene, Router } from 'react-native-router-flux';
+import Styles from './Styles/NavigationContainerStyle';
+import NavigationDrawer from './NavigationDrawer';
 
 // screens identified by the router
-import HomeScreen from '../Containers/HomeScreen'
-import LoginScreen from '../Containers/LoginScreen'
-import APITestingScreen from '../Containers/APITestingScreen'
-import DeviceInfoScreen from '../Containers/DeviceInfoScreen'
-import JobListScreen from '../Containers/JobListScreen'
-import BuildListScreen from '../Containers/BuildListScreen'
+import HomeScreen from '../Containers/HomeScreen';
+import LoginScreen from '../Containers/LoginScreen';
+import DeviceInfoScreen from '../Containers/DeviceInfoScreen';
+import JobListScreen from '../Containers/JobListScreen';
+import BuildListScreen from '../Containers/BuildListScreen';
 
 /***************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
@@ -25,13 +24,12 @@ class NavigationRouter extends Component {
             <Scene key='login' component={LoginScreen} title='New Instance' />
             <Scene key='jobList' component={JobListScreen} title='Jobs' />
             <Scene key='buildList' component={BuildListScreen} title='Builds' />
-            <Scene key='apiTesting' component={APITestingScreen} title='API Testing' />
             <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
           </Scene>
         </Scene>
       </Router>
-    )
+    );
   }
 }
 
-export default NavigationRouter
+export default NavigationRouter;

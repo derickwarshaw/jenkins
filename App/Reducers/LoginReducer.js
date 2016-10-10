@@ -1,6 +1,6 @@
-import Types from '../Actions/Types'
-import Immutable from 'seamless-immutable'
-import { createReducer } from 'reduxsauce'
+import Types from '../Actions/Types';
+import Immutable from 'seamless-immutable';
+import { createReducer } from 'reduxsauce';
 
 export const INITIAL_STATE = Immutable({
   username: null,
@@ -23,7 +23,7 @@ const success = (state, action) =>
 
 // login failure
 const failure = (state, action) =>
-  state.merge({ attempting: false, errorCode: action.errorCode });
+  state.merge({ attempting: false, errorCode: action.errorCode, instanceName: null });
 
 // logout
 const logout = (state, action) =>
@@ -37,4 +37,4 @@ const ACTION_HANDLERS = {
   [Types.LOGOUT]: logout
 };
 
-export default createReducer(INITIAL_STATE, ACTION_HANDLERS)
+export default createReducer(INITIAL_STATE, ACTION_HANDLERS);
