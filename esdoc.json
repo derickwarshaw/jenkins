@@ -1,0 +1,21 @@
+{
+  "source": "./App",
+  "destination": "./docs",
+  "title": "Jenkins: React-Native",
+  "manual": {
+    "overview": ["./manual/overview.md"],
+    "installation": ["./manual/installation.md"],
+    "usage": ["./manual/usage.md"],
+    "tutorial": ["./manual/tutorial.md"],
+    "configuration": ["./manual/configuration.md"],
+    "faq": ["./manual/faq.md"]
+  },
+  "plugins": [
+    {"name": "esdoc-es7-plugin"}
+  ],
+  "autoPrivate": true,
+  "index": "./README.md",
+  "package": "none",
+  "coverage": true,
+  "lint": true
+}

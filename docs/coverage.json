@@ -1,0 +1,174 @@
+{
+  "coverage": "2.77%",
+  "expectCount": 36,
+  "actualCount": 1,
+  "files": {
+    "App/Components/AlertMessageComponent.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        21
+      ]
+    },
+    "App/Themes/ApplicationStyles.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        8
+      ]
+    },
+    "App/Containers/DeviceInfoScreen.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        34,
+        63,
+        38,
+        47
+      ]
+    },
+    "App/Components/DrawerButton.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        6
+      ]
+    },
+    "App/Containers/DrawerContent.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        39,
+        10
+      ]
+    },
+    "App/Components/FullButton.js": {
+      "expectCount": 2,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        13
+      ]
+    },
+    "App/Reducers/LoginReducer.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "App/Reducers/BuildsReducer.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "App/Reducers/JobsReducer.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "App/Navigation/NavigationRouter.js": {
+      "expectCount": 2,
+      "actualCount": 1,
+      "undocumentLines": [
+        18
+      ]
+    },
+    "App/Config/ReduxPersist.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
+      ]
+    },
+    "App/Root.js": {
+      "expectCount": 4,
+      "actualCount": 0,
+      "undocumentLines": [
+        12,
+        17,
+        36,
+        22
+      ]
+    },
+    "App/Containers/Styles/RootStyle.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        4
+      ]
+    },
+    "App/Components/RoundedButton.js": {
+      "expectCount": 3,
+      "actualCount": 0,
+      "undocumentLines": [
+        5,
+        14,
+        19
+      ]
+    },
+    "App/Config/DebugSettings.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "App/Themes/Colors.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        1
+      ]
+    },
+    "App/Themes/Images.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        2
+      ]
+    },
+    "App/Themes/Metrics.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    },
+    "App/Reducers/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        14
+      ]
+    },
+    "App/Sagas/index.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        17
+      ]
+    },
+    "App/Themes/Transitions.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        8
+      ]
+    },
+    "App/Sagas/StartupSaga.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        6
+      ]
+    }
+  }
+}

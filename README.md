@@ -1,7 +1,6 @@
 #  Jenkins Mobile Client
 
-
-* Standard compliant React Native App
+React-Native Jenkins Client for iOS and Android
 
 ## Setup
 
