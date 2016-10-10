@@ -1,0 +1,235 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 305,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 21,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 40,
+      "end": 81,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 41
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 49,
+          "end": 60,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 9
+            },
+            "end": {
+              "line": 2,
+              "column": 20
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 49,
+            "end": 60,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 9
+              },
+              "end": {
+                "line": 2,
+                "column": 20
+              }
+            },
+            "name": "createTypes",
+            "leadingComments": null
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 49,
+            "end": 60,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 9
+              },
+              "end": {
+                "line": 2,
+                "column": 20
+              }
+            },
+            "name": "createTypes",
+            "leadingComments": [
+              {
+                "type": "CommentLine",
+                "value": " A list of all actions in the system.",
+                "start": 0,
+                "end": 39,
+                "loc": {
+                  "start": {
+                    "line": 1,
+                    "column": 0
+                  },
+                  "end": {
+                    "line": 1,
+                    "column": 39
+                  }
+                },
+                "range": [
+                  0,
+                  39
+                ]
+              }
+            ]
+          },
+          "leadingComments": null
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 68,
+        "end": 80,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 28
+          },
+          "end": {
+            "line": 2,
+            "column": 40
+          }
+        },
+        "value": "reduxsauce",
+        "rawValue": "reduxsauce",
+        "raw": "'reduxsauce'"
+      },
+      "leadingComments": [
+        {
+          "type": "CommentLine",
+          "value": " A list of all actions in the system.",
+          "start": 0,
+          "end": 39,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 39
+            }
+          },
+          "range": [
+            0,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 83,
+      "end": 304,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 20,
+          "column": 3
+        }
+      },
+      "declaration": {
+        "type": "CallExpression",
+        "start": 98,
+        "end": 303,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 15
+          },
+          "end": {
+            "line": 20,
+            "column": 2
+          }
+        },
+        "callee": {
+          "type": "Identifier",
+          "start": 98,
+          "end": 109,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 15
+            },
+            "end": {
+              "line": 4,
+              "column": 26
+            }
+          },
+          "name": "createTypes"
+        },
+        "arguments": [
+          {
+            "type": "TemplateLiteral",
+            "start": 110,
+            "end": 302,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 27
+              },
+              "end": {
+                "line": 20,
+                "column": 1
+              }
+            },
+            "expressions": [],
+            "quasis": [
+              {
+                "type": "TemplateElement",
+                "start": 111,
+                "end": 301,
+                "loc": {
+                  "start": {
+                    "line": 4,
+                    "column": 28
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 0
+                  }
+                },
+                "value": {
+                  "raw": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT\n\n  STARTUP\n",
+                  "cooked": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT\n\n  STARTUP\n"
+                },
+                "tail": true
+              }
+            ]
+          }
+        ],
+        "leadingComments": [],
+        "trailingComments": []
+      }
+    }
+  ]
+}
