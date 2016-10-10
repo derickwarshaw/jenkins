@@ -17,12 +17,16 @@
     "android:hockeyapp": "cd android && ./gradlew assembleRelease && puck -submit=auto app/build/outputs/apk/app-release.apk",
     "android:devices": "$ANDROID_HOME/platform-tools/adb devices",
     "android:logcat": "$ANDROID_HOME/platform-tools/adb logcat *:S ReactNative:V ReactNativeJS:V",
-    "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82"
+    "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82",
+    "storybook": "storybook start -p 7007 && opn http://localhost:7007",
+    "storybook:ios": "react-native run-ios && npm run storybook",
+    "storybook:android": "react-native run-android npm run storybook"
   },
   "dependencies": {
     "apisauce": "^0.5.0",
     "cheerio": "^0.22.0",
     "format-json": "^1.0.3",
+    "opn-cli": "^3.1.0",
     "querystringify": "0.0.4",
     "ramda": "^0.22.1",
     "react": "^15.3.2",
@@ -56,7 +60,8 @@
     "nyc": "^8.3.0",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-native-mock": "^0.2.6"
+    "react-native-mock": "^0.2.6",
+    "@kadira/react-native-storybook": "^2.0.0"
   },
   "ava": {
     "files": [
