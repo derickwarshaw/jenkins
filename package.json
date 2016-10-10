@@ -9,7 +9,7 @@
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "clean": "rm -rf $TMPDIR/react-* && watchman watch-del-all && npm cache clean",
     "newclear": "rm -rf $TMPDIR/react-* && watchman watch-del-all && rm -rf ios/build/ModuleCache/* && rm -rf node_modules/ && npm cache clean && npm i",
-    "test": "ava",
+    "test": "ava --verbose",
     "test:watch": "ava --watch",
     "coverage": "nyc ava",
     "android:build": "cd android && ./gradlew assembleRelease",
@@ -56,7 +56,8 @@
     "nyc": "^8.3.0",
     "react-addons-test-utils": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-native-mock": "^0.2.6"
+    "react-native-mock": "^0.2.6",
+    "sinon": "^1.17.6"
   },
   "ava": {
     "files": [
