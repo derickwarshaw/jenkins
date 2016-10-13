@@ -3,8 +3,8 @@ import React from 'react';
 import { Text } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { shallow } from 'enzyme';
-import sinon from 'sinon';
 import AlertMessage from '../../App/Components/AlertMessageComponent';
+
 
 const wrapper = shallow(<AlertMessage title='Alert Message Title' />);
 
@@ -21,23 +21,25 @@ test('component structure', t => {
   t.is(subview.children().length, 2);
 });
 
-test('has text and set properly', t => {
+test('Has text and set properly', t => {
   t.is(wrapper.containsMatchingElement(<Text>ALERT MESSAGE TITLE</Text>), true);
 });
 
-test('has icon and set properly', t => {
+test('Has icon and default icon set properly', t => {
   t.is(wrapper.containsMatchingElement(<Icon name='ios-alert' />), true);
-
-  const custom = shallow(<AlertMessage onPress={() => {}} title='Alert Message Title' icon='test' />);
-  t.is(custom.containsMatchingElement(<Icon name='test' />), true);
 });
 
-test('style props are passed to top view', t => {
-  const withStyle = shallow(<AlertMessage title='Alert Message Title' style={{color: 'red'}} />);
-  t.is(withStyle.props().style[1].color, 'red');
+test('Has custom icon set properly', t => {
+  const customIconWrapper = shallow(<AlertMessage onPress={() => {}} title='Alert Message Title' icon='test' />);
+  t.is(customIconWrapper.containsMatchingElement(<Icon name='test' />), true);
+});
+
+test('Style props are passed to top view', t => {
+  const styledWrapper = shallow(<AlertMessage title='Alert Message Title' style={{color: 'red'}} />);
+  t.is(styledWrapper.props().style[1].color, 'red');
 });
 
 test('show false', t => {
-  const hidden = shallow(<AlertMessage title='Alert Message Title' show={false} />);
-  t.is(hidden.children().length, 0);
+  const hiddenWrapper = shallow(<AlertMessage title='Alert Message Title' show={false} />);
+  t.is(hiddenWrapper.children().length, 0);
 });
