@@ -15,6 +15,8 @@ mockery.warnOnUnregistered(false);
 // Mock any libs that get called in here
 // I'm looking at you react-native-router-flux, reactotron etc!
 mockery.registerMock('reactotron', {});
+mockery.registerMock('react-native-animatable', {View: 'Animatable.View'});
+mockery.registerMock('react-native-vector-icons/Ionicons', {});
 
 // Mock all images for React Native
 const originalLoader = m._load;
