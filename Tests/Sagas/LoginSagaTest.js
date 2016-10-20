@@ -3,7 +3,6 @@ import { take, call, put } from 'redux-saga/effects';
 import login from '../../App/Sagas/LoginSaga';
 import Actions from '../../App/Actions/Creators';
 import Types from '../../App/Actions/Types';
-import sinon from 'sinon';
 
 const stepper = (fn) => (mock) => fn.next(mock).value;
 
