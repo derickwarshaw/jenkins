@@ -43,10 +43,6 @@ class HomeScreen extends React.Component {
             </View>
           </View>
 
-          {/*<RoundedButton onPress={this.props.login}>*/}
-            {/*Add Jenkins Instance*/}
-          {/*</RoundedButton>*/}
-
           <Button buttonType="RoundedButton" onPress={this.props.login}>
             Add Jenkins Instance
           </Button>
