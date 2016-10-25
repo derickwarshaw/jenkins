@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { ScrollView, Image } from 'react-native';
 import styles from './Styles/DrawerContentStyle';
 import { Images } from '../Themes';
-import DrawerButton from '../Components/DrawerButton';
+import Button from '../Components/Button';
 import { Actions as NavigationActions } from 'react-native-router-flux';
 
 class DrawerContent extends Component {
@@ -40,11 +40,11 @@ class DrawerContent extends Component {
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logo} style={styles.logo} />
-        <DrawerButton text='Home Screen' onPress={this.handlePressHome} />
-        <DrawerButton text='Jobs' onPress={this.handlePressJobs} />
-        <DrawerButton text='Device Info' onPress={this.handlePressDevice} />
-        <DrawerButton text='Login' onPress={this.handlePressLogin} />
-        <DrawerButton text='Build List' onPress={this.handlePressBuildList} />
+        <Button buttonType="DrawerButton" text='Home Screen' onPress={this.handlePressHome} />
+        <Button buttonType="DrawerButton" text='Jobs' onPress={this.handlePressJobs} />
+        <Button buttonType="DrawerButton" text='Device Info' onPress={this.handlePressDevice} />
+        <Button buttonType="DrawerButton" text='Login' onPress={this.handlePressLogin} />
+        <Button buttonType="DrawerButton" text='Build List' onPress={this.handlePressBuildList} />
       </ScrollView>
     );
   }
