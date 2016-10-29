@@ -59,7 +59,7 @@ const create = (baseURL = 'http://') => {
   const startJob = (job) =>  jobs.getJob(api, job);
   const startLogin = (username, password, instanceName, host, port, https) => {
     updateDefaultBaseURL({host, port, https});
-    return login.attemptLogin(api, username, password, instanceName);
+    return login.attemptLogin(api, username, password, https);
   };
 
 
