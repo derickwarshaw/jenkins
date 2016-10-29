@@ -2,8 +2,8 @@ import React, {PropTypes} from 'react';
 import { ScrollView, Text, Image, View } from 'react-native';
 import { Images } from '../Themes';
 import { connect } from 'react-redux';
-import RoundedButton from '../Components/RoundedButton';
 import { Actions as NavigationActions } from 'react-native-router-flux';
+import Button from '../Components/Button';
 
 // Styles
 import styles from './Styles/PresentationScreenStyle';
@@ -43,9 +43,9 @@ class HomeScreen extends React.Component {
             </View>
           </View>
 
-          <RoundedButton onPress={this.props.login}>
+          <Button buttonType="RoundedButton" onPress={this.props.login}>
             Add Jenkins Instance
-          </RoundedButton>
+          </Button>
 
         </ScrollView>
       </View>

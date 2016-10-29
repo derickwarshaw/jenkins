@@ -1,0 +1,1594 @@
+{
+  "type": "Program",
+  "start": 0,
+  "end": 763,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 23,
+      "column": 0
+    }
+  },
+  "sourceType": "module",
+  "body": [
+    {
+      "type": "ImportDeclaration",
+      "start": 0,
+      "end": 42,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 42
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 9,
+          "end": 13,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 9
+            },
+            "end": {
+              "line": 1,
+              "column": 13
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 13,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 13
+              }
+            },
+            "name": "fork"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 9,
+            "end": 13,
+            "loc": {
+              "start": {
+                "line": 1,
+                "column": 9
+              },
+              "end": {
+                "line": 1,
+                "column": 13
+              }
+            },
+            "name": "fork"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 21,
+        "end": 41,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 21
+          },
+          "end": {
+            "line": 1,
+            "column": 41
+          }
+        },
+        "value": "redux-saga/effects",
+        "rawValue": "redux-saga/effects",
+        "raw": "'redux-saga/effects'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 43,
+      "end": 77,
+      "loc": {
+        "start": {
+          "line": 2,
+          "column": 0
+        },
+        "end": {
+          "line": 2,
+          "column": 34
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 50,
+          "end": 53,
+          "loc": {
+            "start": {
+              "line": 2,
+              "column": 7
+            },
+            "end": {
+              "line": 2,
+              "column": 10
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 50,
+            "end": 53,
+            "loc": {
+              "start": {
+                "line": 2,
+                "column": 7
+              },
+              "end": {
+                "line": 2,
+                "column": 10
+              }
+            },
+            "name": "API"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 59,
+        "end": 76,
+        "loc": {
+          "start": {
+            "line": 2,
+            "column": 16
+          },
+          "end": {
+            "line": 2,
+            "column": 33
+          }
+        },
+        "value": "../Services/Api",
+        "rawValue": "../Services/Api",
+        "raw": "'../Services/Api'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 78,
+      "end": 126,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 48
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 85,
+          "end": 95,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 7
+            },
+            "end": {
+              "line": 3,
+              "column": 17
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 85,
+            "end": 95,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 17
+              }
+            },
+            "name": "FixtureAPI"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 101,
+        "end": 125,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 23
+          },
+          "end": {
+            "line": 3,
+            "column": 47
+          }
+        },
+        "value": "../Services/FixtureApi",
+        "rawValue": "../Services/FixtureApi",
+        "raw": "'../Services/FixtureApi'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 127,
+      "end": 172,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 45
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportSpecifier",
+          "start": 136,
+          "end": 148,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 9
+            },
+            "end": {
+              "line": 4,
+              "column": 21
+            }
+          },
+          "imported": {
+            "type": "Identifier",
+            "start": 136,
+            "end": 148,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 21
+              }
+            },
+            "name": "watchStartup"
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 136,
+            "end": 148,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 9
+              },
+              "end": {
+                "line": 4,
+                "column": 21
+              }
+            },
+            "name": "watchStartup"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 156,
+        "end": 171,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 29
+          },
+          "end": {
+            "line": 4,
+            "column": 44
+          }
+        },
+        "value": "./StartupSaga",
+        "rawValue": "./StartupSaga",
+        "raw": "'./StartupSaga'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 173,
+      "end": 205,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 32
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 180,
+          "end": 185,
+          "loc": {
+            "start": {
+              "line": 5,
+              "column": 7
+            },
+            "end": {
+              "line": 5,
+              "column": 12
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 180,
+            "end": 185,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 7
+              },
+              "end": {
+                "line": 5,
+                "column": 12
+              }
+            },
+            "name": "login"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 191,
+        "end": 204,
+        "loc": {
+          "start": {
+            "line": 5,
+            "column": 18
+          },
+          "end": {
+            "line": 5,
+            "column": 31
+          }
+        },
+        "value": "./LoginSaga",
+        "rawValue": "./LoginSaga",
+        "raw": "'./LoginSaga'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 206,
+      "end": 242,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 6,
+          "column": 36
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 213,
+          "end": 220,
+          "loc": {
+            "start": {
+              "line": 6,
+              "column": 7
+            },
+            "end": {
+              "line": 6,
+              "column": 14
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 213,
+            "end": 220,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 7
+              },
+              "end": {
+                "line": 6,
+                "column": 14
+              }
+            },
+            "name": "getJobs"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 226,
+        "end": 241,
+        "loc": {
+          "start": {
+            "line": 6,
+            "column": 20
+          },
+          "end": {
+            "line": 6,
+            "column": 35
+          }
+        },
+        "value": "./GetJobsSaga",
+        "rawValue": "./GetJobsSaga",
+        "raw": "'./GetJobsSaga'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 243,
+      "end": 283,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 7,
+          "column": 40
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 250,
+          "end": 259,
+          "loc": {
+            "start": {
+              "line": 7,
+              "column": 7
+            },
+            "end": {
+              "line": 7,
+              "column": 16
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 250,
+            "end": 259,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 7
+              },
+              "end": {
+                "line": 7,
+                "column": 16
+              }
+            },
+            "name": "getBuilds"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 265,
+        "end": 282,
+        "loc": {
+          "start": {
+            "line": 7,
+            "column": 22
+          },
+          "end": {
+            "line": 7,
+            "column": 39
+          }
+        },
+        "value": "./GetBuildsSaga",
+        "rawValue": "./GetBuildsSaga",
+        "raw": "'./GetBuildsSaga'"
+      }
+    },
+    {
+      "type": "ImportDeclaration",
+      "start": 284,
+      "end": 336,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 8,
+          "column": 52
+        }
+      },
+      "specifiers": [
+        {
+          "type": "ImportDefaultSpecifier",
+          "start": 291,
+          "end": 304,
+          "loc": {
+            "start": {
+              "line": 8,
+              "column": 7
+            },
+            "end": {
+              "line": 8,
+              "column": 20
+            }
+          },
+          "local": {
+            "type": "Identifier",
+            "start": 291,
+            "end": 304,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 7
+              },
+              "end": {
+                "line": 8,
+                "column": 20
+              }
+            },
+            "name": "DebugSettings"
+          }
+        }
+      ],
+      "importKind": "value",
+      "source": {
+        "type": "Literal",
+        "start": 310,
+        "end": 335,
+        "loc": {
+          "start": {
+            "line": 8,
+            "column": 26
+          },
+          "end": {
+            "line": 8,
+            "column": 51
+          }
+        },
+        "value": "../Config/DebugSettings",
+        "rawValue": "../Config/DebugSettings",
+        "raw": "'../Config/DebugSettings'"
+      },
+      "trailingComments": [
+        {
+          "type": "CommentLine",
+          "value": " Create our API at this level and feed it into",
+          "start": 338,
+          "end": 386,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 10,
+              "column": 48
+            }
+          },
+          "range": [
+            338,
+            386
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " the sagas that are expected to make API calls",
+          "start": 387,
+          "end": 435,
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 48
+            }
+          },
+          "range": [
+            387,
+            435
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " so there's only 1 copy app-wide!",
+          "start": 436,
+          "end": 471,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 0
+            },
+            "end": {
+              "line": 12,
+              "column": 35
+            }
+          },
+          "range": [
+            436,
+            471
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " const api = API.create()",
+          "start": 472,
+          "end": 499,
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 27
+            }
+          },
+          "range": [
+            472,
+            499
+          ]
+        }
+      ]
+    },
+    {
+      "type": "VariableDeclaration",
+      "start": 500,
+      "end": 566,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 0
+        },
+        "end": {
+          "line": 14,
+          "column": 66
+        }
+      },
+      "declarations": [
+        {
+          "type": "VariableDeclarator",
+          "start": 506,
+          "end": 565,
+          "loc": {
+            "start": {
+              "line": 14,
+              "column": 6
+            },
+            "end": {
+              "line": 14,
+              "column": 65
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 506,
+            "end": 509,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 6
+              },
+              "end": {
+                "line": 14,
+                "column": 9
+              }
+            },
+            "name": "api",
+            "leadingComments": null
+          },
+          "init": {
+            "type": "ConditionalExpression",
+            "start": 512,
+            "end": 565,
+            "loc": {
+              "start": {
+                "line": 14,
+                "column": 12
+              },
+              "end": {
+                "line": 14,
+                "column": 65
+              }
+            },
+            "test": {
+              "type": "MemberExpression",
+              "start": 512,
+              "end": 537,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 12
+                },
+                "end": {
+                  "line": 14,
+                  "column": 37
+                }
+              },
+              "object": {
+                "type": "Identifier",
+                "start": 512,
+                "end": 525,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 12
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 25
+                  }
+                },
+                "name": "DebugSettings"
+              },
+              "property": {
+                "type": "Identifier",
+                "start": 526,
+                "end": 537,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 26
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 37
+                  }
+                },
+                "name": "useFixtures"
+              },
+              "computed": false
+            },
+            "consequent": {
+              "type": "Identifier",
+              "start": 540,
+              "end": 550,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 40
+                },
+                "end": {
+                  "line": 14,
+                  "column": 50
+                }
+              },
+              "name": "FixtureAPI"
+            },
+            "alternate": {
+              "type": "CallExpression",
+              "start": 553,
+              "end": 565,
+              "loc": {
+                "start": {
+                  "line": 14,
+                  "column": 53
+                },
+                "end": {
+                  "line": 14,
+                  "column": 65
+                }
+              },
+              "callee": {
+                "type": "MemberExpression",
+                "start": 553,
+                "end": 563,
+                "loc": {
+                  "start": {
+                    "line": 14,
+                    "column": 53
+                  },
+                  "end": {
+                    "line": 14,
+                    "column": 63
+                  }
+                },
+                "object": {
+                  "type": "Identifier",
+                  "start": 553,
+                  "end": 556,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 53
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 56
+                    }
+                  },
+                  "name": "API"
+                },
+                "property": {
+                  "type": "Identifier",
+                  "start": 557,
+                  "end": 563,
+                  "loc": {
+                    "start": {
+                      "line": 14,
+                      "column": 57
+                    },
+                    "end": {
+                      "line": 14,
+                      "column": 63
+                    }
+                  },
+                  "name": "create"
+                },
+                "computed": false
+              },
+              "arguments": []
+            }
+          },
+          "leadingComments": null
+        }
+      ],
+      "kind": "const",
+      "leadingComments": [
+        {
+          "type": "CommentLine",
+          "value": " Create our API at this level and feed it into",
+          "start": 338,
+          "end": 386,
+          "loc": {
+            "start": {
+              "line": 10,
+              "column": 0
+            },
+            "end": {
+              "line": 10,
+              "column": 48
+            }
+          },
+          "range": [
+            338,
+            386
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " the sagas that are expected to make API calls",
+          "start": 387,
+          "end": 435,
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 0
+            },
+            "end": {
+              "line": 11,
+              "column": 48
+            }
+          },
+          "range": [
+            387,
+            435
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " so there's only 1 copy app-wide!",
+          "start": 436,
+          "end": 471,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 0
+            },
+            "end": {
+              "line": 12,
+              "column": 35
+            }
+          },
+          "range": [
+            436,
+            471
+          ]
+        },
+        {
+          "type": "CommentLine",
+          "value": " const api = API.create()",
+          "start": 472,
+          "end": 499,
+          "loc": {
+            "start": {
+              "line": 13,
+              "column": 0
+            },
+            "end": {
+              "line": 13,
+              "column": 27
+            }
+          },
+          "range": [
+            472,
+            499
+          ]
+        }
+      ],
+      "trailingComments": [
+        {
+          "type": "CommentLine",
+          "value": " start the daemons",
+          "start": 568,
+          "end": 588,
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 20
+            }
+          },
+          "range": [
+            568,
+            588
+          ]
+        }
+      ]
+    },
+    {
+      "type": "ExportDefaultDeclaration",
+      "start": 589,
+      "end": 762,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 22,
+          "column": 1
+        }
+      },
+      "declaration": {
+        "type": "FunctionDeclaration",
+        "start": 604,
+        "end": 762,
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 15
+          },
+          "end": {
+            "line": 22,
+            "column": 1
+          }
+        },
+        "id": {
+          "type": "Identifier",
+          "start": 615,
+          "end": 619,
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 26
+            },
+            "end": {
+              "line": 17,
+              "column": 30
+            }
+          },
+          "name": "root",
+          "leadingComments": null
+        },
+        "generator": true,
+        "expression": false,
+        "async": false,
+        "params": [],
+        "body": {
+          "type": "BlockStatement",
+          "start": 623,
+          "end": 762,
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 34
+            },
+            "end": {
+              "line": 22,
+              "column": 1
+            }
+          },
+          "body": [
+            {
+              "type": "ExpressionStatement",
+              "start": 627,
+              "end": 652,
+              "loc": {
+                "start": {
+                  "line": 18,
+                  "column": 2
+                },
+                "end": {
+                  "line": 18,
+                  "column": 27
+                }
+              },
+              "expression": {
+                "type": "YieldExpression",
+                "start": 627,
+                "end": 651,
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 18,
+                    "column": 26
+                  }
+                },
+                "delegate": false,
+                "argument": {
+                  "type": "CallExpression",
+                  "start": 633,
+                  "end": 651,
+                  "loc": {
+                    "start": {
+                      "line": 18,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 26
+                    }
+                  },
+                  "callee": {
+                    "type": "Identifier",
+                    "start": 633,
+                    "end": 637,
+                    "loc": {
+                      "start": {
+                        "line": 18,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 12
+                      }
+                    },
+                    "name": "fork"
+                  },
+                  "arguments": [
+                    {
+                      "type": "Identifier",
+                      "start": 638,
+                      "end": 650,
+                      "loc": {
+                        "start": {
+                          "line": 18,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 18,
+                          "column": 25
+                        }
+                      },
+                      "name": "watchStartup"
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "ExpressionStatement",
+              "start": 655,
+              "end": 686,
+              "loc": {
+                "start": {
+                  "line": 19,
+                  "column": 2
+                },
+                "end": {
+                  "line": 19,
+                  "column": 33
+                }
+              },
+              "expression": {
+                "type": "YieldExpression",
+                "start": 655,
+                "end": 685,
+                "loc": {
+                  "start": {
+                    "line": 19,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 19,
+                    "column": 32
+                  }
+                },
+                "delegate": false,
+                "argument": {
+                  "type": "CallExpression",
+                  "start": 661,
+                  "end": 685,
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 32
+                    }
+                  },
+                  "callee": {
+                    "type": "Identifier",
+                    "start": 661,
+                    "end": 665,
+                    "loc": {
+                      "start": {
+                        "line": 19,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 19,
+                        "column": 12
+                      }
+                    },
+                    "name": "fork"
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "start": 666,
+                      "end": 684,
+                      "loc": {
+                        "start": {
+                          "line": 19,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 19,
+                          "column": 31
+                        }
+                      },
+                      "object": {
+                        "type": "CallExpression",
+                        "start": 666,
+                        "end": 676,
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 23
+                          }
+                        },
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 666,
+                          "end": 671,
+                          "loc": {
+                            "start": {
+                              "line": 19,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 19,
+                              "column": 18
+                            }
+                          },
+                          "name": "login"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 672,
+                            "end": 675,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 19
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 22
+                              }
+                            },
+                            "name": "api"
+                          }
+                        ]
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 677,
+                        "end": 684,
+                        "loc": {
+                          "start": {
+                            "line": 19,
+                            "column": 24
+                          },
+                          "end": {
+                            "line": 19,
+                            "column": 31
+                          }
+                        },
+                        "name": "watcher"
+                      },
+                      "computed": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "ExpressionStatement",
+              "start": 689,
+              "end": 722,
+              "loc": {
+                "start": {
+                  "line": 20,
+                  "column": 2
+                },
+                "end": {
+                  "line": 20,
+                  "column": 35
+                }
+              },
+              "expression": {
+                "type": "YieldExpression",
+                "start": 689,
+                "end": 721,
+                "loc": {
+                  "start": {
+                    "line": 20,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 34
+                  }
+                },
+                "delegate": false,
+                "argument": {
+                  "type": "CallExpression",
+                  "start": 695,
+                  "end": 721,
+                  "loc": {
+                    "start": {
+                      "line": 20,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 34
+                    }
+                  },
+                  "callee": {
+                    "type": "Identifier",
+                    "start": 695,
+                    "end": 699,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 12
+                      }
+                    },
+                    "name": "fork"
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "start": 700,
+                      "end": 720,
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 33
+                        }
+                      },
+                      "object": {
+                        "type": "CallExpression",
+                        "start": 700,
+                        "end": 712,
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 25
+                          }
+                        },
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 700,
+                          "end": 707,
+                          "loc": {
+                            "start": {
+                              "line": 20,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 20,
+                              "column": 20
+                            }
+                          },
+                          "name": "getJobs"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 708,
+                            "end": 711,
+                            "loc": {
+                              "start": {
+                                "line": 20,
+                                "column": 21
+                              },
+                              "end": {
+                                "line": 20,
+                                "column": 24
+                              }
+                            },
+                            "name": "api"
+                          }
+                        ]
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 713,
+                        "end": 720,
+                        "loc": {
+                          "start": {
+                            "line": 20,
+                            "column": 26
+                          },
+                          "end": {
+                            "line": 20,
+                            "column": 33
+                          }
+                        },
+                        "name": "watcher"
+                      },
+                      "computed": false
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "ExpressionStatement",
+              "start": 725,
+              "end": 760,
+              "loc": {
+                "start": {
+                  "line": 21,
+                  "column": 2
+                },
+                "end": {
+                  "line": 21,
+                  "column": 37
+                }
+              },
+              "expression": {
+                "type": "YieldExpression",
+                "start": 725,
+                "end": 759,
+                "loc": {
+                  "start": {
+                    "line": 21,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 21,
+                    "column": 36
+                  }
+                },
+                "delegate": false,
+                "argument": {
+                  "type": "CallExpression",
+                  "start": 731,
+                  "end": 759,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 8
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 36
+                    }
+                  },
+                  "callee": {
+                    "type": "Identifier",
+                    "start": 731,
+                    "end": 735,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 8
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 12
+                      }
+                    },
+                    "name": "fork"
+                  },
+                  "arguments": [
+                    {
+                      "type": "MemberExpression",
+                      "start": 736,
+                      "end": 758,
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 21,
+                          "column": 35
+                        }
+                      },
+                      "object": {
+                        "type": "CallExpression",
+                        "start": 736,
+                        "end": 750,
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 13
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 27
+                          }
+                        },
+                        "callee": {
+                          "type": "Identifier",
+                          "start": 736,
+                          "end": 745,
+                          "loc": {
+                            "start": {
+                              "line": 21,
+                              "column": 13
+                            },
+                            "end": {
+                              "line": 21,
+                              "column": 22
+                            }
+                          },
+                          "name": "getBuilds"
+                        },
+                        "arguments": [
+                          {
+                            "type": "Identifier",
+                            "start": 746,
+                            "end": 749,
+                            "loc": {
+                              "start": {
+                                "line": 21,
+                                "column": 23
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 26
+                              }
+                            },
+                            "name": "api"
+                          }
+                        ]
+                      },
+                      "property": {
+                        "type": "Identifier",
+                        "start": 751,
+                        "end": 758,
+                        "loc": {
+                          "start": {
+                            "line": 21,
+                            "column": 28
+                          },
+                          "end": {
+                            "line": 21,
+                            "column": 35
+                          }
+                        },
+                        "name": "watcher"
+                      },
+                      "computed": false
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "leadingComments": [
+          {
+            "type": "CommentLine",
+            "value": " start the daemons",
+            "start": 568,
+            "end": 588,
+            "loc": {
+              "start": {
+                "line": 16,
+                "column": 0
+              },
+              "end": {
+                "line": 16,
+                "column": 20
+              }
+            },
+            "range": [
+              568,
+              588
+            ]
+          }
+        ],
+        "trailingComments": []
+      },
+      "leadingComments": [
+        {
+          "type": "CommentLine",
+          "value": " start the daemons",
+          "start": 568,
+          "end": 588,
+          "loc": {
+            "start": {
+              "line": 16,
+              "column": 0
+            },
+            "end": {
+              "line": 16,
+              "column": 20
+            }
+          },
+          "range": [
+            568,
+            588
+          ]
+        }
+      ]
+    }
+  ]
+}
