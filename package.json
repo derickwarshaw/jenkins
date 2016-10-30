@@ -35,7 +35,7 @@
     "react-native-vector-icons": "^3.0.0",
     "react-redux": "^4.4.5",
     "redux": "^3.6.0",
-    "redux-logger": "^2.6.1",
+    "redux-logger": "^2.7.4",
     "redux-persist": "^3.5.0",
     "redux-saga": "^0.12.0",
     "reduxsauce": "^0.2.0",
