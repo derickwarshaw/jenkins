@@ -77,7 +77,6 @@ DrawerContent.contextTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    username: state.login.username,
     loginSuccess: state.login.loginSuccess
   };
 };
