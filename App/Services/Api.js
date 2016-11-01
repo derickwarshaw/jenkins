@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce';
-import { info, builds, jobs, views, que, load, login } from '../Services/';
+import { info, builds, jobs, views, que, load, login, logout } from '../Services/';
 
 // our "constructor"
 const create = (baseURL = 'http://') => {
@@ -61,6 +61,7 @@ const create = (baseURL = 'http://') => {
     updateDefaultBaseURL({host, port, https});
     return login.attemptLogin(api, username, password, https);
   };
+  const startLogout = () => logout.attemptLogout(api);
 
 
 
@@ -85,6 +86,7 @@ const create = (baseURL = 'http://') => {
     getLoadAPI,
     getBuilds,
     startLogin,
+    startLogout,
     startJob,
     // additional utilities
     addMonitor

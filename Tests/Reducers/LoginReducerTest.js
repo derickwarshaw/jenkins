@@ -15,15 +15,27 @@ test('success', t => {
 });
 
 test('failure', t => {
-  const state = reducer(INITIAL_STATE, Actions.loginFailure(69))
+  const state = reducer(INITIAL_STATE, Actions.loginFailure(69));
 
   t.false(state.attempting);
   t.is(state.errorCode, 69)
 });
 
-test('logout', t => {
-  const loginState = reducer(INITIAL_STATE, Actions.loginSuccess('hi'));
-  const state = reducer(loginState, Actions.logout());
+test('logout attempt', t => {
+  const state = reducer(INITIAL_STATE, Actions.logoutAttempt());
 
-  t.falsy(state.username)
+  t.true(state.attempting)
+});
+
+test('logout success', t => {
+  const state = reducer(INITIAL_STATE, Actions.logoutSuccess());
+
+  t.is(state.INITIAL_STATE);
+});
+
+test('logout failure', t => {
+  const state = reducer(INITIAL_STATE, Actions.logoutFailure(69));
+
+  t.false(state.attempting);
+  t.is(state.errorCode, 69)
 });

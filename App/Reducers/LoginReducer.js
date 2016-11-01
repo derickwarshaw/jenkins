@@ -26,16 +26,26 @@ const success = (state, action) =>
 const failure = (state, action) =>
   state.merge({ attempting: false, errorCode: action.errorCode, instanceName: null });
 
-// logout
-const logout = (state, action) =>
-  state.merge({ username: null });
+// logout attempt
+const logoutAttempt = (state, action) =>
+  state.merge({ attempting: true });
+
+// logout success
+const logoutSuccess = (state, action) =>
+  state.merge(INITIAL_STATE);
+
+// logout failure
+const logoutFailure = (state, action) =>
+  state.merge({ attempting: false, errorCode: action.errorCode });
 
 // map our types to our handlers
 const ACTION_HANDLERS = {
   [Types.LOGIN_ATTEMPT]: attempt,
   [Types.LOGIN_SUCCESS]: success,
   [Types.LOGIN_FAILURE]: failure,
-  [Types.LOGOUT]: logout
+  [Types.LOGOUT_ATTEMPT]: logoutAttempt,
+  [Types.LOGOUT_SUCCESS]: logoutSuccess,
+  [Types.LOGOUT_FAILURE]: logoutFailure
 };
 
 export default createReducer(INITIAL_STATE, ACTION_HANDLERS);

@@ -12,7 +12,9 @@ const getBuilds = (job) => ({ type: Types.GETBUILDS_ATTEMPT, job });
 const getBuildsSuccess = (result) => ({ type: Types.GETBUILDS_SUCCESS, result });
 const getBuildsFailure = (errorCode) => ({ type: Types.GETBUILDS_FAILURE, errorCode });
 
-const logout = () => ({ type: Types.LOGOUT });
+const logoutAttempt = () => ({ type: Types.LOGOUT_ATTEMPT });
+const logoutSuccess = () => ({ type: Types.LOGOUT_SUCCESS });
+const logoutFailure = (errorCode) => ({ type: Types.LOGOUT_FAILURE, errorCode });
 
 const startup = () => ({ type: Types.STARTUP });
 
@@ -29,6 +31,8 @@ export default {
   getJobsFailure,
   loginSuccess,
   loginFailure,
-  logout,
+  logoutAttempt,
+  logoutSuccess,
+  logoutFailure,
   startup
 };

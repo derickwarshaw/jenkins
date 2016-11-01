@@ -26,6 +26,11 @@
 	<dict>
 		<key>NSExceptionDomains</key>
 		<dict>
+			<key>devbuild.derickwarshaw.com</key>
+			<dict>
+				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
 			<key>localhost</key>
 			<dict>
 				<key>NSTemporaryExceptionAllowsInsecureHTTPLoads</key>
