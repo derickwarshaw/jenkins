@@ -14,7 +14,7 @@ const getBuildsFailure = (errorCode) => ({ type: Types.GETBUILDS_FAILURE, errorC
 
 const logoutAttempt = () => ({ type: Types.LOGOUT_ATTEMPT });
 const logoutSuccess = () => ({ type: Types.LOGOUT_SUCCESS });
-const logoutFailure = () => ({ type: Types.LOGOUT_FAILURE });
+const logoutFailure = (errorCode) => ({ type: Types.LOGOUT_FAILURE, errorCode });
 
 const startup = () => ({ type: Types.STARTUP });
 
