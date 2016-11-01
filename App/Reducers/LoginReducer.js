@@ -28,7 +28,7 @@ const failure = (state, action) =>
 
 // logout
 const logout = (state, action) =>
-  state.merge({ username: null });
+  state.merge({ INITIAL_STATE });
 
 // map our types to our handlers
 const ACTION_HANDLERS = {

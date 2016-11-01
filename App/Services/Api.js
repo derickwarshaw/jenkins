@@ -61,6 +61,7 @@ const create = (baseURL = 'http://') => {
     updateDefaultBaseURL({host, port, https});
     return login.attemptLogin(api, username, password, https);
   };
+  const startLogout = () => logout.attemptLogout(api);
 
 
 
@@ -85,6 +86,7 @@ const create = (baseURL = 'http://') => {
     getLoadAPI,
     getBuilds,
     startLogin,
+    startLogout,
     startJob,
     // additional utilities
     addMonitor
