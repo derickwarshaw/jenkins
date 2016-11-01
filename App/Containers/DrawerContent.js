@@ -4,22 +4,11 @@ import { ScrollView, Image } from 'react-native';
 import styles from './Styles/DrawerContentStyle';
 import { Images } from '../Themes';
 import Button from '../Components/Button';
+import Actions from '../Actions/Creators';
 import { Actions as NavigationActions } from 'react-native-router-flux';
 
 class DrawerContent extends Component {
 
-  constructor (props) {
-    super(props);
-
-  }
-
-  componentWillReceiveProps (newProps) {
-    // Did the logout attempt complete?
-    if (this.loginSuccess && !newProps.loginSuccess) {
-      this.toggleDrawer();
-      NavigationActions.login();
-    }
-  }
 
   toggleDrawer () {
     this.context.drawer.toggle();
@@ -51,7 +40,9 @@ class DrawerContent extends Component {
   };
 
   handlePressLogout = () => {
-    this.props.attemptLogout();
+    this.props.logoutAttempt();
+    this.toggleDrawer();
+    NavigationActions.homeScreen();
   };
 
   render () {
@@ -77,7 +68,7 @@ class DrawerContent extends Component {
 DrawerContent.propTypes = {
   dispatch: PropTypes.func,
   loginSuccess: PropTypes.bool,
-  attemptLogout: PropTypes.func
+  logoutAttempt: PropTypes.func
 };
 
 DrawerContent.contextTypes = {
@@ -94,7 +85,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     close: NavigationActions.pop,
-    attemptLogout: () => dispatch(Actions.attemptLogout())
+    logoutAttempt: () => dispatch(Actions.logoutAttempt())
   };
 };
 

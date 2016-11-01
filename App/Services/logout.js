@@ -1,6 +1,5 @@
-import {util} from '../Util';
-
 export default {
+  // Log out
   attemptLogout: (api) => {
     return api.get('/logout');
   }

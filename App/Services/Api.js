@@ -1,6 +1,6 @@
 // a library to wrap and simplify api calls
 import apisauce from 'apisauce';
-import { info, builds, jobs, views, que, load, login } from '../Services/';
+import { info, builds, jobs, views, que, load, login, logout } from '../Services/';
 
 // our "constructor"
 const create = (baseURL = 'http://') => {

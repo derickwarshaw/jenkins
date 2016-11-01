@@ -2,6 +2,7 @@ import { fork } from 'redux-saga/effects';
 import API from '../Services/Api';
 import FixtureAPI from '../Services/FixtureApi';
 import { watchStartup } from './StartupSaga';
+import logout from './LogoutSaga';
 import login from './LoginSaga';
 import getJobs from './GetJobsSaga';
 import getBuilds from './GetBuildsSaga';
@@ -17,6 +18,7 @@ const api = DebugSettings.useFixtures ? FixtureAPI : API.create();
 export default function * root () {
   yield fork(watchStartup);
   yield fork(login(api).watcher);
+  yield fork(logout(api).watcher);
   yield fork(getJobs(api).watcher);
   yield fork(getBuilds(api).watcher);
 }
