@@ -5,9 +5,9 @@ import Actions from '../Actions/Creators';
 // attempts to login
 export default (api) => {
 
-  function * worker (username, password, instanceName, host, port) {
+  function * worker (username, password, instanceName, host, port, https) {
 
-    const response = yield call(api.startLogin, username, password, instanceName, host, port);
+    const response = yield call(api.startLogin, username, password, instanceName, host, port, https);
 
     if (response.ok) {
       yield put(Actions.loginSuccess(username, instanceName, host, port ));
@@ -20,8 +20,8 @@ export default (api) => {
 
   function * watcher () {
     while (true) {
-      const { username, password, instanceName, host, port } = yield take(Types.LOGIN_ATTEMPT);
-      yield call(worker,username, password, instanceName, host, port);
+      const { username, password, instanceName, host, port, https } = yield take(Types.LOGIN_ATTEMPT);
+      yield call(worker,username, password, instanceName, host, port, https);
     }
   }
 

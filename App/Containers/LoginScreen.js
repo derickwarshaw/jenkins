@@ -7,7 +7,8 @@ import {
   TouchableOpacity,
   Image,
   Keyboard,
-  LayoutAnimation
+  LayoutAnimation,
+  Switch
 } from 'react-native';
 import { connect } from 'react-redux';
 import Styles from './Styles/LoginScreenStyle';
@@ -29,7 +30,8 @@ class LoginScreen extends React.Component {
       host: '',
       port: '',
       visibleHeight: Metrics.screenHeight,
-      topLogo: { width: Metrics.screenWidth }
+      topLogo: { width: Metrics.screenWidth },
+      https: false
     };
     this.isAttempting = false;
   }
@@ -75,10 +77,10 @@ class LoginScreen extends React.Component {
   };
 
   handlePressLogin = () => {
-    const { username, password, instanceName, host, port } = this.state;
+    const { username, password, instanceName, host, port, https } = this.state;
     this.isAttempting = true;
     // attempt a login - a saga is listening to pick it up from here.
-    this.props.attemptLogin(username, password, instanceName, host, port );
+    this.props.attemptLogin(username, password, instanceName, host, port, https );
   };
 
   handleChangeUsername = (text) => {
@@ -101,8 +103,12 @@ class LoginScreen extends React.Component {
     this.setState({ port: text });
   };
 
+  handleChangeHttps = (value) => {
+    this.setState({ https: value });
+  };
+
   render () {
-    const { username, password, instanceName, host, port } = this.state;
+    const { username, password, instanceName, host, port, https } = this.state;
     const { attempting } = this.props;
     const editable = !attempting;
     const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly;
@@ -191,6 +197,14 @@ class LoginScreen extends React.Component {
               placeholder={I18n.t('password')} />
           </View>
 
+          <View style={Styles.row}>
+            <Text style={Styles.rowLabel}>{I18n.t('https')}</Text>
+            <Switch
+              style={Styles.toggle}
+              onValueChange={this.handleChangeHttps}
+              value={https} />
+          </View>
+
           <View style={[Styles.loginRow]}>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}>
               <View style={Styles.loginButton}>
@@ -233,7 +247,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     close: NavigationActions.pop,
-    attemptLogin: (username, password, instanceName, host, port) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port))
+    attemptLogin: (username, password, instanceName, host, port, https) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port, https))
   };
 };
 
