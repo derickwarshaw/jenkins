@@ -48,5 +48,9 @@ export default StyleSheet.create({
   topLogo: {
     alignSelf: 'center',
     resizeMode: 'contain'
+  },
+  toggle :{
+    height: 40,
+    marginTop: 10
   }
 });

@@ -31,7 +31,8 @@ const create = (baseURL = 'http://') => {
   });
 
   const updateDefaultBaseURL = (data) => {
-    api.axiosInstance.defaults.baseURL = `http://${data.host}:${data.port}`;
+    const protocol = data.https ? 'https' : 'http';
+    api.axiosInstance.defaults.baseURL = `${protocol}://${data.host}:${data.port}`;
   };
 
   // ------
@@ -56,9 +57,9 @@ const create = (baseURL = 'http://') => {
   const getBuilds = (job) => builds.getBuilds(api, job);
   const getJenkinsInfo = () => info.getInfo(api);
   const startJob = (job) =>  jobs.getJob(api, job);
-  const startLogin = (username, password, instanceName, host, port) => {
-    updateDefaultBaseURL({host, port});
-    return login.attemptLogin(api, username, password, instanceName);
+  const startLogin = (username, password, instanceName, host, port, https) => {
+    updateDefaultBaseURL({host, port, https});
+    return login.attemptLogin(api, username, password, https);
   };
 
 
