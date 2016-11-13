@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -61,7 +58,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">App/Actions/Creators.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import Types from &apos;./Types&apos;;
 
-const attemptLogin = (username, password, instanceName, host, port) =&gt; ({ type: Types.LOGIN_ATTEMPT, username, password, instanceName, host, port });
+const attemptLogin = (username, password, instanceName, host, port, https) =&gt; ({ type: Types.LOGIN_ATTEMPT, username, password, instanceName, host, port, https });
 const loginSuccess = (username, instanceName, host, port) =&gt; ({ type: Types.LOGIN_SUCCESS, username, instanceName, host, port });
 const loginFailure = (errorCode) =&gt; ({ type: Types.LOGIN_FAILURE, errorCode });
 
@@ -73,7 +70,9 @@ const getBuilds = (job) =&gt; ({ type: Types.GETBUILDS_ATTEMPT, job });
 const getBuildsSuccess = (result) =&gt; ({ type: Types.GETBUILDS_SUCCESS, result });
 const getBuildsFailure = (errorCode) =&gt; ({ type: Types.GETBUILDS_FAILURE, errorCode });
 
-const logout = () =&gt; ({ type: Types.LOGOUT });
+const logoutAttempt = () =&gt; ({ type: Types.LOGOUT_ATTEMPT });
+const logoutSuccess = () =&gt; ({ type: Types.LOGOUT_SUCCESS });
+const logoutFailure = (errorCode) =&gt; ({ type: Types.LOGOUT_FAILURE, errorCode });
 
 const startup = () =&gt; ({ type: Types.STARTUP });
 
@@ -90,7 +89,9 @@ export default {
   getJobsFailure,
   loginSuccess,
   loginFailure,
-  logout,
+  logoutAttempt,
+  logoutSuccess,
+  logoutFailure,
   startup
 };
 </code></pre>

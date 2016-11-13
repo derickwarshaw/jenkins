@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -59,14 +56,17 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">App/Containers/DrawerContent.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, { Component } from &apos;react&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import React, { Component, PropTypes } from &apos;react&apos;;
+import { connect } from &apos;react-redux&apos;;
 import { ScrollView, Image } from &apos;react-native&apos;;
 import styles from &apos;./Styles/DrawerContentStyle&apos;;
 import { Images } from &apos;../Themes&apos;;
-import DrawerButton from &apos;../Components/DrawerButton&apos;;
+import Button from &apos;../Components/Button&apos;;
+import Actions from &apos;../Actions/Creators&apos;;
 import { Actions as NavigationActions } from &apos;react-native-router-flux&apos;;
 
 class DrawerContent extends Component {
+
 
   toggleDrawer () {
     this.context.drawer.toggle();
@@ -97,15 +97,26 @@ class DrawerContent extends Component {
     NavigationActions.buildList();
   };
 
+  handlePressLogout = () =&gt; {
+    this.props.logoutAttempt();
+    this.toggleDrawer();
+    NavigationActions.homeScreen();
+  };
+
   render () {
+    const userStatus = this.props.loginSuccess ? (
+      &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Log Out&apos; onPress={this.handlePressLogout} /&gt;
+    ) : (
+      &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Login&apos; onPress={this.handlePressLogin} /&gt;
+    );
     return (
       &lt;ScrollView style={styles.container}&gt;
         &lt;Image source={Images.logo} style={styles.logo} /&gt;
-        &lt;DrawerButton text=&apos;Home Screen&apos; onPress={this.handlePressHome} /&gt;
-        &lt;DrawerButton text=&apos;Jobs&apos; onPress={this.handlePressJobs} /&gt;
-        &lt;DrawerButton text=&apos;Device Info&apos; onPress={this.handlePressDevice} /&gt;
-        &lt;DrawerButton text=&apos;Login&apos; onPress={this.handlePressLogin} /&gt;
-        &lt;DrawerButton text=&apos;Build List&apos; onPress={this.handlePressBuildList} /&gt;
+        {userStatus}
+        &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Home Screen&apos; onPress={this.handlePressHome} /&gt;
+        &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Jobs&apos; onPress={this.handlePressJobs} /&gt;
+        &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Device Info&apos; onPress={this.handlePressDevice} /&gt;
+        &lt;Button buttonType=&quot;DrawerButton&quot; text=&apos;Build List&apos; onPress={this.handlePressBuildList} /&gt;
       &lt;/ScrollView&gt;
     );
   }
@@ -113,13 +124,29 @@ class DrawerContent extends Component {
 }
 
 DrawerContent.propTypes = {
+  dispatch: PropTypes.func,
+  loginSuccess: PropTypes.bool,
+  logoutAttempt: PropTypes.func
 };
 
 DrawerContent.contextTypes = {
   drawer: React.PropTypes.object
 };
 
-export default DrawerContent;
+const mapStateToProps = (state) =&gt; {
+  return {
+    loginSuccess: state.login.loginSuccess
+  };
+};
+
+const mapDispatchToProps = (dispatch) =&gt; {
+  return {
+    close: NavigationActions.pop,
+    logoutAttempt: () =&gt; dispatch(Actions.logoutAttempt())
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(DrawerContent);
 </code></pre>
 
 </div>
