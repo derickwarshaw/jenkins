@@ -1,14 +1,13 @@
 {
-  "coverage": "2.77%",
-  "expectCount": 36,
+  "coverage": "3.84%",
+  "expectCount": 26,
   "actualCount": 1,
   "files": {
     "App/Components/AlertMessageComponent.js": {
-      "expectCount": 2,
+      "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        8,
-        21
+        8
       ]
     },
     "App/Themes/ApplicationStyles.js": {
@@ -16,6 +15,13 @@
       "actualCount": 0,
       "undocumentLines": [
         8
+      ]
+    },
+    "App/Components/Button.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        5
       ]
     },
     "App/Containers/DeviceInfoScreen.js": {
@@ -28,31 +34,6 @@
         47
       ]
     },
-    "App/Components/DrawerButton.js": {
-      "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        6
-      ]
-    },
-    "App/Containers/DrawerContent.js": {
-      "expectCount": 3,
-      "actualCount": 0,
-      "undocumentLines": [
-        8,
-        39,
-        10
-      ]
-    },
-    "App/Components/FullButton.js": {
-      "expectCount": 2,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        13
-      ]
-    },
     "App/Reducers/LoginReducer.js": {
       "expectCount": 1,
       "actualCount": 0,
@@ -60,14 +41,14 @@
         5
       ]
     },
-    "App/Reducers/BuildsReducer.js": {
+    "App/Reducers/JobsReducer.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
         5
       ]
     },
-    "App/Reducers/JobsReducer.js": {
+    "App/Reducers/BuildsReducer.js": {
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
@@ -103,15 +84,6 @@
       "actualCount": 0,
       "undocumentLines": [
         4
-      ]
-    },
-    "App/Components/RoundedButton.js": {
-      "expectCount": 3,
-      "actualCount": 0,
-      "undocumentLines": [
-        5,
-        14,
-        19
       ]
     },
     "App/Config/DebugSettings.js": {
@@ -153,7 +125,7 @@
       "expectCount": 1,
       "actualCount": 0,
       "undocumentLines": [
-        17
+        18
       ]
     },
     "App/Themes/Transitions.js": {

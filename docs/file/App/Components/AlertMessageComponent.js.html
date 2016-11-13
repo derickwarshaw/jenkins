@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -66,44 +63,40 @@ import * as Animatable from &apos;react-native-animatable&apos;;
 import { Metrics } from &apos;../Themes/&apos;;
 import Icon from &apos;react-native-vector-icons/Ionicons&apos;;
 
-export default class AlertMessage extends React.Component {
+const AlertMessageComponent = (props) =&gt; {
+  const { title } = props;
+  let messageComponent = (
+      &lt;Animatable.View
+      style={[styles.container, props.style]}
+      delay={800}
+      animation=&apos;bounceIn&apos;
+    &gt;
+      &lt;View style={styles.contentContainer}&gt;
+        &lt;Icon
+          name={props.icon || &apos;ios-alert&apos;}
+          size={Metrics.icons.large}
+          style={styles.icon}
+        /&gt;
+        &lt;Text allowFontScaling={false} style={styles.message}&gt;{title &amp;&amp; title.toUpperCase()}&lt;/Text&gt;
+      &lt;/View&gt;
+    &lt;/Animatable.View&gt;
+    );
 
-  static propTypes = {
-    style: React.PropTypes.object,
-    title: React.PropTypes.string.isRequired,
-    icon: React.PropTypes.string,
-    show: React.PropTypes.bool
-  };
+  return props.show ? messageComponent : null;
+};
 
-  static defaultProps = {
-    show: true
-  };
+AlertMessageComponent.defaultProps = {
+  show: true
+};
 
-  render () {
-    let messageComponent = null;
-    if (this.props.show) {
-      const { title } = this.props;
-      return (
-        &lt;Animatable.View
-          style={[styles.container, this.props.style]}
-          delay={800}
-          animation=&apos;bounceIn&apos;
-        &gt;
-          &lt;View style={styles.contentContainer}&gt;
-            &lt;Icon
-              name={this.props.icon || &apos;ios-alert&apos;}
-              size={Metrics.icons.large}
-              style={styles.icon}
-            /&gt;
-            &lt;Text allowFontScaling={false} style={styles.message}&gt;{title &amp;&amp; title.toUpperCase()}&lt;/Text&gt;
-          &lt;/View&gt;
-        &lt;/Animatable.View&gt;
-      );
-    }
+AlertMessageComponent.PropTypes = {
+  style: React.PropTypes.object,
+  title: React.PropTypes.string.isRequired,
+  icon: React.PropTypes.string,
+  show: React.PropTypes.bool
+};
 
-    return messageComponent;
-  }
-}
+export default AlertMessageComponent;
 </code></pre>
 
 </div>

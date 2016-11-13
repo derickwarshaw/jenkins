@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -59,17 +56,39 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">App/Services/login.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { util } from &apos;../Util&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import {util} from &apos;../Util&apos;;
 
 export default {
-  attemptLogin: (api, username, password) =&gt; {
-    return api.post(&apos;/j_acegi_security_check&apos;, util.serializeJSON({
+  attemptLogin: (api, username, password, https) =&gt; {
+
+    const payload = {
       j_username: username,
       j_password: password,
       from: &apos;/&apos;
-    }), {
-      headers: {&apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;}
-    });
+    };
+
+    const headers = {&apos;Content-Type&apos;: &apos;application/x-www-form-urlencoded&apos;};
+    const loginEndpoint = &apos;/j_acegi_security_check&apos;;
+
+    if (https) {
+      return api.get(&apos;/crumbIssuer/api/json&apos;, {}, {
+        auth: {
+          username: username,
+          password: password
+        }
+      }).then((response) =&gt; {
+        const crumb = response.data.crumb;
+        const fieldName = response.data.crumbRequestField;
+
+        if (crumb &amp;&amp; fieldName) {
+          payload[fieldName] = crumb;
+        }
+
+        return api.post(loginEndpoint, util.serializeJSON(payload), {headers});
+      });
+    } else {
+      return api.post(loginEndpoint, util.serializeJSON(payload), {headers});
+    }
   }
 };
 </code></pre>

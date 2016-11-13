@@ -1,7 +1,7 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 159,
+  "end": 162,
   "loc": {
     "start": {
       "line": 1,
@@ -17,7 +17,7 @@
     {
       "type": "Identifier",
       "start": 0,
-      "end": 132,
+      "end": 135,
       "loc": {
         "start": {
           "line": 1,
@@ -32,7 +32,7 @@
         {
           "type": "VariableDeclarator",
           "start": 6,
-          "end": 131,
+          "end": 134,
           "loc": {
             "start": {
               "line": 1,
@@ -62,7 +62,7 @@
           "init": {
             "type": "ObjectExpression",
             "start": 17,
-            "end": 131,
+            "end": 134,
             "loc": {
               "start": {
                 "line": 1,
@@ -234,7 +234,7 @@
               {
                 "type": "Property",
                 "start": 83,
-                "end": 101,
+                "end": 104,
                 "loc": {
                   "start": {
                     "line": 5,
@@ -242,7 +242,7 @@
                   },
                   "end": {
                     "line": 5,
-                    "column": 20
+                    "column": 23
                   }
                 },
                 "method": false,
@@ -265,9 +265,9 @@
                   "name": "reduxLogging"
                 },
                 "value": {
-                  "type": "Literal",
+                  "type": "Identifier",
                   "start": 97,
-                  "end": 101,
+                  "end": 104,
                   "loc": {
                     "start": {
                       "line": 5,
@@ -275,19 +275,17 @@
                     },
                     "end": {
                       "line": 5,
-                      "column": 20
+                      "column": 23
                     }
                   },
-                  "value": true,
-                  "rawValue": true,
-                  "raw": "true"
+                  "name": "__DEV__"
                 },
                 "kind": "init"
               },
               {
                 "type": "Property",
-                "start": 105,
-                "end": 129,
+                "start": 108,
+                "end": 132,
                 "loc": {
                   "start": {
                     "line": 6,
@@ -303,8 +301,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 105,
-                  "end": 120,
+                  "start": 108,
+                  "end": 123,
                   "loc": {
                     "start": {
                       "line": 6,
@@ -319,8 +317,8 @@
                 },
                 "value": {
                   "type": "Identifier",
-                  "start": 122,
-                  "end": 129,
+                  "start": 125,
+                  "end": 132,
                   "loc": {
                     "start": {
                       "line": 6,
@@ -346,8 +344,8 @@
     },
     {
       "type": "Identifier",
-      "start": 134,
-      "end": 158,
+      "start": 137,
+      "end": 161,
       "loc": {
         "start": {
           "line": 9,
@@ -360,8 +358,8 @@
       },
       "declaration": {
         "type": "Identifier",
-        "start": 149,
-        "end": 157,
+        "start": 152,
+        "end": 160,
         "loc": {
           "start": {
             "line": 9,
@@ -380,8 +378,8 @@
     },
     {
       "type": "ExportDefaultDeclaration",
-      "start": 134,
-      "end": 158,
+      "start": 137,
+      "end": 161,
       "loc": {
         "start": {
           "line": 9,
@@ -395,7 +393,7 @@
       "declaration": {
         "type": "VariableDeclaration",
         "start": 0,
-        "end": 132,
+        "end": 135,
         "loc": {
           "start": {
             "line": 1,
@@ -410,7 +408,7 @@
           {
             "type": "VariableDeclarator",
             "start": 6,
-            "end": 131,
+            "end": 134,
             "loc": {
               "start": {
                 "line": 1,
@@ -440,7 +438,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 17,
-              "end": 131,
+              "end": 134,
               "loc": {
                 "start": {
                   "line": 1,
@@ -612,7 +610,7 @@
                 {
                   "type": "Property",
                   "start": 83,
-                  "end": 101,
+                  "end": 104,
                   "loc": {
                     "start": {
                       "line": 5,
@@ -620,7 +618,7 @@
                     },
                     "end": {
                       "line": 5,
-                      "column": 20
+                      "column": 23
                     }
                   },
                   "method": false,
@@ -643,9 +641,9 @@
                     "name": "reduxLogging"
                   },
                   "value": {
-                    "type": "Literal",
+                    "type": "Identifier",
                     "start": 97,
-                    "end": 101,
+                    "end": 104,
                     "loc": {
                       "start": {
                         "line": 5,
@@ -653,19 +651,17 @@
                       },
                       "end": {
                         "line": 5,
-                        "column": 20
+                        "column": 23
                       }
                     },
-                    "value": true,
-                    "rawValue": true,
-                    "raw": "true"
+                    "name": "__DEV__"
                   },
                   "kind": "init"
                 },
                 {
                   "type": "Property",
-                  "start": 105,
-                  "end": 129,
+                  "start": 108,
+                  "end": 132,
                   "loc": {
                     "start": {
                       "line": 6,
@@ -681,8 +677,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 105,
-                    "end": 120,
+                    "start": 108,
+                    "end": 123,
                     "loc": {
                       "start": {
                         "line": 6,
@@ -697,8 +693,8 @@
                   },
                   "value": {
                     "type": "Identifier",
-                    "start": 122,
-                    "end": 129,
+                    "start": 125,
+                    "end": 132,
                     "loc": {
                       "start": {
                         "line": 6,

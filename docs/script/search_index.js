@@ -1,9 +1,9 @@
 window.esdocSearchIndex = [
   [
-    "./app/components/alertmessagecomponent.js~alertmessage",
-    "class/App/Components/AlertMessageComponent.js~AlertMessage.html",
-    "<span>AlertMessage</span> <span class=\"search-result-import-path\">./App/Components/AlertMessageComponent.js</span>",
-    "class"
+    "./app/components/alertmessagecomponent.js~alertmessagecomponent",
+    "variable/index.html#static-variable-AlertMessageComponent",
+    "<span>AlertMessageComponent</span> <span class=\"search-result-import-path\">./App/Components/AlertMessageComponent.js</span>",
+    "variable"
   ],
   [
     "./app/themes/applicationstyles.js~applicationstyles",
@@ -12,27 +12,15 @@ window.esdocSearchIndex = [
     "variable"
   ],
   [
+    "./app/components/button.js~button",
+    "variable/index.html#static-variable-Button",
+    "<span>Button</span> <span class=\"search-result-import-path\">./App/Components/Button.js</span>",
+    "variable"
+  ],
+  [
     "./app/containers/deviceinfoscreen.js~deviceinfoscreen",
     "class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html",
     "<span>DeviceInfoScreen</span> <span class=\"search-result-import-path\">./App/Containers/DeviceInfoScreen.js</span>",
-    "class"
-  ],
-  [
-    "./app/components/drawerbutton.js~drawerbutton",
-    "class/App/Components/DrawerButton.js~DrawerButton.html",
-    "<span>DrawerButton</span> <span class=\"search-result-import-path\">./App/Components/DrawerButton.js</span>",
-    "class"
-  ],
-  [
-    "./app/containers/drawercontent.js~drawercontent",
-    "class/App/Containers/DrawerContent.js~DrawerContent.html",
-    "<span>DrawerContent</span> <span class=\"search-result-import-path\">./App/Containers/DrawerContent.js</span>",
-    "class"
-  ],
-  [
-    "./app/components/fullbutton.js~fullbutton",
-    "class/App/Components/FullButton.js~FullButton.html",
-    "<span>FullButton</span> <span class=\"search-result-import-path\">./App/Components/FullButton.js</span>",
     "class"
   ],
   [
@@ -76,12 +64,6 @@ window.esdocSearchIndex = [
     "variable/index.html#static-variable-RootStyle",
     "<span>RootStyle</span> <span class=\"search-result-import-path\">./App/Containers/Styles/RootStyle.js</span>",
     "variable"
-  ],
-  [
-    "./app/components/roundedbutton.js~roundedbutton",
-    "class/App/Components/RoundedButton.js~RoundedButton.html",
-    "<span>RoundedButton</span> <span class=\"search-result-import-path\">./App/Components/RoundedButton.js</span>",
-    "class"
   ],
   [
     "./app/config/debugsettings.js~settings",
@@ -150,52 +132,10 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/components/alertmessagecomponent.js~alertmessage#render",
-    "class/App/Components/AlertMessageComponent.js~AlertMessage.html#instance-method-render",
-    "App/Components/AlertMessageComponent.js~AlertMessage#render",
-    "method"
-  ],
-  [
-    "app/components/drawerbutton.js",
-    "file/App/Components/DrawerButton.js.html",
-    "App/Components/DrawerButton.js",
+    "app/components/button.js",
+    "file/App/Components/Button.js.html",
+    "App/Components/Button.js",
     "file"
-  ],
-  [
-    "app/components/drawerbutton.js~drawerbutton#render",
-    "class/App/Components/DrawerButton.js~DrawerButton.html#instance-method-render",
-    "App/Components/DrawerButton.js~DrawerButton#render",
-    "method"
-  ],
-  [
-    "app/components/fullbutton.js",
-    "file/App/Components/FullButton.js.html",
-    "App/Components/FullButton.js",
-    "file"
-  ],
-  [
-    "app/components/fullbutton.js~fullbutton#render",
-    "class/App/Components/FullButton.js~FullButton.html#instance-method-render",
-    "App/Components/FullButton.js~FullButton#render",
-    "method"
-  ],
-  [
-    "app/components/roundedbutton.js",
-    "file/App/Components/RoundedButton.js.html",
-    "App/Components/RoundedButton.js",
-    "file"
-  ],
-  [
-    "app/components/roundedbutton.js~roundedbutton#gettext",
-    "class/App/Components/RoundedButton.js~RoundedButton.html#instance-method-getText",
-    "App/Components/RoundedButton.js~RoundedButton#getText",
-    "method"
-  ],
-  [
-    "app/components/roundedbutton.js~roundedbutton#render",
-    "class/App/Components/RoundedButton.js~RoundedButton.html#instance-method-render",
-    "App/Components/RoundedButton.js~RoundedButton#render",
-    "method"
   ],
   [
     "app/components/styles/alertmessagecomponentstyle.js",
@@ -204,21 +144,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "app/components/styles/drawerbuttonstyles.js",
-    "file/App/Components/Styles/DrawerButtonStyles.js.html",
-    "App/Components/Styles/DrawerButtonStyles.js",
-    "file"
-  ],
-  [
-    "app/components/styles/fullbuttonstyle.js",
-    "file/App/Components/Styles/FullButtonStyle.js.html",
-    "App/Components/Styles/FullButtonStyle.js",
-    "file"
-  ],
-  [
-    "app/components/styles/roundedbuttonstyle.js",
-    "file/App/Components/Styles/RoundedButtonStyle.js.html",
-    "App/Components/Styles/RoundedButtonStyle.js",
+    "app/components/styles/buttonstyle.js",
+    "file/App/Components/Styles/ButtonStyle.js.html",
+    "App/Components/Styles/ButtonStyle.js",
     "file"
   ],
   [
@@ -274,18 +202,6 @@ window.esdocSearchIndex = [
     "file/App/Containers/DrawerContent.js.html",
     "App/Containers/DrawerContent.js",
     "file"
-  ],
-  [
-    "app/containers/drawercontent.js~drawercontent#render",
-    "class/App/Containers/DrawerContent.js~DrawerContent.html#instance-method-render",
-    "App/Containers/DrawerContent.js~DrawerContent#render",
-    "method"
-  ],
-  [
-    "app/containers/drawercontent.js~drawercontent#toggledrawer",
-    "class/App/Containers/DrawerContent.js~DrawerContent.html#instance-method-toggleDrawer",
-    "App/Containers/DrawerContent.js~DrawerContent#toggleDrawer",
-    "method"
   ],
   [
     "app/containers/homescreen.js",
@@ -474,6 +390,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "app/sagas/logoutsaga.js",
+    "file/App/Sagas/LogoutSaga.js.html",
+    "App/Sagas/LogoutSaga.js",
+    "file"
+  ],
+  [
     "app/sagas/startupsaga.js",
     "file/App/Sagas/StartupSaga.js.html",
     "App/Sagas/StartupSaga.js",
@@ -537,6 +459,12 @@ window.esdocSearchIndex = [
     "app/services/login.js",
     "file/App/Services/login.js.html",
     "App/Services/login.js",
+    "file"
+  ],
+  [
+    "app/services/logout.js",
+    "file/App/Services/logout.js.html",
+    "App/Services/logout.js",
     "file"
   ],
   [

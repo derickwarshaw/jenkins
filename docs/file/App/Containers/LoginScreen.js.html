@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -68,7 +65,8 @@ import {
   TouchableOpacity,
   Image,
   Keyboard,
-  LayoutAnimation
+  LayoutAnimation,
+  Switch
 } from &apos;react-native&apos;;
 import { connect } from &apos;react-redux&apos;;
 import Styles from &apos;./Styles/LoginScreenStyle&apos;;
@@ -90,7 +88,8 @@ class LoginScreen extends React.Component {
       host: &apos;&apos;,
       port: &apos;&apos;,
       visibleHeight: Metrics.screenHeight,
-      topLogo: { width: Metrics.screenWidth }
+      topLogo: { width: Metrics.screenWidth },
+      https: false
     };
     this.isAttempting = false;
   }
@@ -136,10 +135,10 @@ class LoginScreen extends React.Component {
   };
 
   handlePressLogin = () =&gt; {
-    const { username, password, instanceName, host, port } = this.state;
+    const { username, password, instanceName, host, port, https } = this.state;
     this.isAttempting = true;
     // attempt a login - a saga is listening to pick it up from here.
-    this.props.attemptLogin(username, password, instanceName, host, port );
+    this.props.attemptLogin(username, password, instanceName, host, port, https );
   };
 
   handleChangeUsername = (text) =&gt; {
@@ -162,8 +161,12 @@ class LoginScreen extends React.Component {
     this.setState({ port: text });
   };
 
+  handleChangeHttps = (value) =&gt; {
+    this.setState({ https: value });
+  };
+
   render () {
-    const { username, password, instanceName, host, port } = this.state;
+    const { username, password, instanceName, host, port, https } = this.state;
     const { attempting } = this.props;
     const editable = !attempting;
     const textInputStyle = editable ? Styles.textInput : Styles.textInputReadonly;
@@ -252,6 +255,14 @@ class LoginScreen extends React.Component {
               placeholder={I18n.t(&apos;password&apos;)} /&gt;
           &lt;/View&gt;
 
+          &lt;View style={Styles.row}&gt;
+            &lt;Text style={Styles.rowLabel}&gt;{I18n.t(&apos;https&apos;)}&lt;/Text&gt;
+            &lt;Switch
+              style={Styles.toggle}
+              onValueChange={this.handleChangeHttps}
+              value={https} /&gt;
+          &lt;/View&gt;
+
           &lt;View style={[Styles.loginRow]}&gt;
             &lt;TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}&gt;
               &lt;View style={Styles.loginButton}&gt;
@@ -294,7 +305,7 @@ const mapStateToProps = (state) =&gt; {
 const mapDispatchToProps = (dispatch) =&gt; {
   return {
     close: NavigationActions.pop,
-    attemptLogin: (username, password, instanceName, host, port) =&gt; dispatch(Actions.attemptLogin(username, password, instanceName, host, port))
+    attemptLogin: (username, password, instanceName, host, port, https) =&gt; dispatch(Actions.attemptLogin(username, password, instanceName, host, port, https))
   };
 };
 

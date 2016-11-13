@@ -33,14 +33,11 @@
   <ul>
     
   <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Root.js~Root.html">Root</a></span></span></li>
-<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/AlertMessageComponent.js~AlertMessage.html">AlertMessage</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/DrawerButton.js~DrawerButton.html">DrawerButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/FullButton.js~FullButton.html">FullButton</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Components/RoundedButton.js~RoundedButton.html">RoundedButton</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Components</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-AlertMessageComponent">AlertMessageComponent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-Button">Button</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Config</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SETTINGS">SETTINGS</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-REDUX_PERSIST">REDUX_PERSIST</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DeviceInfoScreen.js~DeviceInfoScreen.html">DeviceInfoScreen</a></span></span></li>
-<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Containers/DrawerContent.js~DrawerContent.html">DrawerContent</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Containers/Styles</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-RootStyle">RootStyle</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Navigation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/App/Navigation/NavigationRouter.js~NavigationRouter.html">NavigationRouter</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Reducers</div><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-INITIAL_STATE">INITIAL_STATE</a></span></span></li>
@@ -61,7 +58,7 @@
 <div class="content" data-ice="content"><h1 data-ice="title">App/Services/Api.js</h1>
 <pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// a library to wrap and simplify api calls
 import apisauce from &apos;apisauce&apos;;
-import { info, builds, jobs, views, que, load, login } from &apos;../Services/&apos;;
+import { info, builds, jobs, views, que, load, login, logout } from &apos;../Services/&apos;;
 
 // our &quot;constructor&quot;
 const create = (baseURL = &apos;http://&apos;) =&gt; {
@@ -92,7 +89,8 @@ const create = (baseURL = &apos;http://&apos;) =&gt; {
   });
 
   const updateDefaultBaseURL = (data) =&gt; {
-    api.axiosInstance.defaults.baseURL = `http://${data.host}:${data.port}`;
+    const protocol = data.https ? &apos;https&apos; : &apos;http&apos;;
+    api.axiosInstance.defaults.baseURL = `${protocol}://${data.host}:${data.port}`;
   };
 
   // ------
@@ -117,10 +115,11 @@ const create = (baseURL = &apos;http://&apos;) =&gt; {
   const getBuilds = (job) =&gt; builds.getBuilds(api, job);
   const getJenkinsInfo = () =&gt; info.getInfo(api);
   const startJob = (job) =&gt;  jobs.getJob(api, job);
-  const startLogin = (username, password, instanceName, host, port) =&gt; {
-    updateDefaultBaseURL({host, port});
-    return login.attemptLogin(api, username, password, instanceName);
+  const startLogin = (username, password, instanceName, host, port, https) =&gt; {
+    updateDefaultBaseURL({host, port, https});
+    return login.attemptLogin(api, username, password, https);
   };
+  const startLogout = () =&gt; logout.attemptLogout(api);
 
 
 
@@ -145,6 +144,7 @@ const create = (baseURL = &apos;http://&apos;) =&gt; {
     getLoadAPI,
     getBuilds,
     startLogin,
+    startLogout,
     startJob,
     // additional utilities
     addMonitor

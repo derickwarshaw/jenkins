@@ -1,14 +1,14 @@
 {
   "type": "Program",
   "start": 0,
-  "end": 305,
+  "end": 347,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 21,
+      "line": 23,
       "column": 0
     }
   },
@@ -146,28 +146,28 @@
     {
       "type": "ExportDefaultDeclaration",
       "start": 83,
-      "end": 304,
+      "end": 346,
       "loc": {
         "start": {
           "line": 4,
           "column": 0
         },
         "end": {
-          "line": 20,
+          "line": 22,
           "column": 3
         }
       },
       "declaration": {
         "type": "CallExpression",
         "start": 98,
-        "end": 303,
+        "end": 345,
         "loc": {
           "start": {
             "line": 4,
             "column": 15
           },
           "end": {
-            "line": 20,
+            "line": 22,
             "column": 2
           }
         },
@@ -191,14 +191,14 @@
           {
             "type": "TemplateLiteral",
             "start": 110,
-            "end": 302,
+            "end": 344,
             "loc": {
               "start": {
                 "line": 4,
                 "column": 27
               },
               "end": {
-                "line": 20,
+                "line": 22,
                 "column": 1
               }
             },
@@ -207,20 +207,20 @@
               {
                 "type": "TemplateElement",
                 "start": 111,
-                "end": 301,
+                "end": 343,
                 "loc": {
                   "start": {
                     "line": 4,
                     "column": 28
                   },
                   "end": {
-                    "line": 20,
+                    "line": 22,
                     "column": 0
                   }
                 },
                 "value": {
-                  "raw": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT\n\n  STARTUP\n",
-                  "cooked": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT\n\n  STARTUP\n"
+                  "raw": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT_ATTEMPT\n  LOGOUT_SUCCESS\n  LOGOUT_FAILURE\n\n  STARTUP\n",
+                  "cooked": "\n  LOGIN_ATTEMPT\n  LOGIN_SUCCESS\n  LOGIN_FAILURE\n  \n  GETBUILDS_ATTEMPT\n  GETBUILDS_SUCCESS\n  GETBUILDS_FAILURE\n  \n  GETJOBS_ATTEMPT\n  GETJOBS_SUCCESS\n  GETJOBS_FAILURE\n\n  LOGOUT_ATTEMPT\n  LOGOUT_SUCCESS\n  LOGOUT_FAILURE\n\n  STARTUP\n"
                 },
                 "tail": true
               }
