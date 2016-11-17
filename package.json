@@ -50,7 +50,7 @@
     "esdoc": "^0.4.6",
     "esdoc-es7-plugin": "0.0.3",
     "eslint": "^3.10.0",
-    "eslint-plugin-babel": "^3.3.0",
+    "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-flow-vars": "^0.5.0",
     "eslint-plugin-react": "^6.6.0",
     "mockery": "^2.0.0",
