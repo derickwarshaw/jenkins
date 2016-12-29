@@ -51,14 +51,23 @@ class DrawerContent extends Component {
     ) : (
       <Button buttonType="DrawerButton" text='Login' onPress={this.handlePressLogin} />
     );
+
+    const buildListContent = this.props.buildList.length ? (
+      <Button buttonType="DrawerButton" text='Build List' onPress={this.handlePressBuildList} />
+    ) : null;
+
+    const jobListContent = this.props.jobList.length ? (
+      <Button buttonType="DrawerButton" text='Jobs' onPress={this.handlePressJobs} />
+    ) : null;
+
     return (
       <ScrollView style={styles.container}>
         <Image source={Images.logo} style={styles.logo} />
         {userStatus}
         <Button buttonType="DrawerButton" text='Home Screen' onPress={this.handlePressHome} />
-        <Button buttonType="DrawerButton" text='Jobs' onPress={this.handlePressJobs} />
+        {jobListContent}
         <Button buttonType="DrawerButton" text='Device Info' onPress={this.handlePressDevice} />
-        <Button buttonType="DrawerButton" text='Build List' onPress={this.handlePressBuildList} />
+        {buildListContent}
       </ScrollView>
     );
   }
@@ -66,7 +75,9 @@ class DrawerContent extends Component {
 }
 
 DrawerContent.propTypes = {
+  buildList: PropTypes.array,
   dispatch: PropTypes.func,
+  jobList: PropTypes.array,
   loginSuccess: PropTypes.bool,
   logoutAttempt: PropTypes.func
 };
@@ -77,7 +88,9 @@ DrawerContent.contextTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    loginSuccess: state.login.loginSuccess
+    loginSuccess: state.login.loginSuccess,
+    buildList: state.builds.data,
+    jobList: state.jobs.data
   };
 };
 
