@@ -9,6 +9,10 @@ export const INITIAL_STATE = Immutable({
   loaded: false
 });
 
+// init builds
+const initBuilds = (state, action) =>
+state.merge(INITIAL_STATE);
+
 // attempt
 const attempt = (state, action) =>
   state.merge({ attempting: true, loaded: false });
@@ -23,6 +27,7 @@ const failure = (state, action) =>
 
 // map our types to our handlers
 const ACTION_HANDLERS = {
+  [Types.GETBUILDS_INIT]: initBuilds,
   [Types.GETBUILDS_ATTEMPT]: attempt,
   [Types.GETBUILDS_SUCCESS]: success,
   [Types.GETBUILDS_FAILURE]: failure

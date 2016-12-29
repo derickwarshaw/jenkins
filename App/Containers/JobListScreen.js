@@ -23,19 +23,6 @@ class JobListScreen extends React.Component {
   constructor (props) {
     super(props);
 
-    /* ***********************************************************
-     * STEP 1
-     * This is an array of objects with the properties you desire
-     * Usually this should come from Redux mapStateToProps
-     *************************************************************/
-
-
-    /* ***********************************************************
-     * STEP 2
-     * Teach datasource how to detect if rows are different
-     * Make this function fast!  Perhaps something like:
-     *   (r1, r2) => r1.id !== r2.id}
-     *************************************************************/
     const rowHasChanged = (r1, r2) => r1 !== r2;
 
     // DataSource configured
@@ -63,14 +50,6 @@ class JobListScreen extends React.Component {
     this.props.getBuilds(name);
   }
 
-  /* ***********************************************************
-   * STEP 3
-   * `_renderRow` function -How each cell/row should be rendered
-   * It's our best practice to place a single component here:
-   *
-   * e.g.
-   return <MyCustomCell title={rowData.title} description={rowData.description} />
-   *************************************************************/
   _renderRow (rowData) {
     return (
       <TouchableHighlight onPress={() => this.getBuilds(rowData.name)}>
@@ -81,24 +60,6 @@ class JobListScreen extends React.Component {
       </TouchableHighlight>
     );
   }
-
-  /* ***********************************************************
-   * STEP 4
-   * If your datasource is driven by Redux, you'll need to
-   * reset it when new data arrives.
-   * DO NOT! place `cloneWithRows` inside of render, since render
-   * is called very often, and should remain fast!  Just replace
-   * state's datasource on newProps.
-   *
-   * e.g.
-   componentWillReceiveProps (newProps) {
-   if (newProps.someData) {
-   this.setState({
-   dataSource: this.state.dataSource.cloneWithRows(newProps.someData)
-   })
-   }
-   }
-   *************************************************************/
 
   // Used for friendly AlertMessage
   // returns true if the dataSource is empty
@@ -122,7 +83,7 @@ class JobListScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    jobs: state.jobs.data,
+    jobs: state.jobs,
     dataObjects: state.jobs.data,
     builds: state.builds,
     buildList: NavigationActions.buildList

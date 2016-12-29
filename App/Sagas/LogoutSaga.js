@@ -12,6 +12,8 @@ export default (api) => {
     // When logging out there is a 302 redirect to / and response status 403 with new auth header indicating anonymous
     if (response.status === 403 || response.headers['x-you-are-authenticated-as'] === 'anonymous') {
       yield put(Actions.logoutSuccess());
+      yield put(Actions.initJobs());
+      yield put(Actions.initBuilds());
     } else {
       yield put(Actions.logoutFailure(response.statusCode));
     }
