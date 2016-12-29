@@ -8,6 +8,10 @@ export const INITIAL_STATE = Immutable({
   attempting: false
 });
 
+// init jobs
+const init = (state, action) =>
+state.merge(INITIAL_STATE);
+
 // login attempts
 const attempt = (state, action) =>
   state.merge({ attempting: true });
@@ -22,6 +26,7 @@ const failure = (state, action) =>
 
 // map our types to our handlers
 const ACTION_HANDLERS = {
+  [Types.GETJOBS_INIT]: init,
   [Types.GETJOBS_ATTEMPT]: attempt,
   [Types.GETJOBS_SUCCESS]: success,
   [Types.GETJOBS_FAILURE]: failure

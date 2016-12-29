@@ -11,13 +11,13 @@ test('attempt', t => {
 test('success', t => {
   const state = reducer(INITIAL_STATE, Actions.getJobsSuccess('hi'));
 
-  t.false(state.attempting)
+  t.false(state.attempting);
   t.is(state.data, 'hi')
 });
 
 test('failure', t => {
-  const state = reducer(INITIAL_STATE, Actions.getJobsFailure(69))
+  const state = reducer(INITIAL_STATE, Actions.getJobsFailure(69));
 
-  t.false(state.attempting)
+  t.false(state.attempting);
   t.is(state.errorCode, 69)
 });
