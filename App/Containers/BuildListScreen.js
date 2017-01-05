@@ -21,10 +21,19 @@ class BuildListScreen extends React.Component {
 
     // DataSource configured
     const ds = new ListView.DataSource({rowHasChanged});
+    const dataForRows = props.dataObjects.map((obj) => {
+      const rawDate = new Date(obj.timestamp);
+      const dateFormatted = rawDate.toLocaleString();
+      return {
+        number: obj.number,
+        result: obj.result,
+        timestamp: dateFormatted
+      }
+    });
 
     // Datasource is always in state
     this.state = {
-      dataSource: ds.cloneWithRows(props.dataObjects)
+      dataSource: ds.cloneWithRows(dataForRows)
     };
   }
 
@@ -40,6 +49,7 @@ class BuildListScreen extends React.Component {
     return (
       <View style={styles.row}>
         <Text style={styles.boldLabel}>{rowData.number}</Text>
+        <Text style={styles.boldLabel}>{rowData.timestamp}</Text>
         <Text style={styles.label}>{rowData.result}</Text>
       </View>
     );
