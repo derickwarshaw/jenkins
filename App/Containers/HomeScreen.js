@@ -23,6 +23,11 @@ class HomeScreen extends React.Component {
 
   render () {
     const instanceName = this.props.instanceName;
+    const addInstanceButton = !instanceName ? (
+      <Button buttonType="RoundedButton" onPress={this.props.login}>
+        Log In
+      </Button>
+    ) : null;
 
     return (
       <View style={styles.mainContainer}>
@@ -42,11 +47,7 @@ class HomeScreen extends React.Component {
               </Text>
             </View>
           </View>
-
-          <Button buttonType="RoundedButton" onPress={this.props.login}>
-            Add Jenkins Instance
-          </Button>
-
+          {addInstanceButton}
         </ScrollView>
       </View>
     );

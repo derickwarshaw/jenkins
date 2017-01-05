@@ -6,7 +6,6 @@ import NavigationDrawer from './NavigationDrawer';
 // screens identified by the router
 import HomeScreen from '../Containers/HomeScreen';
 import LoginScreen from '../Containers/LoginScreen';
-import DeviceInfoScreen from '../Containers/DeviceInfoScreen';
 import JobListScreen from '../Containers/JobListScreen';
 import BuildListScreen from '../Containers/BuildListScreen';
 
@@ -24,7 +23,6 @@ class NavigationRouter extends Component {
             <Scene key='login' component={LoginScreen} title='New Instance' />
             <Scene key='jobList' component={JobListScreen} title='Jobs' />
             <Scene key='buildList' component={BuildListScreen} title='Builds' />
-            <Scene key='deviceInfo' component={DeviceInfoScreen} title='Device Info' />
           </Scene>
         </Scene>
       </Router>
