@@ -28,7 +28,6 @@
     "react": "^15.3.2",
     "react-native": "^0.39.0",
     "react-native-animatable": "^1.1.0",
-    "react-native-device-info": "^0.9.5",
     "react-native-drawer": "^2.3.0",
     "react-native-i18n": "^0.1.1",
     "react-native-router-flux": "^3.37.0",
