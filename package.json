@@ -56,7 +56,7 @@
     "mockery": "^2.0.0",
     "nyc": "^9.0.1",
     "react-addons-test-utils": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^15.4.2",
     "react-native-mock": "^0.2.6",
     "sinon": "^1.17.6"
   },
