@@ -9,6 +9,8 @@ export default (api) => {
     const payload = {};
 
     if (response.ok) {
+
+      // this only handles github pull request builder plugin. need to handle vanilla also
       const dataArray = response.data.actions.length && response.data.actions[0].parameters;
       if (dataArray && dataArray.length) {
         for (const item of dataArray) {
