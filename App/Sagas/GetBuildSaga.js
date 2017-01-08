@@ -9,10 +9,12 @@ export default (api) => {
     const payload = {};
 
     if (response.ok) {
-      const dataArray = response.data.actions[0].parameters;
-      for (const item of dataArray) {
-        const name = item.name;
-        payload[`${name}`] = item.value;
+      const dataArray = response.data.actions.length && response.data.actions[0].parameters;
+      if (dataArray && dataArray.length) {
+        for (const item of dataArray) {
+          const name = item.name;
+          payload[`${name}`] = item.value;
+        }
       }
       yield put(Actions.getBuildSuccess(payload));
     } else {

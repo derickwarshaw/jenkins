@@ -8,6 +8,7 @@ import HomeScreen from '../Containers/HomeScreen';
 import LoginScreen from '../Containers/LoginScreen';
 import JobListScreen from '../Containers/JobListScreen';
 import BuildListScreen from '../Containers/BuildListScreen';
+import BuildScreen from '../Containers/BuildScreen';
 
 /***************************
 * Documentation: https://github.com/aksonov/react-native-router-flux
@@ -23,6 +24,7 @@ class NavigationRouter extends Component {
             <Scene key='login' component={LoginScreen} title='New Instance' />
             <Scene key='jobList' component={JobListScreen} title='Jobs' />
             <Scene key='buildList' component={BuildListScreen} title='Builds' />
+            <Scene key='build' component={BuildScreen} title='Build' />
           </Scene>
         </Scene>
       </Router>

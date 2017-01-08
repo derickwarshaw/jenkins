@@ -1,7 +1,8 @@
 import React, {PropTypes} from 'react';
-import { View, Text, ListView, TouchableHighlight } from 'react-native';
+import {View, Text, ListView, TouchableHighlight} from 'react-native';
 import Actions from '../Actions/Creators';
-import { connect } from 'react-redux';
+import {Actions as NavigationActions} from 'react-native-router-flux';
+import {connect} from 'react-redux';
 
 // For empty lists
 import AlertMessage from '../Components/AlertMessageComponent';
@@ -13,11 +14,12 @@ class BuildListScreen extends React.Component {
 
   static propTypes = {
     getBuild: PropTypes.func,
+    build: PropTypes.object,
     builds: PropTypes.object,
     dispatch: PropTypes.func
   };
 
-  constructor (props) {
+  constructor(props) {
     super(props);
 
     const rowHasChanged = (r1, r2) => r1 !== r2;
@@ -46,34 +48,38 @@ class BuildListScreen extends React.Component {
         dataSource: this.state.dataSource.cloneWithRows(nextProps.builds.data)
       });
     }
+
+    if (nextProps.build.loaded) {
+      NavigationActions.build();
+    }
   }
 
-  getBuild (jobName, buildNumber) {
+  getBuild(jobName, buildNumber) {
     this.props.getBuild(jobName, buildNumber);
   }
 
-  _renderRow (rowData) {
+  _renderRow(rowData) {
     return (
-      <TouchableHighlight onPress={() => this.getBuild(this.props.builds.selectedJob, rowData.number)}>
-      <View style={styles.row}>
-        <Text style={styles.boldLabel}>{rowData.number}</Text>
-        <Text style={styles.boldLabel}>{rowData.timestamp}</Text>
-        <Text style={styles.label}>{rowData.result}</Text>
-      </View>
-        </TouchableHighlight>
+      <TouchableHighlight style={styles.row} onPress={() => this.getBuild(this.props.builds.selectedJob, rowData.number)}>
+        <View style={styles.row}>
+          <Text style={styles.boldLabel}>{rowData.number}</Text>
+          <Text style={styles.boldLabel}>{rowData.timestamp}</Text>
+          <Text style={styles.label}>{rowData.result}</Text>
+        </View>
+      </TouchableHighlight>
     );
   }
 
   // Used for friendly AlertMessage
   // returns true if the dataSource is empty
-  _noRowData () {
+  _noRowData() {
     return this.state.dataSource.getRowCount() === 0;
   }
 
-  render () {
+  render() {
     return (
       <View style={styles.container}>
-        <AlertMessage title='Nothing to See Here, Move Along' show={this._noRowData()} />
+        <AlertMessage title='Nothing to See Here, Move Along' show={this._noRowData()}/>
         <ListView
           contentContainerStyle={styles.listContent}
           dataSource={this.state.dataSource}
@@ -87,7 +93,8 @@ class BuildListScreen extends React.Component {
 const mapStateToProps = (state) => {
   return {
     dataObjects: state.builds.data,
-    builds: state.builds
+    builds: state.builds,
+    build: state.build
   };
 };
 

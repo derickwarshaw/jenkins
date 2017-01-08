@@ -52,7 +52,7 @@ class JobListScreen extends React.Component {
 
   _renderRow (rowData) {
     return (
-      <TouchableHighlight onPress={() => this.getBuilds(rowData.name)}>
+      <TouchableHighlight style={styles.row} onPress={() => this.getBuilds(rowData.name)}>
       <View style={styles.row} >
         <Text style={styles.boldLabel}>{rowData.name}</Text>
         <Text style={styles.label}>{rowData.color}</Text>
