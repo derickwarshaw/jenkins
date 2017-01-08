@@ -1,5 +1,6 @@
 import React, {PropTypes} from 'react';
-import { View, Text, ListView } from 'react-native';
+import { View, Text, ListView, TouchableHighlight } from 'react-native';
+import Actions from '../Actions/Creators';
 import { connect } from 'react-redux';
 
 // For empty lists
@@ -11,7 +12,9 @@ import styles from './Styles/BuildListStyle';
 class BuildListScreen extends React.Component {
 
   static propTypes = {
-    builds: PropTypes.object
+    getBuild: PropTypes.func,
+    builds: PropTypes.object,
+    dispatch: PropTypes.func
   };
 
   constructor (props) {
@@ -28,7 +31,7 @@ class BuildListScreen extends React.Component {
         number: obj.number,
         result: obj.result,
         timestamp: dateFormatted
-      }
+      };
     });
 
     // Datasource is always in state
@@ -45,13 +48,19 @@ class BuildListScreen extends React.Component {
     }
   }
 
+  getBuild (jobName, buildNumber) {
+    this.props.getBuild(jobName, buildNumber);
+  }
+
   _renderRow (rowData) {
     return (
+      <TouchableHighlight onPress={() => this.getBuild(this.props.builds.selectedJob, rowData.number)}>
       <View style={styles.row}>
         <Text style={styles.boldLabel}>{rowData.number}</Text>
         <Text style={styles.boldLabel}>{rowData.timestamp}</Text>
         <Text style={styles.label}>{rowData.result}</Text>
       </View>
+        </TouchableHighlight>
     );
   }
 
@@ -68,7 +77,7 @@ class BuildListScreen extends React.Component {
         <ListView
           contentContainerStyle={styles.listContent}
           dataSource={this.state.dataSource}
-          renderRow={this._renderRow}
+          renderRow={this._renderRow.bind(this)}
         />
       </View>
     );
@@ -82,4 +91,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps)(BuildListScreen);
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBuild: (selectedJob, buildNumber) => dispatch(Actions.getBuild(selectedJob, buildNumber))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(BuildListScreen);

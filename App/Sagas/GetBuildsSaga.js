@@ -8,7 +8,7 @@ export default (api) => {
     const response = yield call(api.getBuilds, job);
 
     if (response.ok) {
-      yield put(Actions.getBuildsSuccess(response.data.builds));
+      yield put(Actions.getBuildsSuccess(response.data.builds, job));
     } else {
       yield put(Actions.getBuildsFailure(response.statusCode));
     }
