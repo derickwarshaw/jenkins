@@ -22,6 +22,8 @@ class JobListScreen extends React.Component {
 
   constructor (props) {
     super(props);
+    this._renderRow = this._renderRow.bind(this);
+    this._noRowData = this._noRowData.bind(this);
 
     const rowHasChanged = (r1, r2) => r1 !== r2;
 
@@ -74,7 +76,7 @@ class JobListScreen extends React.Component {
         <ListView
           contentContainerStyle={styles.listContent}
           dataSource={this.state.dataSource}
-          renderRow={this._renderRow.bind(this)}
+          renderRow={this._renderRow}
         />
       </View>
     );
