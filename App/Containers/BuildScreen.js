@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
-import { ScrollView, Text, Image, View } from 'react-native';
-import { Images } from '../Themes';
+import { Text, View } from 'react-native';
 import { connect } from 'react-redux';
 
 // Styles
