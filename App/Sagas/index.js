@@ -6,6 +6,7 @@ import logout from './LogoutSaga';
 import login from './LoginSaga';
 import getJobs from './GetJobsSaga';
 import getBuilds from './GetBuildsSaga';
+import getBuild from './GetBuildSaga';
 import DebugSettings from '../Config/DebugSettings';
 
 // Create our API at this level and feed it into
@@ -21,4 +22,5 @@ export default function * root () {
   yield fork(logout(api).watcher);
   yield fork(getJobs(api).watcher);
   yield fork(getBuilds(api).watcher);
+  yield fork(getBuild(api).watcher);
 }

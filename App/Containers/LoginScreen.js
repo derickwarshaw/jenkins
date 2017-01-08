@@ -121,6 +121,7 @@ class LoginScreen extends React.Component {
             <TextInput
               ref='instanceName'
               autoCapitalize="none"
+              autoCorrect={false}
               style={textInputStyle}
               value={instanceName}
               editable={editable}
@@ -137,6 +138,7 @@ class LoginScreen extends React.Component {
             <TextInput
               ref='host'
               autoCapitalize="none"
+              autoCorrect={false}
               style={textInputStyle}
               value={host}
               editable={editable}
@@ -153,6 +155,7 @@ class LoginScreen extends React.Component {
             <TextInput
               ref='port'
               autoCapitalize="none"
+              autoCorrect={false}
               style={textInputStyle}
               value={port}
               editable={editable}
@@ -169,6 +172,7 @@ class LoginScreen extends React.Component {
             <TextInput
               ref='username'
               autoCapitalize="none"
+              autoCorrect={false}
               style={textInputStyle}
               value={username}
               editable={editable}
@@ -185,6 +189,7 @@ class LoginScreen extends React.Component {
             <TextInput
               ref='password'
               autoCapitalize="none"
+              autoCorrect={false}
               style={textInputStyle}
               value={password}
               editable={editable}

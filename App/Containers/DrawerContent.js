@@ -24,19 +24,9 @@ class DrawerContent extends Component {
     NavigationActions.jobList();
   };
 
-  handlePressDevice = () => {
-    this.toggleDrawer();
-    NavigationActions.deviceInfo();
-  };
-
   handlePressLogin = () => {
     this.toggleDrawer();
     NavigationActions.login();
-  };
-
-  handlePressBuildList = () => {
-    this.toggleDrawer();
-    NavigationActions.buildList();
   };
 
   handlePressLogout = () => {
@@ -52,10 +42,6 @@ class DrawerContent extends Component {
       <Button buttonType="DrawerButton" text='Login' onPress={this.handlePressLogin} />
     );
 
-    const buildListContent = this.props.buildList.length ? (
-      <Button buttonType="DrawerButton" text='Build List' onPress={this.handlePressBuildList} />
-    ) : null;
-
     const jobListContent = this.props.jobList.length ? (
       <Button buttonType="DrawerButton" text='Jobs' onPress={this.handlePressJobs} />
     ) : null;
@@ -66,8 +52,6 @@ class DrawerContent extends Component {
         {userStatus}
         <Button buttonType="DrawerButton" text='Home Screen' onPress={this.handlePressHome} />
         {jobListContent}
-        <Button buttonType="DrawerButton" text='Device Info' onPress={this.handlePressDevice} />
-        {buildListContent}
       </ScrollView>
     );
   }

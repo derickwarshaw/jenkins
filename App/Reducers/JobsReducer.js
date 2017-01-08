@@ -5,22 +5,20 @@ import { createReducer } from 'reduxsauce';
 export const INITIAL_STATE = Immutable({
   data: [],
   errorCode: null,
-  attempting: false
+  attempting: false,
+  selectedJob: null
 });
 
 // init jobs
 const init = (state, action) =>
 state.merge(INITIAL_STATE);
 
-// login attempts
 const attempt = (state, action) =>
   state.merge({ attempting: true });
 
-// successful logins
 const success = (state, action) =>
   state.merge({ attempting: false, data: action.result });
 
-// login failure
 const failure = (state, action) =>
   state.merge({ attempting: false, errorCode: action.errorCode });
 

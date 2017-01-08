@@ -55,6 +55,7 @@ const create = (baseURL = 'http://') => {
   const getQueAPI = () => que.getQueApi(api);
   const getLoadAPI = () => load.getLoadApi(api);
   const getBuilds = (job) => builds.getBuilds(api, job);
+  const getBuild = (job, buildNumber) => builds.getBuild(api, job, buildNumber);
   const getJenkinsInfo = () => info.getInfo(api);
   const startJob = (job) =>  jobs.getJob(api, job);
   const startLogin = (username, password, instanceName, host, port, https) => {
@@ -84,6 +85,7 @@ const create = (baseURL = 'http://') => {
     getJenkinsViews,
     getQueAPI,
     getLoadAPI,
+    getBuild,
     getBuilds,
     startLogin,
     startLogout,
