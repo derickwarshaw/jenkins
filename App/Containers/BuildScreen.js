@@ -13,9 +13,15 @@ class BuildScreen extends React.Component {
   };
 
   render () {
+    const { build } = this.props;
+
+    const ghPluginContent = build.data.ghPluginData ? (
+      <Text>{build.data.ghPluginData.ghprbActualCommitAuthor}</Text>
+    ) : null;
+
     return (
       <View style={styles.mainContainer}>
-        <Text>{this.props.build.data.ghprbActualCommitAuthor}</Text>
+        {ghPluginContent}
       </View>
     );
   }

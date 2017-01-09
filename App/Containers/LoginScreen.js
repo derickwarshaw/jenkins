@@ -40,7 +40,6 @@ class LoginScreen extends React.Component {
     this.forceUpdate();
     // Did the login attempt complete?
     if (this.isAttempting && !newProps.attempting && newProps.loginSuccess) {
-      console.log(newProps);
       this.props.close();
     }
   }
