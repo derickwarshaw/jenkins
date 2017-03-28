@@ -23,7 +23,7 @@
     "apisauce": "^0.10.0",
     "cheerio": "^0.22.0",
     "format-json": "^1.0.3",
-    "querystringify": "0.0.4",
+    "querystringify": "1.0.0",
     "ramda": "^0.23.0",
     "react": "^15.3.2",
     "react-native": "^0.42.0",
