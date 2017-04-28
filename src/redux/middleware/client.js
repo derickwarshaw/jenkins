@@ -22,10 +22,10 @@ export default ({ dispatch, getState }) => next => (action) => {
 
   options = {
     cache: 'no-cache',
-    headers: new Headers({
+    headers: {
       Authorization: bearerAuth,
       'Content-Type': 'application/json'
-    }),
+    },
     mode: 'cors',
     ...options
   };

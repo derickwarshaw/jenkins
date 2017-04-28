@@ -1,8 +1,8 @@
 // leave off @2x/@3x
 const images = {
-  logo: require('../Images/ir.png'),
-  clearLogo: require('../Images/jenkinsLogo1.png'),
-  background: require('../Images/BG.png')
+  logo: require('../images/ir.png'),
+  clearLogo: require('../images/jenkinsLogo1.png'),
+  background: require('../images/BG.png')
 };
 
 export default images;

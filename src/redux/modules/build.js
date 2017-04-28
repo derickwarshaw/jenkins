@@ -1,3 +1,4 @@
+const INIT = 'jenkins/build/INIT';
 const LOAD = 'jenkins/build/LOAD';
 const LOAD_SUCCESS = 'jenkins/build/LOAD_SUCCESS';
 const LOAD_FAIL = 'jenkins/build/LOAD_FAIL';
@@ -22,14 +23,14 @@ export default function reducer(state = initialState, action = {}) {
         loaded: false,
         selectedJob: action.job
       };
-    case LOAD_SUCCESS:
+    case LOAD_SUCCESS: {
       const dataArray = action.data.actions[0].parameters;
       let payload = {};
       for (const item of dataArray) {
         const name = item.name;
         payload[`${name}`] = item.value;
       }
-    {
+    
       return {
         ...state,
         attempting: false,
@@ -52,8 +53,9 @@ export default function reducer(state = initialState, action = {}) {
 export function init() {
   return {
     type: INIT
-  }
+  };
 }
+
 export function load(job, buildNumber) {
   return {
     type: [LOAD, LOAD_SUCCESS, LOAD_FAIL],
@@ -63,5 +65,5 @@ export function load(job, buildNumber) {
         method: 'GET'
       }
     }
-  }
+  };
 }

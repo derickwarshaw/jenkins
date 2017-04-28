@@ -4,7 +4,7 @@ import Actions from '../Actions/Creators';
 import { connect } from 'react-redux';
 
 // For empty lists
-import AlertMessage from '../Components/AlertMessageComponent';
+import AlertMessage from '../components/AlertMessageComponent';
 
 // Styles
 import styles from './Styles/BuildListStyle';

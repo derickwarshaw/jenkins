@@ -22,31 +22,31 @@ export default function reducer(state = initialState, action = {}) {
     case LOGIN:
       return {
         ...state,
-        attempting: true, 
-        username: action.username, 
-        password: action.password, 
-        instanceName: action.instanceName, 
-        host: action.host, 
-        port: action.port, 
+        attempting: true,
+        username: action.username,
+        password: action.password,
+        instanceName: action.instanceName,
+        host: action.host,
+        port: action.port,
         https: action.https
       };
     case LOGIN_SUCCESS:
       return {
         ...state,
-        attempting: false, 
-        loginSuccess: true, 
-        password: null, 
-        errorCode: null, 
-        username: action.username, 
-        instanceName: action.instanceName, 
-        host: action.host, 
+        attempting: false,
+        loginSuccess: true,
+        password: null,
+        errorCode: null,
+        username: action.username,
+        instanceName: action.instanceName,
+        host: action.host,
         port: action.port
       };
     case LOGIN_FAIL:
       return {
         ...state,
-        attempting: false, 
-        errorCode: action.errorCode, 
+        attempting: false,
+        errorCode: action.errorCode,
         instanceName: null
       };
     case LOGOUT:
@@ -54,15 +54,14 @@ export default function reducer(state = initialState, action = {}) {
         ...state,
         attempting: true
       };
-    case LOGOUT_SUCCESS: {
+    case LOGOUT_SUCCESS:
       return {
         ...initialState
       };
-    }
     case LOGOUT_FAIL:
       return {
         ...state,
-        attempting: false, 
+        attempting: false,
         errorCode: action.errorCode
       };
     default:
@@ -72,13 +71,13 @@ export default function reducer(state = initialState, action = {}) {
 
 export function login(username, password, instanceName, host, port, https) {
   return (dispatch) => {
-    
+
     const payload = {
       j_username: username,
       j_password: password,
       from: '/'
     };
-    
+
     if (https) {
       return dispatch({
         type: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
@@ -95,7 +94,7 @@ export function login(username, password, instanceName, host, port, https) {
         if (crumb && fieldName) {
           payload[fieldName] = crumb;
         }
-        
+
         return dispatch({
           type: [LOGIN, LOGIN_SUCCESS, LOGIN_FAIL],
           request: {
@@ -141,9 +140,9 @@ export function login(username, password, instanceName, host, port, https) {
         host,
         port,
         https
-      });
+      })
     }
-  }
+  };
 }
 
 export function logout() {

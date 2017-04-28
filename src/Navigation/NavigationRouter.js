@@ -4,10 +4,10 @@ import Styles from './Styles/NavigationContainerStyle';
 import NavigationDrawer from './NavigationDrawer';
 
 // screens identified by the router
-import HomeScreen from '../Containers/HomeScreen';
-import LoginScreen from '../Containers/LoginScreen';
-import JobListScreen from '../Containers/JobListScreen';
-import BuildListScreen from '../Containers/BuildListScreen';
+import HomeScreen from '../containers/HomeScreen';
+import LoginScreen from '../containers/LoginScreen';
+import JobListScreen from '../containers/JobListScreen';
+import BuildListScreen from '../containers/BuildListScreen';
 
 /***************************
 * Documentation: https://github.com/aksonov/react-native-router-flux

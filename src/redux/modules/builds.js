@@ -1,3 +1,4 @@
+const INIT = 'jenkins/builds/INIT';
 const LOAD = 'jenkins/builds/LOAD';
 const LOAD_SUCCESS = 'jenkins/builds/LOAD_SUCCESS';
 const LOAD_FAIL = 'jenkins/builds/LOAD_FAIL';
@@ -44,7 +45,7 @@ export default function reducer(state = initialState, action = {}) {
 export function init() {
   return {
     type: INIT
-  }
+  };
 }
 export function load(job) {
   return {
@@ -55,5 +56,5 @@ export function load(job) {
         method: 'GET'
       }
     }
-  }
+  };
 }

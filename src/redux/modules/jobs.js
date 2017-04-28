@@ -1,3 +1,4 @@
+const INIT = 'jenkins/jobs/INIT';
 const LOAD = 'jenkins/jobs/LOAD';
 const LOAD_SUCCESS = 'jenkins/jobs/LOAD_SUCCESS';
 const LOAD_FAIL = 'jenkins/jobs/LOAD_FAIL';
@@ -27,13 +28,13 @@ export default function reducer(state = initialState, action = {}) {
     case LOAD_SUCCESS:
       return {
         ...state,
-        attempting: false, 
+        attempting: false,
         data: action.result
       };
     case LOAD_FAIL:
       return {
         ...state,
-        attempting: false, 
+        attempting: false,
         errorCode: action.errorCode
       };
     default:
@@ -44,7 +45,7 @@ export default function reducer(state = initialState, action = {}) {
 export function init() {
   return {
     type: INIT
-  }
+  };
 }
 export function load() {
   return {
@@ -55,7 +56,7 @@ export function load() {
         method: 'GET'
       }
     }
-  }
+  };
 }
 
 export function start(job) {
@@ -67,5 +68,5 @@ export function start(job) {
         method: 'POST'
       }
     }
-  }
+  };
 }

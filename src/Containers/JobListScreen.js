@@ -5,7 +5,7 @@ import Actions from '../Actions/Creators';
 import { Actions as NavigationActions } from 'react-native-router-flux';
 
 // For empty lists
-import AlertMessage from '../Components/AlertMessageComponent';
+import AlertMessage from '../components/AlertMessageComponent';
 
 // Styles
 import styles from './Styles/JobListStyle';

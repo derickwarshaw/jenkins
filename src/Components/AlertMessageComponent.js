@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text } from 'react-native';
 import styles from './Styles/AlertMessageComponentStyle';
 import * as Animatable from 'react-native-animatable';
-import { Metrics } from '../Themes/';
+import { Metrics } from '../themes/';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const AlertMessageComponent = (props) => {

@@ -11,6 +11,7 @@ export default class Root extends React.Component {
   };
 
   renderApp () {
+    console.log(this.props);
     console.disableYellowBox = DebugSettings.yellowBox;
     return (
       <Provider store={this.props.store}>
