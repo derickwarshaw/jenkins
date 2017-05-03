@@ -12,12 +12,9 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import Styles from './Styles/LoginScreenStyle';
-import Actions from '../Actions/Creators';
-import {Images, Metrics} from '../Themes';
+import { login } from '../redux/modules/user';
+import {Images, Metrics} from '../themes';
 import { Actions as NavigationActions } from 'react-native-router-flux';
-
-// I18n
-import I18n from '../I18n/I18n.js';
 
 class LoginScreen extends React.Component {
 
@@ -38,16 +35,12 @@ class LoginScreen extends React.Component {
 
   componentWillReceiveProps (newProps) {
     this.forceUpdate();
-    // Did the login attempt complete?
     if (this.isAttempting && !newProps.attempting && newProps.loginSuccess) {
-      console.log(newProps);
       this.props.close();
     }
   }
 
   componentWillMount () {
-    // Using keyboardWillShow/Hide looks 1,000 times better, but doesn't work on Android
-    // TODO: Revisit this if Android begins to support - https://github.com/facebook/react-native/issues/3468
     this.keyboardDidShowListener = Keyboard.addListener('keyboardDidShow', this.keyboardDidShow);
     this.keyboardDidHideListener = Keyboard.addListener('keyboardDidHide', this.keyboardDidHide);
   }
@@ -58,7 +51,6 @@ class LoginScreen extends React.Component {
   }
 
   keyboardDidShow = (e) => {
-    // Animation types easeInEaseOut/linear/spring
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     let newSize = Metrics.screenHeight - e.endCoordinates.height;
     this.setState({
@@ -68,7 +60,6 @@ class LoginScreen extends React.Component {
   };
 
   keyboardDidHide = (e) => {
-    // Animation types easeInEaseOut/linear/spring
     LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
     this.setState({
       visibleHeight: Metrics.screenHeight,
@@ -79,8 +70,7 @@ class LoginScreen extends React.Component {
   handlePressLogin = () => {
     const { username, password, instanceName, host, port, https } = this.state;
     this.isAttempting = true;
-    // attempt a login - a saga is listening to pick it up from here.
-    this.props.attemptLogin(username, password, instanceName, host, port, https );
+    this.props.login(username, password, instanceName, host, port, https );
   };
 
   handleChangeUsername = (text) => {
@@ -117,7 +107,7 @@ class LoginScreen extends React.Component {
         <Image source={Images.logo} style={[Styles.topLogo, this.state.topLogo]} />
         <View style={Styles.form}>
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('instanceName')}</Text>
+            <Text style={Styles.rowLabel}>instanceName</Text>
             <TextInput
               ref='instanceName'
               autoCapitalize="none"
@@ -130,11 +120,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeInstanceName}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.instanceName.focus()}
-              placeholder={I18n.t('instanceName')} />
+              placeholder='instanceName' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('host')}</Text>
+            <Text style={Styles.rowLabel}>host</Text>
             <TextInput
               ref='host'
               autoCapitalize="none"
@@ -147,11 +137,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeHost}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.host.focus()}
-              placeholder={I18n.t('host')} />
+              placeholder='host' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('port')}</Text>
+            <Text style={Styles.rowLabel}>port</Text>
             <TextInput
               ref='port'
               autoCapitalize="none"
@@ -164,11 +154,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangePort}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.port.focus()}
-              placeholder={I18n.t('port')} />
+              placeholder='port' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('username')}</Text>
+            <Text style={Styles.rowLabel}>username</Text>
             <TextInput
               ref='username'
               autoCapitalize="none"
@@ -181,11 +171,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeUsername}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.password.focus()}
-              placeholder={I18n.t('username')} />
+              placeholder='username' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('password')}</Text>
+            <Text style={Styles.rowLabel}>password</Text>
             <TextInput
               ref='password'
               autoCapitalize="none"
@@ -199,11 +189,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangePassword}
               underlineColorAndroid='transparent'
               onSubmitEditing={this.handlePressLogin}
-              placeholder={I18n.t('password')} />
+              placeholder='password' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>{I18n.t('https')}</Text>
+            <Text style={Styles.rowLabel}>https</Text>
             <Switch
               style={Styles.toggle}
               onValueChange={this.handleChangeHttps}
@@ -213,12 +203,12 @@ class LoginScreen extends React.Component {
           <View style={[Styles.loginRow]}>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}>
               <View style={Styles.loginButton}>
-                <Text style={Styles.loginText}>{I18n.t('signIn')}</Text>
+                <Text style={Styles.loginText}>'signIn'</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.props.close}>
               <View style={Styles.loginButton}>
-                <Text style={Styles.loginText}>{I18n.t('cancel')}</Text>
+                <Text style={Styles.loginText}>cancel</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -234,9 +224,8 @@ LoginScreen.propTypes = {
   dispatch: PropTypes.func,
   attempting: PropTypes.bool,
   close: PropTypes.func,
-  attemptLogin: PropTypes.func,
-  loginFail: PropTypes.bool,
-  loginSuccess: PropTypes.bool
+  login: PropTypes.func,
+  loginFail: PropTypes.bool
 };
 
 const mapStateToProps = (state) => {
@@ -244,7 +233,7 @@ const mapStateToProps = (state) => {
     attempting: state.login.attempting,
     username: state.login.username,
     jobs: state.jobs.data,
-    loginSuccess: state.login.loginSuccess,
+    login: state.login,
     loginFail: state.login.fail
   };
 };
@@ -252,7 +241,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     close: NavigationActions.pop,
-    attemptLogin: (username, password, instanceName, host, port, https) => dispatch(Actions.attemptLogin(username, password, instanceName, host, port, https))
+    login: (username, password, instanceName, host, port, https) => dispatch(login(username, password, instanceName, host, port, https))
   };
 };
 

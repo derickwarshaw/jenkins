@@ -1,9 +1,9 @@
 import React, {PropTypes} from 'react';
 import { ScrollView, Text, Image, View } from 'react-native';
-import { Images } from '../Themes';
+import { Images } from '../themes';
 import { connect } from 'react-redux';
 import { Actions as NavigationActions } from 'react-native-router-flux';
-import Button from '../Components/Button';
+import Button from '../components/Button';
 
 // Styles
 import styles from './Styles/PresentationScreenStyle';
@@ -56,18 +56,18 @@ class HomeScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    username: state.login.username,
-    instanceName: state.login.instanceName,
-    host: state.login.host,
-    port: state.login.port,
-    path: state.login.path
+    // username: state.login.username,
+    // instanceName: state.login.instanceName,
+    // host: state.login.host,
+    // port: state.login.port,
+    // path: state.login.path
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    login: NavigationActions.login,
-    jobList: NavigationActions.jobList
+    // login: NavigationActions.login,
+    // jobList: NavigationActions.jobList
 
   };
 };
