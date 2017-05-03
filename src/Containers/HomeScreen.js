@@ -55,20 +55,20 @@ class HomeScreen extends React.Component {
 }
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    // username: state.login.username,
-    // instanceName: state.login.instanceName,
-    // host: state.login.host,
-    // port: state.login.port,
-    // path: state.login.path
+    username: state.username,
+    instanceName: state.instanceName,
+    host: state.host,
+    port: state.port,
+    path: state.path
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    // login: NavigationActions.login,
-    // jobList: NavigationActions.jobList
-
+    login: NavigationActions.login,
+    jobList: NavigationActions.jobList
   };
 };
 

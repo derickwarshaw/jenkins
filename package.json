@@ -20,25 +20,20 @@
     "android:shake": "$ANDROID_HOME/platform-tools/adb devices | grep '\\t' | awk '{print $1}' | sed 's/\\s//g' | xargs -I {} $ANDROID_HOME/platform-tools/adb -s {} shell input keyevent 82"
   },
   "dependencies": {
-    "apisauce": "^0.12.0",
     "cheerio": "^0.22.0",
     "format-json": "^1.0.3",
     "querystringify": "1.0.0",
     "ramda": "^0.23.0",
-    "react": "^15.3.2",
-    "react-native": "^0.43.0",
+    "react": "^15.5.0",
+    "react-native": "0.40.0",
     "react-native-animatable": "^1.1.0",
     "react-native-drawer": "^2.3.0",
     "react-native-i18n": "^1.0.0",
-    "react-native-router-flux": "^3.37.0",
+    "react-native-router-flux": "^3.38.0",
     "react-native-vector-icons": "^4.0.0",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
-    "redux-logger": "^3.0.0",
-    "redux-persist": "^4.0.1",
-    "redux-saga": "^0.14.0",
-    "reduxsauce": "^0.4.0",
-    "seamless-immutable": "^7.0.1"
+    "redux-logger": "^3.0.0"
   },
   "devDependencies": {
     "ava": "^0.18.2",

@@ -107,7 +107,7 @@ class LoginScreen extends React.Component {
         <Image source={Images.logo} style={[Styles.topLogo, this.state.topLogo]} />
         <View style={Styles.form}>
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>instanceName</Text>
+            <Text style={Styles.rowLabel}>InstanceName</Text>
             <TextInput
               ref='instanceName'
               autoCapitalize="none"
@@ -120,11 +120,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeInstanceName}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.instanceName.focus()}
-              placeholder='instanceName' />
+              placeholder='InstanceName' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>host</Text>
+            <Text style={Styles.rowLabel}>Host</Text>
             <TextInput
               ref='host'
               autoCapitalize="none"
@@ -137,11 +137,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeHost}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.host.focus()}
-              placeholder='host' />
+              placeholder='Host' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>port</Text>
+            <Text style={Styles.rowLabel}>Port</Text>
             <TextInput
               ref='port'
               autoCapitalize="none"
@@ -154,11 +154,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangePort}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.port.focus()}
-              placeholder='port' />
+              placeholder='Port' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>username</Text>
+            <Text style={Styles.rowLabel}>Username</Text>
             <TextInput
               ref='username'
               autoCapitalize="none"
@@ -171,11 +171,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangeUsername}
               underlineColorAndroid='transparent'
               onSubmitEditing={() => this.refs.password.focus()}
-              placeholder='username' />
+              placeholder='Username' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>password</Text>
+            <Text style={Styles.rowLabel}>Password</Text>
             <TextInput
               ref='password'
               autoCapitalize="none"
@@ -189,11 +189,11 @@ class LoginScreen extends React.Component {
               onChangeText={this.handleChangePassword}
               underlineColorAndroid='transparent'
               onSubmitEditing={this.handlePressLogin}
-              placeholder='password' />
+              placeholder='Password' />
           </View>
 
           <View style={Styles.row}>
-            <Text style={Styles.rowLabel}>https</Text>
+            <Text style={Styles.rowLabel}>Https</Text>
             <Switch
               style={Styles.toggle}
               onValueChange={this.handleChangeHttps}
@@ -203,12 +203,12 @@ class LoginScreen extends React.Component {
           <View style={[Styles.loginRow]}>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.handlePressLogin}>
               <View style={Styles.loginButton}>
-                <Text style={Styles.loginText}>'signIn'</Text>
+                <Text style={Styles.loginText}>Sign In</Text>
               </View>
             </TouchableOpacity>
             <TouchableOpacity style={Styles.loginButtonWrapper} onPress={this.props.close}>
               <View style={Styles.loginButton}>
-                <Text style={Styles.loginText}>cancel</Text>
+                <Text style={Styles.loginText}>Cancel</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -230,11 +230,11 @@ LoginScreen.propTypes = {
 
 const mapStateToProps = (state) => {
   return {
-    attempting: state.login.attempting,
-    username: state.login.username,
-    jobs: state.jobs.data,
+    attempting: state.attempting,
+    username: state.username,
+    jobs: state.data,
     login: state.login,
-    loginFail: state.login.fail
+    loginFail: state.fail
   };
 };
 

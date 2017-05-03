@@ -140,7 +140,7 @@ export function login(username, password, instanceName, host, port, https) {
         host,
         port,
         https
-      })
+      });
     }
   };
 }

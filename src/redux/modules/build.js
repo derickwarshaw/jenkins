@@ -30,7 +30,7 @@ export default function reducer(state = initialState, action = {}) {
         const name = item.name;
         payload[`${name}`] = item.value;
       }
-    
+
       return {
         ...state,
         attempting: false,
