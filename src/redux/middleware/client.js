@@ -14,7 +14,7 @@ export default ({ dispatch, getState }) => next => (action) => {
   const [REQUEST, SUCCESS, FAILURE] = type;
   const url = formatUrl(request.url);
   const { user } = getState();
-  const bearerAuth = `Bearer ${user.opco.id}|${user.id}|${user.username}`;
+  const bearerAuth = '';
   let { options } = request;
   let status;
 
