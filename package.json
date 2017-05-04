@@ -31,7 +31,7 @@
     "react-native-drawer": "^2.3.0",
     "react-native-i18n": "^1.0.0",
     "react-native-router-flux": "^3.37.0",
-    "react-native-vector-icons": "^4.0.0",
+    "react-native-vector-icons": "^4.1.0",
     "react-redux": "^5.0.1",
     "redux": "^3.6.0",
     "redux-logger": "^3.0.0",
